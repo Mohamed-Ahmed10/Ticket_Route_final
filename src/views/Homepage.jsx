@@ -1,8 +1,11 @@
+import Partners from "../components/Partners";
 import Hero from '../components/Hero.jsx'
+
 export default function Homepage() {
     return (
-        <main>
+        <div>
             <Hero />
-        </main>
+            <Partners />
+        </div>
     )
 }
