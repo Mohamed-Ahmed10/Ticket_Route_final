@@ -255,6 +255,17 @@ button.active_button {
   flex-direction: row;
   gap: 30px;
 }
+.footer_nav_links a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer_nav_links a:hover {
+  text-decoration: underline;
+}
+
+.footer_socials {
+}
 
 .footer_socials button {
   position: absolute;
@@ -265,17 +276,51 @@ button.active_button {
 .footer_socials form {
   position: relative;
   display: flex;
-  flex-direction: column;
 }
 .footer_socials input {
   border: none;
-  padding: 10px 60px;
+  padding: 10px 40px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
   margin-right: 20px;
-  /*width: 300px;
-  */
+  width: 350px;
+  outline: none;
+}
+.footer_input_icon {
+  position: absolute;
+  left: 15px;
+  top: 53%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: Gray;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.social_icons {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.social_icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  background-color: #1c6798;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }

@@ -1,5 +1,9 @@
 
 import icon_transparent from "../assets/logo/icon_transparent.png"
+import { FaRegEnvelope } from "react-icons/fa6";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+
+
 
 
 export default function Footer() {
@@ -25,8 +29,21 @@ export default function Footer() {
             <div className="footer_socials">
                 <form>
                     <input type="text" placeholder="Enter your email address" />
+                    <FaRegEnvelope className="footer_input_icon" />
                     <button className="primary_btn">subscribe</button>
                 </form>
+                <div className="social_icons">
+                    <a href="#">
+                        <FaFacebookF className="social_icon" />
+                    </a>
+                    <a href="#">
+                        <FaTwitter className="social_icon" />
+                    </a>
+                    <a href="#">
+
+                        <FaInstagram className="social_icon" />
+                    </a>
+                </div>
             </div>
         </div>
     )
