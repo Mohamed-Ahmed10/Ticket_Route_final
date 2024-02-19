@@ -1,14 +1,10 @@
 {
-<<<<<<< HEAD
   "site_nav": "Site nav",
   "her_sup_p": "Book your next trip with best prices",
-  "hero_heading": "The best affordable Trips with Ticket Route",
-  "hero_p": "Search, find and book your next trip with affordable prices; Check flights, bus and train tickets from anywhere in Egypt, start now and book your next trip"
+  "hero_heading": "The best affordable",
+  "hero_heading2": "Trips with Ticket Route",
+  "hero_p": "Search, find and book your next trip with affordable prices; Check flights, bus and train tickets from anywhere in Egypt, start now and book your next trip",
+  "flight_tab": " Flights",
+  "bus_tab": " Bus",
+  "train_tab": "Train"
 }
-=======
-    "site_nav": "Site nav",
-    "home": "Home",
-    "about_us": "About us",
-    "contact_us": "Contact us"
-}
->>>>>>> 651d23a39d417036cf77a6b3fb28fac3bea30598
