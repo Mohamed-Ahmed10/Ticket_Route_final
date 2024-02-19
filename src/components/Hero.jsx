@@ -16,7 +16,7 @@ function Hero() {
                         {t('hero_heading')} <br />
                         {t('hero_heading2')}
                     </h3>
-                    <p className="hero_p">
+                    <p className="hero_p w-75">
                         {t('hero_p')}
                     </p>
                 </div>

@@ -15,18 +15,18 @@ function BookingSection() {
     return (
         <div className='tabs'>
             <div className='tap_buttons_container'>
-                <button className={`${activeTap == 'flight' && "active_button"} `} onClick={tapChangeHandler} id='flight'>
-                    <IoAirplaneOutline className={`${activeTap == 'flight' && 'active_icon'} `} />
-                    <span className='ms-1'>{t('flight_tab')}</span>
+                <button className={`${activeTap == 'flight' ? "active_button" : ''} `} onClick={tapChangeHandler} id='flight'>
+                    <IoAirplaneOutline className={`${activeTap == 'flight' ? 'active_icon' : ''} me-1`} />
+                    {t('flight_tab')}
                 </button>
-                <button className={`${activeTap == 'bus' && "active_button"}`} onClick={tapChangeHandler} id='bus'>
-                    <TbBus className={`${activeTap == 'bus' && 'active_icon'} `} />
-                    <span className='ms-1'>{t('bus_tab')}</span>
+                <button className={`${activeTap == 'bus' ? "active_button" : ''}`} onClick={tapChangeHandler} id='bus'>
+                    <TbBus className={`${activeTap == 'bus' ? 'active_icon' : ''} me-1`} />
+                    {t('bus_tab')}
                 </button>
 
-                <button className={`${activeTap == 'train' && "active_button"} `} onClick={tapChangeHandler} id='train'>
-                    <PiTrain className={`${activeTap == 'train' && 'active_icon'} `} />
-                    <span className='ms-1'>{t('train_tab')}</span>
+                <button className={`${activeTap == 'train' ? "active_button" : ''} `} onClick={tapChangeHandler} id='train'>
+                    <PiTrain className={`${activeTap == 'train' ? 'active_icon' : ''} me-1`} />
+                    {t('train_tab')}
                 </button>
             </div>
             {activeTap === 'flight' && (
