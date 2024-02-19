@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import egyptian_railway from "../assets/partners/railway.png"
 import egypt_air from "../assets/partners/egypt_Air.png"
 import elnil from "../assets/partners/el_nil.png"
@@ -9,7 +9,7 @@ import saudi from "../assets/partners/saudia.png"
 import swvl from "../assets/partners/swvl.png"
 export default function Partners() {
     return (
-        <Container>
+        <>
             <Row className="align-items-center gx-4">
                 <Col md="4" sm="12">
                     <h3>Popular Partners in Egypt</h3>
@@ -32,6 +32,6 @@ export default function Partners() {
                     <img src={swvl} className="m-1 w-50 my-2" alt="Partner image" />
                 </Col>
             </Row>
-        </Container>
+        </>
     )
 }

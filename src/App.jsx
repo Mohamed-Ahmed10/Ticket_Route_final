@@ -1,14 +1,18 @@
 import SiteNav from "./layout/SiteNav"
 import { Routes, Route } from "react-router-dom"
 import Homepage from "./views/Homepage"
-import AboutUs from "./views/AboutUS"
+import AboutUs from "./views/AboutUs"
 import FAQ from "./views/FAQ"
 import Footer from "./layout/Footer"
 import ContactUs from "./views/ContactUs"
+import { useTranslation } from "react-i18next"
 
 const App = () => {
+
+  let { i18n } = useTranslation()
+  console.log(i18n)
   return (
-    <div>
+    <div className={i18n.language === 'ar' ? "rtl" : ""}>
       <SiteNav />
 
       <Routes>
