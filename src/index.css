@@ -304,8 +304,6 @@ button.active_button {
     text-decoration: underline;
 }
 
-.footer_socials {}
-
 .footer_socials button {
     position: absolute;
     top: 0;
