@@ -31,3 +31,81 @@ body {
 .dropdown-menu[data-bs-popper] {
     left: -20px;
 }
+
+#hero_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hero_section img {
+    width: 374px;
+    height: 453px;
+    object-fit: cover;
+}
+
+#hero_section .hero_image {
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#hero_section h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#hero_section .hero_p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #9fb1bd;
+    max-width: 533px;
+}
+
+.background_box {
+    position: absolute;
+    background-color: #71b6d640;
+    width: 374px;
+    height: 453px;
+    border-radius: 15px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.tap_buttons_container {
+    display: flex;
+    align-items: center;
+}
+
+.tap_buttons_container button {
+    background-color: #fff;
+    border: none;
+    color: Gray;
+
+    padding: 10px 25px;
+}
+
+.tap_buttons_container> :first-child {
+    border-top-left-radius: 10px;
+}
+
+.tap_buttons_container> :last-child {
+    border-top-right-radius: 10px;
+}
+
+button.active_button {
+    border-bottom: 2px solid #2582c0;
+}
+
+.tap_buttons_container .active_icon {
+    color: #2582c0;
+}
+
+.booking_box {
+    background-color: #fff;
+    max-width: 800px;
+}
