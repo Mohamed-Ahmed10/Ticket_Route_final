@@ -28,6 +28,14 @@ body {
     --bs-dropdown-min-width: 50px !important
 }
 
+.nav-item {
+    background: #FFF;
+    padding: 10px;
+    border-radius: 15px;
+    width: 60px;
+    text-align: center;
+}
+
 .dropdown-menu[data-bs-popper] {
     left: -20px;
 }
