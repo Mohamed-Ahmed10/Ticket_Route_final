@@ -1,5 +1,8 @@
+import Hero from '../components/Hero.jsx'
 export default function Homepage() {
     return (
-        <div>Homepage</div>
+        <main>
+            <Hero />
+        </main>
     )
 }
