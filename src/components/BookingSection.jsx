@@ -37,12 +37,18 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='inputs_block'>
-                            <label htmlFor="">From</label>
-                            <input type="text" />
-                            <label htmlFor="">From</label>
-                            <input type="text" />
-                            <label htmlFor="">From</label>
-                            <input type="text" />
+                            <div className='booking_labels'>
+                                <label htmlFor="">From</label>
+                                <label htmlFor="">To</label>
+                                <label htmlFor="">Departure</label>
+                                <label htmlFor="">Return</label>
+                            </div>
+                            <div className='booking_inputs'>
+                                <input type="text" placeholder='enter your location' />
+                                <input type="text" placeholder='enter your destination' />
+                                <input type="text" placeholder='pick departure date' />
+                                <input type="text" placeholder='pick return date' />
+                            </div>
                         </div>
                         <div className='actions_block'>
 

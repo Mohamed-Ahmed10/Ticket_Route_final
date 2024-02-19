@@ -2,6 +2,8 @@ body {
   background: #f5f5f5 !important;
 }
 
+/* hero section */
+
 #hero_section {
   display: flex;
   align-items: center;
@@ -43,6 +45,9 @@ body {
   right: 0;
   z-index: -1;
 }
+
+/* booking form */
+
 .tap_buttons_container {
   display: flex;
   align-items: center;
@@ -71,4 +76,27 @@ button.active_button {
 .booking_box {
   background-color: #fff;
   max-width: 800px;
+}
+.inputs_block {
+  padding: 20px;
+  color: #000;
+}
+.booking_labels {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.booking_labels label {
+  padding-right: 145px;
+
+  padding-left: 20px;
+}
+.booking_labels label:not(:last-child) {
+  border-right: 2px solid black;
+}
+.booking_inputs input {
+  border: none;
+}
+
+.booking_inputs {
+  display: flex;
 }
