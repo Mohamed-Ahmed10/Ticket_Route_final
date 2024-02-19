@@ -1,46 +1,34 @@
 import { useTranslation } from "react-i18next"
-import { Button, Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import icon_transparent from "../assets/logo/icon_transparent.png"
+import { NavLink } from "react-router-dom";
 export default function SiteNav() {
 
-    let { t } = useTranslation()
+    let { t, i18n } = useTranslation()
+
+    let handleLanguage = (lang) => {
+        i18n.changeLanguage(lang)
+    }
+
     return (
         <div>
             <Navbar expand="lg">
-                <Container fluid>
+                <Container>
                     <Navbar.Brand href="#">
                         <img src={icon_transparent} alt="Icon" style={{ width: '50px' }} />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
-                        <Nav className="me-auto my-2 my-lg-0">
-                            <Nav.Link href="#action1">{t('home')}</Nav.Link>
-                            <Nav.Link href="#action2">{t('about_us')}</Nav.Link>
-                            <Nav.Link href="#action2">{t('contact_us')}</Nav.Link>
-                            <Nav.Link href="#action2">{t('faq')}</Nav.Link>
-                            <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="#" disabled>
-                                Link
-                            </Nav.Link>
+                        <Nav className="me-auto ms-4 my-2 my-lg-0">
+                            <NavLink to="/" className="mx-4 nav-link link-offset-3 ">{t('home')}</NavLink>
+                            <NavLink to="/about" className="mx-4 nav-link link-offset-3 ">{t('about_us')}</NavLink>
+                            <NavLink to="/contact_us" className="mx-4 nav-link link-offset-3 ">{t('contact_us')}</NavLink>
+                            <NavLink to="/faq" className="mx-4 nav-link link-offset-3 ">{t('faq')}</NavLink>
                         </Nav>
-                        <Form className="d-flex">
-                            <Form.Control
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-success">Search</Button>
-                        </Form>
+                        <NavDropdown title={`${i18n.language}`}>
+                            <NavDropdown.Item href="#" onClick={() => handleLanguage('en')}>En</NavDropdown.Item>
+                            <NavDropdown.Item href="#" onClick={() => handleLanguage('ar')}>Ar</NavDropdown.Item>
+                        </NavDropdown>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
