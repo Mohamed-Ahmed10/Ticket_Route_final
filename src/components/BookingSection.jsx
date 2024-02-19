@@ -36,6 +36,11 @@ function BookingSection() {
             {activeTap === 'flight' && (
                 <div className='booking_box'>
                     <form action="">
+                        <div className='trip_type'>
+                            <button>One way</button>
+                            <button>Round Trip</button>
+                            <button>Multi-city</button>
+                        </div>
                         <div className='inputs_block'>
                             <div className='booking_labels'>
                                 <label htmlFor="">From</label>
@@ -51,19 +56,110 @@ function BookingSection() {
                             </div>
                         </div>
                         <div className='actions_block'>
-
+                            <div className='checkbox_container'>
+                                <input type="checkbox" name="" id="" />
+                                <label htmlFor=""> Direct Trips</label>
+                            </div>
+                            <div>
+                                <select name="" id="">
+                                    <option value="1 Adult">1Adult</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="Economy">Economy</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="Payment Type">Payment Type</option>
+                                </select>
+                                <button className='submit_booking primary_btn'>Search</button>
+                            </div>
                         </div>
                     </form>
                 </div>
             )}
             {activeTap === 'bus' && (
                 <div className='booking_box'>
-                    bus tap
+                    <form action="">
+                        <div className='trip_type'>
+                            <button>One way</button>
+                            <button>Round Trip</button>
+                            <button>Multi-city</button>
+                        </div>
+                        <div className='inputs_block'>
+                            <div className='booking_labels'>
+                                <label htmlFor="">From</label>
+                                <label htmlFor="">To</label>
+                                <label htmlFor="">Departure</label>
+                                <label htmlFor="">Return</label>
+                            </div>
+                            <div className='booking_inputs'>
+                                <input type="text" placeholder='enter your location' />
+                                <input type="text" placeholder='enter your destination' />
+                                <input type="text" placeholder='pick departure date' />
+                                <input type="text" placeholder='pick return date' />
+                            </div>
+                        </div>
+                        <div className='actions_block'>
+                            <div className='checkbox_container'>
+                                <input type="checkbox" name="" id="" />
+                                <label htmlFor=""> Direct Trips</label>
+                            </div>
+                            <div>
+                                <select name="" id="">
+                                    <option value="1 Adult">1Adult</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="Economy">Economy</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="Payment Type">Payment Type</option>
+                                </select>
+                                <button className='submit_booking primary_btn'>Search</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             )}
             {activeTap === 'train' && (
                 <div className='booking_box'>
-                    train tap
+                    <form action="">
+                        <div className='trip_type'>
+                            <button>One way</button>
+                            <button>Round Trip</button>
+                            <button>Multi-city</button>
+                        </div>
+                        <div className='inputs_block'>
+                            <div className='booking_labels'>
+                                <label htmlFor="">From</label>
+                                <label htmlFor="">To</label>
+                                <label htmlFor="">Departure</label>
+                                <label htmlFor="">Return</label>
+                            </div>
+                            <div className='booking_inputs'>
+                                <input type="text" placeholder='enter your location' />
+                                <input type="text" placeholder='enter your destination' />
+                                <input type="text" placeholder='pick departure date' />
+                                <input type="text" placeholder='pick return date' />
+                            </div>
+                        </div>
+                        <div className='actions_block'>
+                            <div className='checkbox_container'>
+                                <input type="checkbox" name="" id="" />
+                                <label htmlFor=""> Direct Trips</label>
+                            </div>
+                            <div>
+                                <select name="" id="">
+                                    <option value="1 Adult">1Adult</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="Economy">Economy</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="Payment Type">Payment Type</option>
+                                </select>
+                                <button className='submit_booking primary_btn'>Search</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             )}
         </div>

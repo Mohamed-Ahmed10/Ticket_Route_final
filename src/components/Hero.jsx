@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import { PiPaperPlaneTilt } from "react-icons/pi";
 import heroImg from '../assets/header_image.png'
 import BookingSection from "./BookingSection";
+import Statistics from "./Statistics";
 
 
 function Hero() {
@@ -35,6 +36,9 @@ function Hero() {
             </section>
             <div>
                 <BookingSection />
+            </div>
+            <div>
+                <Statistics />
             </div>
         </Container>
     )
