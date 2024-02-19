@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-    "site_nav": "Site nav",
-    "home": "Home",
-    "about_us": "About us",
-    "contact_us": "Contact us",
-    "faq": "FAQ"
-}
-=======
   "site_nav": "Site nav",
+  "home": "Home",
+  "about_us": "About us",
+  "contact_us": "Contact us",
+  "faq": "FAQ",
   "her_sup_p": "Book your next trip with best prices",
   "hero_heading": "The best affordable",
   "hero_heading2": "Trips with Ticket Route",
@@ -16,4 +12,3 @@
   "bus_tab": " Bus",
   "train_tab": "Train"
 }
->>>>>>> 9f821be0dd12d708e26f78fc50c46f3cb102d6a4
