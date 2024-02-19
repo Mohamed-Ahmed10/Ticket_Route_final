@@ -1,4 +1,4 @@
-export default function AboutUS() {
+export default function AboutUs() {
     return (
         <div>AboutUS</div>
     )
