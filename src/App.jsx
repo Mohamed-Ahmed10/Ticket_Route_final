@@ -1,9 +1,9 @@
-
-
 const App = () => {
   return (
-    <div className="btn btn-primary">
-      App
+    <div>
+      {/* Nav */}
+      {/* Header */}
+      {/* partners */}
     </div>
   )
 }
