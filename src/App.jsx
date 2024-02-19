@@ -4,6 +4,7 @@ import Homepage from "./views/Homepage"
 import AboutUS from "./views/AboutUS"
 import FAQ from "./views/FAQ"
 import Footer from "./layout/Footer"
+
 const App = () => {
   return (
     <div>
