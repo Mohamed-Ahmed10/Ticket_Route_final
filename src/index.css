@@ -8,6 +8,9 @@ body {
 .rtl {
     direction: rtl;
 }
+.dropdown-toggle::after{
+    margin-inline-start: .255em;
+}
 
 input {
     outline: none;
@@ -38,6 +41,11 @@ input {
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
+}
+
+.secondary_btn.active {
+    background-color: #2582c026;
+    color: #2582c0;
 }
 
 .secondary_btn:hover {
@@ -140,6 +148,7 @@ input {
 
 .tabs {
     font-size: 0.8rem;
+    margin-bottom: 30px;
 }
 
 .tap_buttons_container {
@@ -233,7 +242,7 @@ button.active_button {
 }
 
 .checkbox_container label {
-    padding-left: 5px;
+    padding-inline-start: 5px;
 }
 
 .trip_type {
@@ -244,7 +253,9 @@ button.active_button {
 .stats_container {
     display: flex;
     justify-content: start;
-    gap: 15px;
+    gap: 25px;
+    margin: 40px 0;
+
 }
 
 .stats_box {
@@ -289,7 +300,7 @@ button.active_button {
 .footer_nav_links {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 15px;
 }
 
 .footer_nav_links a {
@@ -387,6 +398,32 @@ button.active_button {
 
 @media (max-width: 767px) {
 
+    .hero {
+        background-size: 40%;
+        background-position: 100% 0%
+    }
+
+    .rtl .hero {
+        background-position: 5% 5%;
+    }
+
+    .hero_text_box {
+        background: #eeeeee7a
+    }
+
+    #hero_section .hero_p {
+        color: #2C2C2C
+    }
+
+    .stats_container {
+        font-size: .6rem;
+        justify-content: space-around;
+    }
+
+    .stats_container h3 {
+        font-size: initial;
+    }
+
     /* @@@@HERO@@@@ */
     .hero_text_box {
         text-align: center;
@@ -400,6 +437,10 @@ button.active_button {
         font-size: 14px !important;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .partners img {
+        width: 25% !important;
     }
 
     .trip_type {
@@ -432,3 +473,30 @@ button.active_button {
         width: 320px;
     }
 }
+
+/******************** trips_container *************************** */
+
+.trips_container .image_container {
+    width: 40%;
+}
+
+.trips_container .image_container img {
+    max-width: 100%;
+}
+
+.trips_container .description {
+    margin-inline-start: 5px;
+    padding: 20px 0 0 20px;
+    line-height: 2;
+}
+
+.trips_container .by {
+    color: #9FB1BD;
+    font-size: .8rem;
+}
+
+.trips_container .price :first-child {
+    font-size: .6rem;
+}
+
+/******************** trips_container *************************** */

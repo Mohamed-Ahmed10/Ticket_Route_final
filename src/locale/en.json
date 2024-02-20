@@ -9,5 +9,22 @@
   "hero_p": "Search, find and book your next trip with affordable prices; Check flights, bus and train tickets from anywhere in Egypt, start now and book your next trip",
   "flight_tab": "Flights",
   "bus_tab": " Bus",
-  "train_tab": "Train"
+  "train_tab": "Train",
+  "one_way": "One way",
+  "round_trip": "Round Trip",
+  "multi_city": "Multi-city",
+  "from": "From",
+  "to": "To",
+  "departure": "Departure",
+  "return": "Return",
+  "direct_trips": "Direct Trips",
+  "economy":"Economy",
+  "payment_type":"Payment Type",
+  "search":"Search",
+  "successful_booked":"Successful booked",
+  "tickets_in_egypt":"Tickets in Egypt",
+  "everyday_clients":"Everyday clients",
+  "that_trust_us":"that trust us",
+  "happy_clients_by":"Happy clients by",
+  "our_services":"our services"
 }

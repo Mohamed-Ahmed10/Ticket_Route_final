@@ -31,44 +31,44 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button className='secondary_btn'>One way</button>
-                            <button className='secondary_btn'>Round Trip</button>
-                            <button className='secondary_btn'>Multi-city</button>
+                            <button className='secondary_btn'>{t('one_way')}</button>
+                            <button className='secondary_btn'>{t('round_trip')}</button>
+                            <button className='secondary_btn'>{t('multi_city')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">From</label>
+                                <label className="fw-bold">{t('from')}</label>
                                 <input type="text" placeholder='enter your location' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">To</label>
+                                <label className="fw-bold">{t('to')}</label>
                                 <input type="text" placeholder='enter your destination' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">Departure</label>
+                                <label className="fw-bold">{t('departure')}</label>
                                 <input type="text" placeholder='pick departure date' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">Return</label>
+                                <label className="fw-bold">{t('return')}</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
                         </div>
                         <div className='actions_block'>
                             <div className='checkbox_container'>
-                                <input className="form-check-input mt-0" type="checkbox" value="" />
-                                <label htmlFor=""> Direct Trips</label>
+                                <input className="form-check-input mt-0" id="direct" type="checkbox" value="" />
+                                <label htmlFor="direct">{t('direct_trips')}</label>
                             </div>
                             <div className='forms_menu' >
-                                <select name="" id="">
+                                {/* <select name="" id="">
                                     <option value="1 Adult">1Adult</option>
+                                </select> */}
+                                <select name="" id="">
+                                    <option value="Economy">{t('economy')}</option>
                                 </select>
                                 <select name="" id="">
-                                    <option value="Economy">Economy</option>
+                                    <option value="Payment Type">{t('payment_type')}</option>
                                 </select>
-                                <select name="" id="">
-                                    <option value="Payment Type">Payment Type</option>
-                                </select>
-                                <button className='submit_booking primary_btn'>Search</button>
+                                <button className='submit_booking primary_btn'>{t('search')}</button>
                             </div>
                         </div>
                     </form>
@@ -78,44 +78,43 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button className='secondary_btn'>One way</button>
-                            <button className='secondary_btn'>Round Trip</button>
-                            <button className='secondary_btn'>Multi-city</button>
+                            <button className='secondary_btn'>{t('one_way')}</button>
+                            <button className='secondary_btn'>{t('round_trip')}</button>
                         </div>
-                        <div className=' inputs_block d-flex'>
+                        <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">From</label>
+                                <label className="fw-bold">{t('from')}</label>
                                 <input type="text" placeholder='enter your location' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">To</label>
+                                <label className="fw-bold">{t('to')}</label>
                                 <input type="text" placeholder='enter your destination' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">Departure</label>
+                                <label className="fw-bold">{t('departure')}</label>
                                 <input type="text" placeholder='pick departure date' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">Return</label>
+                                <label className="fw-bold">{t('return')}</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
                         </div>
                         <div className='actions_block'>
                             <div className='checkbox_container'>
-                                <input className="form-check-input mt-0" type="checkbox" value="" />
-                                <label htmlFor=""> Direct Trips</label>
+                                <input className="form-check-input mt-0" id="direct" type="checkbox" value="" />
+                                <label htmlFor="direct">{t('direct_trips')}</label>
                             </div>
-                            <div className='forms_menu'>
+                            <div className='forms_menu' >
+                                {/* <select name="" id="">
+                                <option value="1 Adult">1Adult</option>
+                            </select> */}
                                 <select name="" id="">
-                                    <option value="1 Adult">1Adult</option>
+                                    <option value="Economy">{t('economy')}</option>
                                 </select>
                                 <select name="" id="">
-                                    <option value="Economy">Economy</option>
+                                    <option value="Payment Type">{t('payment_type')}</option>
                                 </select>
-                                <select name="" id="">
-                                    <option value="Payment Type">Payment Type</option>
-                                </select>
-                                <button className='submit_booking primary_btn'>Search</button>
+                                <button className='submit_booking primary_btn'>{t('search')}</button>
                             </div>
                         </div>
                     </form>
@@ -125,44 +124,43 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button className='secondary_btn'>One way</button>
-                            <button className='secondary_btn'>Round Trip</button>
-                            <button className='secondary_btn'>Multi-city</button>
+                            <button className='secondary_btn'>{t('one_way')}</button>
+                            <button className='secondary_btn'>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">From</label>
+                                <label className="fw-bold">{t('from')}</label>
                                 <input type="text" placeholder='enter your location' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">To</label>
+                                <label className="fw-bold">{t('to')}</label>
                                 <input type="text" placeholder='enter your destination' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">Departure</label>
+                                <label className="fw-bold">{t('departure')}</label>
                                 <input type="text" placeholder='pick departure date' />
                             </div>
                             <div className='input_container d-flex flex-column border-start p-2'>
-                                <label className="fw-bold">Return</label>
+                                <label className="fw-bold">{t('return')}</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
                         </div>
                         <div className='actions_block'>
                             <div className='checkbox_container'>
-                                <input className="form-check-input mt-0" type="checkbox" value="" />
-                                <label htmlFor=""> Direct Trips</label>
+                                <input className="form-check-input mt-0" id="direct" type="checkbox" value="" />
+                                <label htmlFor="direct">{t('direct_trips')}</label>
                             </div>
                             <div className='forms_menu' >
+                                {/* <select name="" id="">
+                                <option value="1 Adult">1Adult</option>
+                            </select> */}
                                 <select name="" id="">
-                                    <option value="1 Adult">1Adult</option>
+                                    <option value="Economy">{t('economy')}</option>
                                 </select>
                                 <select name="" id="">
-                                    <option value="Economy">Economy</option>
+                                    <option value="Payment Type">{t('payment_type')}</option>
                                 </select>
-                                <select name="" id="">
-                                    <option value="Payment Type">Payment Type</option>
-                                </select>
-                                <button className='submit_booking primary_btn'>Search</button>
+                                <button className='submit_booking primary_btn'>{t('search')}</button>
                             </div>
                         </div>
                     </form>

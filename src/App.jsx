@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next"
 const App = () => {
 
   let { i18n } = useTranslation()
-  console.log(i18n)
   return (
     <div className={i18n.language === 'ar' ? "rtl" : ""}>
       <SiteNav />

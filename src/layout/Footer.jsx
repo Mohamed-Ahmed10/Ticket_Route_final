@@ -2,11 +2,13 @@
 import icon_transparent from "../assets/logo/icon_transparent.png"
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-
-
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"
 
 
 export default function Footer() {
+    let { t } = useTranslation()
+
     return (
         <div id="footer">
             <div className="footer_logo">
@@ -17,13 +19,11 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer_nav">
-                <div className="footer_nav_links">
-                    <a href="/">Home</a>
-                    <a href="/about">About Us</a>
-                </div>
-                <div className="footer_nav_links">
-                    <a href="/">Contact Us</a>
-                    <a href="/about">F&QS</a>
+                <div className="footer_nav_links flex-wrap">
+                    <Link to="/" className="w-50 nav-link link-offset-3 ">{t('home')}</Link>
+                    <Link to="/about" className="w-50 nav-link link-offset-3 ">{t('about_us')}</Link>
+                    <Link to="/contact_us" className="w-50 nav-link link-offset-3 ">{t('contact_us')}</Link>
+                    <Link to="/faq" className="w-50 nav-link link-offset-3 ">{t('faq')}</Link>
                 </div>
             </div>
             <div className="footer_socials">

@@ -9,29 +9,29 @@ import saudi from "../assets/partners/saudia.png"
 import swvl from "../assets/partners/swvl.png"
 export default function Partners() {
     return (
-        <>
+        <div className="partners my-4">
             <Row className="align-items-center gx-4">
                 <Col md="4" sm="12">
                     <h3>Popular Partners in Egypt</h3>
                     <p className="light">Book cheap trips on out partnats and you’re ready to go </p>
                 </Col>
-                <Col md="2" sm="6" className="text-center">
+                <Col md="2" sm="6" className="d-flex justify-content-around">
                     <img src={egyptian_railway} className="m-1 w-50 my-2" alt="Partner image" />
                     <img src={egypt_air} className="m-1 w-50 my-2" alt="Partner image" />
                 </Col>
-                <Col md="2" sm="6" className="text-center">
+                <Col md="2" sm="6" className="d-flex justify-content-around">
                     <img src={elnil} className="m-1 w-50 my-2" alt="Partner image" />
                     <img src={emirates} className="m-1 w-50 my-2" alt="Partner image" />
                 </Col>
-                <Col md="2" sm="6" className="text-center">
+                <Col md="2" sm="6" className="d-flex justify-content-around">
                     <img src={fast_bus} className="m-1 w-50 my-2" alt="Partner image" />
                     <img src={go_bus} className="m-1 w-50 my-2" alt="Partner image" />
                 </Col>
-                <Col md="2" sm="6" className="text-center">
+                <Col md="2" sm="6" className="d-flex justify-content-around">
                     <img src={saudi} className="m-1 w-50 my-2" alt="Partner image" />
                     <img src={swvl} className="m-1 w-50 my-2" alt="Partner image" />
                 </Col>
             </Row>
-        </>
+        </div>
     )
 }
