@@ -8,23 +8,21 @@ import { PiTrain } from "react-icons/pi";
 function BookingSection() {
     const [activeTap, setActiveTap] = useState("flight")
     let { t } = useTranslation();
-    const tapChangeHandler = (e) => {
-        setActiveTap(e.target.id)
-    }
+
 
     return (
         <div className='tabs'>
             <div className='tap_buttons_container'>
-                <button className={`${activeTap == 'flight' ? "active_button" : ''} `} onClick={tapChangeHandler} id='flight'>
+                <button className={`${activeTap == 'flight' ? "active_button" : ''} `} onClick={() => setActiveTap('flight')} id='flight'>
                     <IoAirplaneOutline className={`${activeTap == 'flight' ? 'active_icon' : ''} me-1`} />
                     {t('flight_tab')}
                 </button>
-                <button className={`${activeTap == 'bus' ? "active_button" : ''}`} onClick={tapChangeHandler} id='bus'>
+                <button className={`${activeTap == 'bus' ? "active_button" : ''}`} onClick={() => setActiveTap('bus')} id='bus'>
                     <TbBus className={`${activeTap == 'bus' ? 'active_icon' : ''} me-1`} />
                     {t('bus_tab')}
                 </button>
 
-                <button className={`${activeTap == 'train' ? "active_button" : ''} `} onClick={tapChangeHandler} id='train'>
+                <button className={`${activeTap == 'train' ? "active_button" : ''} `} onClick={() => setActiveTap('train')} id='train'>
                     <PiTrain className={`${activeTap == 'train' ? 'active_icon' : ''} me-1`} />
                     {t('train_tab')}
                 </button>
@@ -84,23 +82,27 @@ function BookingSection() {
                             <button>Round Trip</button>
                             <button>Multi-city</button>
                         </div>
-                        <div className='inputs_block'>
-                            <div className='booking_labels'>
-                                <label htmlFor="">From</label>
-                                <label htmlFor="">To</label>
-                                <label htmlFor="">Departure</label>
-                                <label htmlFor="">Return</label>
-                            </div>
-                            <div className='booking_inputs'>
+                        <div className='inputs_block d-flex'>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">From</label>
                                 <input type="text" placeholder='enter your location' />
+                            </div>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">To</label>
                                 <input type="text" placeholder='enter your destination' />
+                            </div>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">Departure</label>
                                 <input type="text" placeholder='pick departure date' />
+                            </div>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">Return</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
                         </div>
                         <div className='actions_block'>
                             <div className='checkbox_container'>
-                                <input type="checkbox" name="" id="" />
+                                <input className="form-check-input mt-0" type="checkbox" value="" />
                                 <label htmlFor=""> Direct Trips</label>
                             </div>
                             <div>
@@ -127,23 +129,27 @@ function BookingSection() {
                             <button>Round Trip</button>
                             <button>Multi-city</button>
                         </div>
-                        <div className='inputs_block'>
-                            <div className='booking_labels'>
-                                <label htmlFor="">From</label>
-                                <label htmlFor="">To</label>
-                                <label htmlFor="">Departure</label>
-                                <label htmlFor="">Return</label>
-                            </div>
-                            <div className='booking_inputs'>
+                        <div className='inputs_block d-flex'>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">From</label>
                                 <input type="text" placeholder='enter your location' />
+                            </div>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">To</label>
                                 <input type="text" placeholder='enter your destination' />
+                            </div>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">Departure</label>
                                 <input type="text" placeholder='pick departure date' />
+                            </div>
+                            <div className='d-flex flex-column border-start p-2'>
+                                <label className="fw-bold">Return</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
                         </div>
                         <div className='actions_block'>
                             <div className='checkbox_container'>
-                                <input type="checkbox" name="" id="" />
+                                <input className="form-check-input mt-0" type="checkbox" value="" />
                                 <label htmlFor=""> Direct Trips</label>
                             </div>
                             <div>
