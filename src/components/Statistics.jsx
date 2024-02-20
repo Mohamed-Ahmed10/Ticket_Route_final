@@ -2,7 +2,7 @@
 
 const Statistics = () => {
     return (
-        <div className="stats_container">
+        <div className="stats_container mt-3">
             <div className="stats_box">
                 <h3>
                     951<span>K+</span>
