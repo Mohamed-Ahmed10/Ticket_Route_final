@@ -36,19 +36,19 @@ function BookingSection() {
                             <button>Multi-city</button>
                         </div>
                         <div className='inputs_block d-flex'>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">From</label>
                                 <input type="text" placeholder='enter your location' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">To</label>
                                 <input type="text" placeholder='enter your destination' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">Departure</label>
                                 <input type="text" placeholder='pick departure date' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">Return</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
@@ -58,7 +58,7 @@ function BookingSection() {
                                 <input className="form-check-input mt-0" type="checkbox" value="" />
                                 <label htmlFor=""> Direct Trips</label>
                             </div>
-                            <div>
+                            <div className='forms_menu' >
                                 <select name="" id="">
                                     <option value="1 Adult">1Adult</option>
                                 </select>
@@ -82,20 +82,20 @@ function BookingSection() {
                             <button>Round Trip</button>
                             <button>Multi-city</button>
                         </div>
-                        <div className='inputs_block d-flex'>
-                            <div className='d-flex flex-column border-start p-2'>
+                        <div className=' inputs_block d-flex'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">From</label>
                                 <input type="text" placeholder='enter your location' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">To</label>
                                 <input type="text" placeholder='enter your destination' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">Departure</label>
                                 <input type="text" placeholder='pick departure date' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">Return</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
@@ -105,7 +105,7 @@ function BookingSection() {
                                 <input className="form-check-input mt-0" type="checkbox" value="" />
                                 <label htmlFor=""> Direct Trips</label>
                             </div>
-                            <div>
+                            <div className='forms_menu'>
                                 <select name="" id="">
                                     <option value="1 Adult">1Adult</option>
                                 </select>
@@ -130,19 +130,19 @@ function BookingSection() {
                             <button>Multi-city</button>
                         </div>
                         <div className='inputs_block d-flex'>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">From</label>
                                 <input type="text" placeholder='enter your location' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">To</label>
                                 <input type="text" placeholder='enter your destination' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">Departure</label>
                                 <input type="text" placeholder='pick departure date' />
                             </div>
-                            <div className='d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column border-start p-2'>
                                 <label className="fw-bold">Return</label>
                                 <input type="text" placeholder='pick return date' />
                             </div>
@@ -152,7 +152,7 @@ function BookingSection() {
                                 <input className="form-check-input mt-0" type="checkbox" value="" />
                                 <label htmlFor=""> Direct Trips</label>
                             </div>
-                            <div>
+                            <div className='forms_menu' >
                                 <select name="" id="">
                                     <option value="1 Adult">1Adult</option>
                                 </select>
@@ -170,22 +170,6 @@ function BookingSection() {
             )}
         </div>
 
-
-        // <Tabs   
-        //     activeKey={key}
-        //     onSelect={(k) => setKey(k)}
-        //     className="mb-3"
-        // >
-        //     <Tab eventKey="home" class title={t('flight_tab')}>
-        //         Tab content for Home
-        //     </Tab>
-        //     <Tab eventKey="profile" title={t('bus_tab')}>
-        //         Tab content for Profile
-        //     </Tab>
-        //     <Tab eventKey="contact" title={t('train_tab')}>
-        //         Tab content for Contact
-        //     </Tab>
-        // </Tabs>
     )
 }
 
