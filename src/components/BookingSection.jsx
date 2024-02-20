@@ -31,9 +31,9 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button>One way</button>
-                            <button>Round Trip</button>
-                            <button>Multi-city</button>
+                            <button className='secondary_btn'>One way</button>
+                            <button className='secondary_btn'>Round Trip</button>
+                            <button className='secondary_btn'>Multi-city</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column border-start p-2'>
@@ -78,9 +78,9 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button>One way</button>
-                            <button>Round Trip</button>
-                            <button>Multi-city</button>
+                            <button className='secondary_btn'>One way</button>
+                            <button className='secondary_btn'>Round Trip</button>
+                            <button className='secondary_btn'>Multi-city</button>
                         </div>
                         <div className=' inputs_block d-flex'>
                             <div className='input_container d-flex flex-column border-start p-2'>
@@ -125,9 +125,9 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button>One way</button>
-                            <button>Round Trip</button>
-                            <button>Multi-city</button>
+                            <button className='secondary_btn'>One way</button>
+                            <button className='secondary_btn'>Round Trip</button>
+                            <button className='secondary_btn'>Multi-city</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column border-start p-2'>
