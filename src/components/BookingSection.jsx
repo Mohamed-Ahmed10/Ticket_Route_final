@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { IoAirplaneOutline } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
 import { PiTrain } from "react-icons/pi";
+import { useNavigate } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 // First, get the user's location coordinates using the Geolocation API
@@ -12,8 +13,11 @@ import { PiTrain } from "react-icons/pi";
 
 
 function BookingSection() {
+    const navigate = useNavigate();
+
     const [activeTap, setActiveTap] = useState("flight")
     const [oneWay, setOneWay] = useState(true);
+    const [searchTerm, setSearchTerm] = useState("")
 
     let { t } = useTranslation();
     const [fromInput, setFromInput] = useState("")
@@ -44,6 +48,23 @@ function BookingSection() {
                 .catch((error) => console.log(error));
         }
     }, [])
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set("searchTerm", searchTerm);
+        const searchQuery = urlParams.toString();
+        navigate(`/search?${searchQuery}`);
+    };
+
+    useEffect(() => {
+        const urlParams = new URLSearchParams(location.search);
+        const searchTermFromUrl = urlParams.get("searchTerm");
+        if (searchTermFromUrl)
+        {
+            setSearchTerm(searchTermFromUrl);
+        }
+    }, [location.search]);
 
     return (
         <div className='tabs'>
@@ -79,39 +100,53 @@ function BookingSection() {
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder={t("enter_your_location")}
+                                <input type="text"
+                                    name='from'
+                                    placeholder={t("enter_your_location")}
                                     onChange={(e) => setFromInput(e.target.value)}
                                     value={`${fromInput}`} />
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
-                                <input type="text" placeholder={t("enter_your_destination")} />
+                                <input type="text"
+                                    name='to'
+                                    placeholder={t("enter_your_destination")}
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                />
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('departure')}</label>
-                                <input type="text" placeholder={t("pick_departure_date")} />
+                                <input type="text"
+                                    name="departure"
+                                    placeholder={t("pick_departure_date")} />
                             </div>
                             <div className={`input_container d-flex flex-column p-2 ${oneWay && 'disabled'}`}>
                                 <label className={`fw-bold ${oneWay && 'disabled'}`}>{t('return')}</label>
-                                <input disabled={oneWay} type="text" placeholder={t("pick_return_date")} />
+                                <input disabled={oneWay} type="text" name='return' placeholder={t("pick_return_date")} />
                             </div>
                         </div>
                         <div className='actions_block'>
                             <div className='checkbox_container'>
-                                <input className="form-check-input mt-0" id="direct" type="checkbox" value="" />
+                                <input
+                                    className="form-check-input mt-0" id="direct"
+                                    name='direct'
+                                    type="checkbox" value="" />
                                 <label htmlFor="direct">{t('direct_trips')}</label>
                             </div>
                             <div className='forms_menu' >
-                                <select name="" id="">
+                                <select name="seats" id="">
                                     <option value="1 Adult">1Adult</option>
                                 </select>
-                                <select name="" id="">
+                                <select name="package" id="">
                                     <option value="Economy">{t('economy')}</option>
                                 </select>
-                                <select name="" id="">
+                                <select name="payment" id="">
                                     <option value="Payment Type">{t('payment_type')}</option>
                                 </select>
-                                <button className='submit_booking primary_btn link-underline link-underline-opacity-0' >{t('search')}</button>
+                                <button className='submit_booking primary_btn link-underline link-underline-opacity-0'
+                                    onClick={handleSearch}
+                                >{t('search')}</button>
                             </div>
                         </div>
                     </form>
