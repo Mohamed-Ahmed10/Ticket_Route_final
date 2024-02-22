@@ -3,10 +3,46 @@ import { useTranslation } from "react-i18next"
 import { IoStarOutline } from "react-icons/io5";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
+import { useEffect, useState } from "react";
 
 
 export default function Search() {
-    let { t } = useTranslation()
+    let { t } = useTranslation();
+    const [searchFilterData, setSearchFilterData] = useState({
+        searchTerms: "",
+        to: "",
+        from: "",
+        departure: "",
+        roundTrip: false
+    });
+
+    useEffect(() => {
+        //putting query data into objects :D
+        const urlParams = new URLSearchParams(location.search);
+        const searchTermFromUrl = urlParams.get("searchTerm");
+        const toFromUrl = urlParams.get("to");
+        const fromFromUrl = urlParams.get("from");
+        const departureFromUrl = urlParams.get("departure");
+        const roundTripFromUrl = urlParams.get("roundTrip");
+
+        // making sure if one of data truly exist
+
+        if (searchTermFromUrl || toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl)
+        {
+            setSearchFilterData({
+                searchTerms: searchTermFromUrl || "",
+                to: toFromUrl || "",
+                from: fromFromUrl || "",
+                departure: departureFromUrl || "",
+                roundTrip: roundTripFromUrl || false
+            })
+        }
+        console.log(searchFilterData);
+        //FETCH DATA HERE
+
+        //ON CHANGE INPUTS HERE :D
+
+    }, [])
     return (
         <Container className="mt-4 search_view">
             <div className="d-flex justify-content-between align-content-center">
@@ -48,7 +84,7 @@ export default function Search() {
                     <input type="text" placeholder={t("pick_return_date")} />
                 </div>
             </div>
-            <hr className="my-4"/>
+            <hr className="my-4" />
             <div className="d-flex filter_parent">
                 <div className="flex-fill d-flex filter p-2 active">
                     <IoStarOutline />
