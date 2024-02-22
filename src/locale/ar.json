@@ -27,5 +27,12 @@
     "that_trust_us": "يثق بنا",
     "happy_clients_by": "عملاء سعداء",
     "our_services": "بخدماتنا",
-    "footer_tip": "احجز رحلات رخيصة مع شركائك وستكون جاهزًا للانطلاق"
+    "footer_tip": "احجز رحلات رخيصة مع شركائك وستكون جاهزًا للانطلاق",
+    "fastest": "الأسرع",
+    "recommended": "المفضلة",
+    "cheapest": "الارخص",
+    "enter_your_destination": "أدخل وجهتك",
+    "pick_departure_date": "اختر تاريخ المغادرة",
+    "enter_your_location": "أدخل موقعك",
+    "pick_return_date": "اختر تاريخ العودة"
 }

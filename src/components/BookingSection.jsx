@@ -36,21 +36,21 @@ function BookingSection() {
                             <button className='secondary_btn'>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder='enter your location' />
+                                <input type="text" placeholder={t("enter_your_location")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
-                                <input type="text" placeholder='enter your destination' />
+                                <input type="text" placeholder={t("enter_your_destination")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('departure')}</label>
-                                <input type="text" placeholder='pick departure date' />
+                                <input type="text" placeholder={t("pick_departure_date")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('return')}</label>
-                                <input type="text" placeholder='pick return date' />
+                                <input type="text" placeholder={t("pick_return_date")} />
                             </div>
                         </div>
                         <div className='actions_block'>
@@ -59,9 +59,9 @@ function BookingSection() {
                                 <label htmlFor="direct">{t('direct_trips')}</label>
                             </div>
                             <div className='forms_menu' >
-                                {/* <select name="" id="">
+                                <select name="" id="">
                                     <option value="1 Adult">1Adult</option>
-                                </select> */}
+                                </select>
                                 <select name="" id="">
                                     <option value="Economy">{t('economy')}</option>
                                 </select>
@@ -82,21 +82,21 @@ function BookingSection() {
                             <button className='secondary_btn'>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder='enter your location' />
+                                <input type="text" placeholder={t("enter_your_location")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
-                                <input type="text" placeholder='enter your destination' />
+                                <input type="text" placeholder={t("enter_your_destination")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('departure')}</label>
-                                <input type="text" placeholder='pick departure date' />
+                                <input type="text" placeholder={t("pick_departure_date")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('return')}</label>
-                                <input type="text" placeholder='pick return date' />
+                                <input type="text" placeholder={t("pick_return_date")} />
                             </div>
                         </div>
                         <div className='actions_block'>
@@ -128,21 +128,21 @@ function BookingSection() {
                             <button className='secondary_btn'>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder='enter your location' />
+                                <input type="text" placeholder={t("enter_your_location")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
-                                <input type="text" placeholder='enter your destination' />
+                                <input type="text" placeholder={t("enter_your_destination")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('departure')}</label>
-                                <input type="text" placeholder='pick departure date' />
+                                <input type="text" placeholder={t("pick_departure_date")} />
                             </div>
-                            <div className='input_container d-flex flex-column border-start p-2'>
+                            <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('return')}</label>
-                                <input type="text" placeholder='pick return date' />
+                                <input type="text" placeholder={t("pick_return_date")} />
                             </div>
                         </div>
                         <div className='actions_block'>

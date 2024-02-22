@@ -6,6 +6,7 @@ import FAQ from "./views/FAQ"
 import Footer from "./layout/Footer"
 import ContactUs from "./views/ContactUs"
 import { useTranslation } from "react-i18next"
+import Search from "./views/Search"
 
 const App = () => {
 
@@ -19,9 +20,10 @@ const App = () => {
         <Route path="/about" Component={AboutUs} />
         <Route path="/contact_uc" Component={ContactUs} />
         <Route path="/faq" Component={FAQ} />
+        <Route path="/search" Component={Search} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
