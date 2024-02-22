@@ -13,6 +13,8 @@ import { PiTrain } from "react-icons/pi";
 
 function BookingSection() {
     const [activeTap, setActiveTap] = useState("flight")
+    const [oneWay, setOneWay] = useState(true);
+
     let { t } = useTranslation();
     const [fromInput, setFromInput] = useState("")
     useEffect(() => {
@@ -65,11 +67,14 @@ function BookingSection() {
                     <form action="">
                         <div className='trip_type'>
                             <button
+                                onClick={() => setOneWay(!oneWay)}
                                 type='button'
-                                className='secondary_btn'>{t('one_way')}</button>
+                                className={`secondary_btn ${oneWay && 'secondary_active'}`}>{t('one_way')}</button>
                             <button
+
+                                onClick={() => setOneWay(!oneWay)}
                                 type='button'
-                                className='secondary_btn'>{t('round_trip')}</button>
+                                className={`secondary_btn ${!oneWay && 'secondary_active'}`}>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column p-2'>
@@ -86,9 +91,9 @@ function BookingSection() {
                                 <label className="fw-bold">{t('departure')}</label>
                                 <input type="text" placeholder={t("pick_departure_date")} />
                             </div>
-                            <div className='input_container d-flex flex-column p-2'>
-                                <label className="fw-bold">{t('return')}</label>
-                                <input type="text" placeholder={t("pick_return_date")} />
+                            <div className={`input_container d-flex flex-column p-2 ${oneWay && 'disabled'}`}>
+                                <label className={`fw-bold ${oneWay && 'disabled'}`}>{t('return')}</label>
+                                <input disabled={oneWay} type="text" placeholder={t("pick_return_date")} />
                             </div>
                         </div>
                         <div className='actions_block'>
@@ -116,13 +121,23 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button className='secondary_btn'>{t('one_way')}</button>
-                            <button className='secondary_btn'>{t('round_trip')}</button>
+                            <button
+                                onClick={() => setOneWay(!oneWay)}
+                                type='button'
+                                className={`secondary_btn ${oneWay && 'secondary_active'}`}>{t('one_way')}</button>
+                            <button
+
+                                onClick={() => setOneWay(!oneWay)}
+                                type='button'
+                                className={`secondary_btn ${!oneWay && 'secondary_active'}`}>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder={t("enter_your_location")} />
+                                <input type="text" placeholder={t("enter_your_location")}
+                                    onChange={(e) => setFromInput(e.target.value)}
+                                    value={`${fromInput}`}
+                                />
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
@@ -132,9 +147,9 @@ function BookingSection() {
                                 <label className="fw-bold">{t('departure')}</label>
                                 <input type="text" placeholder={t("pick_departure_date")} />
                             </div>
-                            <div className='input_container d-flex flex-column p-2'>
-                                <label className="fw-bold">{t('return')}</label>
-                                <input type="text" placeholder={t("pick_return_date")} />
+                            <div className={`input_container d-flex flex-column p-2 ${oneWay && 'disabled'}`}>
+                                <label className={`fw-bold ${oneWay && 'disabled'}`}>{t('return')}</label>
+                                <input disabled={oneWay} type="text" placeholder={t("pick_return_date")} />
                             </div>
                         </div>
                         <div className='actions_block'>
@@ -162,13 +177,23 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button className='secondary_btn'>{t('one_way')}</button>
-                            <button className='secondary_btn'>{t('round_trip')}</button>
+                            <button
+                                onClick={() => setOneWay(!oneWay)}
+                                type='button'
+                                className={`secondary_btn ${oneWay && 'secondary_active'}`}>{t('one_way')}</button>
+                            <button
+
+                                onClick={() => setOneWay(!oneWay)}
+                                type='button'
+                                className={`secondary_btn ${!oneWay && 'secondary_active'}`}>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder={t("enter_your_location")} />
+                                <input type="text" placeholder={t("enter_your_location")}
+                                    onChange={(e) => setFromInput(e.target.value)}
+                                    value={`${fromInput}`}
+                                />
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
@@ -178,9 +203,9 @@ function BookingSection() {
                                 <label className="fw-bold">{t('departure')}</label>
                                 <input type="text" placeholder={t("pick_departure_date")} />
                             </div>
-                            <div className='input_container d-flex flex-column p-2'>
-                                <label className="fw-bold">{t('return')}</label>
-                                <input type="text" placeholder={t("pick_return_date")} />
+                            <div className={`input_container d-flex flex-column p-2 ${oneWay && 'disabled'}`}>
+                                <label className={`fw-bold ${oneWay && 'disabled'}`}>{t('return')}</label>
+                                <input disabled={oneWay} type="text" placeholder={t("pick_return_date")} />
                             </div>
                         </div>
                         <div className='actions_block'>
