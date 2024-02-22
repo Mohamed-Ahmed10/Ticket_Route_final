@@ -4,7 +4,7 @@ import Homepage from "./views/Homepage"
 import About from "./views/About"
 import FAQ from "./views/FAQ"
 import Footer from "./layout/Footer"
-import ContactUs from "./views/ContactUs"
+import Contact from "./views/Contact"
 import { useTranslation } from "react-i18next"
 import Search from "./views/Search"
 
@@ -18,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" Component={Homepage} />
         <Route path="/about" Component={About} />
-        <Route path="/contact_uc" Component={ContactUs} />
+        <Route path="/contact" Component={Contact} />
         <Route path="/faq" Component={FAQ} />
         <Route path="/search" Component={Search} />
       </Routes>
