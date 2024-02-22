@@ -1,7 +1,7 @@
 import SiteNav from "./layout/SiteNav"
 import { Routes, Route } from "react-router-dom"
 import Homepage from "./views/Homepage"
-import AboutUs from "./views/AboutUS"
+import About from "./views/About"
 import FAQ from "./views/FAQ"
 import Footer from "./layout/Footer"
 import ContactUs from "./views/ContactUs"
@@ -17,7 +17,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" Component={Homepage} />
-        <Route path="/about" Component={AboutUs} />
+        <Route path="/about" Component={About} />
         <Route path="/contact_uc" Component={ContactUs} />
         <Route path="/faq" Component={FAQ} />
         <Route path="/search" Component={Search} />
