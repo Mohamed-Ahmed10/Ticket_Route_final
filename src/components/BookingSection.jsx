@@ -1,15 +1,47 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { IoAirplaneOutline } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
 import { PiTrain } from "react-icons/pi";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+
+// First, get the user's location coordinates using the Geolocation API
+
+
+// Then, pass the location coordinates to a Geocoding API to get the city name
 
 
 function BookingSection() {
     const [activeTap, setActiveTap] = useState("flight")
     let { t } = useTranslation();
+    const [fromInput, setFromInput] = useState("")
+    useEffect(() => {
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(showCity);
+        } else
+        {
+            console.log("Geolocation is not supported by this browser.");
+        }
 
+        function showCity(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Make a request to a Geocoding API (e.g. Google Maps Geocoding API)
+            const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+
+            fetch(url)
+                .then((response) => response.json())
+                .then((data) => {
+                    // Parse the city name from the API response
+                    const city = data
+                    console.log(city);
+                    setFromInput(city.city)
+                })
+                .catch((error) => console.log(error));
+        }
+    }, [])
 
     return (
         <div className='tabs'>
@@ -32,13 +64,19 @@ function BookingSection() {
                 <div className='booking_box'>
                     <form action="">
                         <div className='trip_type'>
-                            <button className='secondary_btn'>{t('one_way')}</button>
-                            <button className='secondary_btn'>{t('round_trip')}</button>
+                            <button
+                                type='button'
+                                className='secondary_btn'>{t('one_way')}</button>
+                            <button
+                                type='button'
+                                className='secondary_btn'>{t('round_trip')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder={t("enter_your_location")} />
+                                <input type="text" placeholder={t("enter_your_location")}
+                                    onChange={(e) => setFromInput(e.target.value)}
+                                    value={`${fromInput}`} />
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
@@ -68,7 +106,7 @@ function BookingSection() {
                                 <select name="" id="">
                                     <option value="Payment Type">{t('payment_type')}</option>
                                 </select>
-                                <Link className='submit_booking primary_btn link-underline link-underline-opacity-0' to="/search">{t('search')}</Link>
+                                <button className='submit_booking primary_btn link-underline link-underline-opacity-0' >{t('search')}</button>
                             </div>
                         </div>
                     </form>

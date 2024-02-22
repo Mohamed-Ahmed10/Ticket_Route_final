@@ -4,7 +4,8 @@
       "id": "1",
       "title": "saudia",
       "type": "flight",
-      "phone": "+966 920022222."
+      "phone": "+966 920022222.",
+      "image": ""
     },
     { "id": "2", "title": "swevel", "type": "bus", "phone": "01201320522" },
     { "id": "3", "title": "east bus", "type": "bus", "phone": "02 22633254" },
