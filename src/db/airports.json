@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Hartsfield-Jackson Atlanta International Airport",
+    "code": "ATL",
+    "location": "Atlanta, Georgia, United States"
+  },
+  {
+    "name": "Heathrow Airport",
+    "code": "LHR",
+    "location": "London, United Kingdom"
+  },
+  {
+    "name": "Los Angeles International Airport",
+    "code": "LAX",
+    "location": "Los Angeles, California, United States"
+  },
+  {
+    "name": "Tokyo Haneda Airport",
+    "code": "HND",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "name": "Dubai International Airport",
+    "code": "DXB",
+    "location": "Dubai, United Arab Emirates"
+  },
+  {
+    "name": "Beijing Capital International Airport",
+    "code": "PEK",
+    "location": "Beijing, China"
+  },
+  {
+    "name": "O'Hare International Airport",
+    "code": "ORD",
+    "location": "Chicago, Illinois, United States"
+  },
+  {
+    "name": "Frankfurt Airport",
+    "code": "FRA",
+    "location": "Frankfurt, Germany"
+  },
+  {
+    "name": "Singapore Changi Airport",
+    "code": "SIN",
+    "location": "Singapore"
+  },
+  {
+    "name": "Denver International Airport",
+    "code": "DEN",
+    "location": "Denver, Colorado, United States"
+  }
+]

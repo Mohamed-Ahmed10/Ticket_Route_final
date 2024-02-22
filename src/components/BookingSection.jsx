@@ -17,7 +17,7 @@ function BookingSection() {
 
     const [activeTap, setActiveTap] = useState("flight")
     const [oneWay, setOneWay] = useState(true);
-    const [searchTerm, setSearchTerm] = useState({});
+    const [searchTerm, setSearchTerm] = useState("");
 
     let { t } = useTranslation();
     const [fromInput, setFromInput] = useState("")

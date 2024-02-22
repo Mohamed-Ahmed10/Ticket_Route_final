@@ -4,17 +4,24 @@ import { IoStarOutline } from "react-icons/io5";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
 import { useEffect, useState } from "react";
+import { trips } from '../db/trips'
+
 
 
 export default function Search() {
     let { t } = useTranslation();
+
+    const [availableTickets, setAvailableTickets] = useState([]);
+
     const [searchFilterData, setSearchFilterData] = useState({
-        searchTerms: "",
+        searchTerm: "",
         to: "",
         from: "",
         departure: "",
         roundTrip: false
     });
+
+
 
     useEffect(() => {
         //putting query data into objects :D
@@ -30,7 +37,7 @@ export default function Search() {
         if (searchTermFromUrl || toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl)
         {
             setSearchFilterData({
-                searchTerms: searchTermFromUrl || "",
+                searchTerm: searchTermFromUrl || "",
                 to: toFromUrl || "",
                 from: fromFromUrl || "",
                 departure: departureFromUrl || "",
@@ -38,11 +45,16 @@ export default function Search() {
             })
         }
         console.log(searchFilterData);
+        console.log(location.search)
+        const keyWord = urlParams.toString().split("=")[1]
         //FETCH DATA HERE
-
+        console.log(keyWord)
         //ON CHANGE INPUTS HERE :D
+        const filteredTickets = trips.filter((ticket) => ticket.name.includes(keyWord));
+        setAvailableTickets(filteredTickets)
+        console.log(availableTickets);
 
-    }, [])
+    }, [location.search])
     return (
         <Container className="mt-4 search_view">
             <div className="d-flex justify-content-between align-content-center">
