@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/search" Component={Search} />
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
