@@ -14,8 +14,7 @@ export default function Footer() {
             <div className="footer_logo">
                 <img src={icon_transparent} alt="Icon" style={{ width: '50px' }} />
                 <div className="logo_text_box">
-                    <p>Book cheap trips on out partnats</p>
-                    <p> and you’re ready to go</p>
+                    <p>{t('footer_tip')}</p>
                 </div>
             </div>
             <div className="footer_nav">
@@ -40,7 +39,6 @@ export default function Footer() {
                         <FaTwitter className="social_icon" />
                     </a>
                     <a href="#">
-
                         <FaInstagram className="social_icon" />
                     </a>
                 </div>

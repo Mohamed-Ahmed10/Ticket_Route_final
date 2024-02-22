@@ -8,7 +8,8 @@ body {
 .rtl {
     direction: rtl;
 }
-.dropdown-toggle::after{
+
+.dropdown-toggle::after {
     margin-inline-start: .255em;
 }
 
@@ -160,7 +161,7 @@ input {
     background-color: #fff;
     border: none;
     color: Gray;
-
+    border-bottom: 2px solid transparent;
     padding: 10px 25px;
 }
 
@@ -249,6 +250,10 @@ button.active_button {
     padding: 10px;
 }
 
+.forms_menu {
+    margin-top: 10px;
+}
+
 /* Statistics style */
 .stats_container {
     display: flex;
@@ -315,8 +320,13 @@ button.active_button {
 .footer_socials button {
     position: absolute;
     top: 0;
-    right: 0px;
+    right: 0;
     z-index: 10;
+}
+
+.rtl .footer_socials button {
+    right: initial;
+    left: 0;
 }
 
 .footer_socials form {
@@ -348,6 +358,11 @@ button.active_button {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+}
+
+.rtl .footer_input_icon {
+    left: initial;
+    right: 30px;
 }
 
 .social_icons {

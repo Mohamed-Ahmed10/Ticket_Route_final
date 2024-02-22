@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { IoAirplaneOutline } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
 import { PiTrain } from "react-icons/pi";
+import { Link } from 'react-router-dom';
 
 
 function BookingSection() {
@@ -33,7 +34,6 @@ function BookingSection() {
                         <div className='trip_type'>
                             <button className='secondary_btn'>{t('one_way')}</button>
                             <button className='secondary_btn'>{t('round_trip')}</button>
-                            <button className='secondary_btn'>{t('multi_city')}</button>
                         </div>
                         <div className='inputs_block d-flex'>
                             <div className='input_container d-flex flex-column border-start p-2'>
@@ -68,7 +68,7 @@ function BookingSection() {
                                 <select name="" id="">
                                     <option value="Payment Type">{t('payment_type')}</option>
                                 </select>
-                                <button className='submit_booking primary_btn'>{t('search')}</button>
+                                <Link className='submit_booking primary_btn link-underline link-underline-opacity-0' to="/search">{t('search')}</Link>
                             </div>
                         </div>
                     </form>

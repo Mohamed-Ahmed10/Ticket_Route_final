@@ -18,13 +18,14 @@
   "departure": "Departure",
   "return": "Return",
   "direct_trips": "Direct Trips",
-  "economy":"Economy",
-  "payment_type":"Payment Type",
-  "search":"Search",
-  "successful_booked":"Successful booked",
-  "tickets_in_egypt":"Tickets in Egypt",
-  "everyday_clients":"Everyday clients",
-  "that_trust_us":"that trust us",
-  "happy_clients_by":"Happy clients by",
-  "our_services":"our services"
+  "economy": "Economy",
+  "payment_type": "Payment Type",
+  "search": "Search",
+  "successful_booked": "Successful booked",
+  "tickets_in_egypt": "Tickets in Egypt",
+  "everyday_clients": "Everyday clients",
+  "that_trust_us": "that trust us",
+  "happy_clients_by": "Happy clients by",
+  "our_services": "our services",
+  "footer_tip":"Book cheap trips on out partnats and you’re ready to go"
 }
