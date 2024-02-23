@@ -78,12 +78,19 @@ function BookingSection() {
 
     useEffect(() => {
 
-        setAutoCompleteFrom(fuse.search(tripData.fromInput))
-        console.log(autoCompleteFrom);
         setAutoCompleteTo(fuse.search(tripData.toInput))
-        console.log(autoCompleteTo);
 
-    }, [tripData.formInput, tripData.toInput])
+    }, [tripData.toInput])
+
+    useEffect(() => {
+        setAutoCompleteFrom(fuse.search(tripData.fromInput))
+
+
+
+    }, [tripData.fromInput])
+    console.log('from', autoCompleteFrom);
+    console.log('to', autoCompleteTo);
+
     return (
         <div className='tabs'>
 
@@ -127,22 +134,22 @@ function BookingSection() {
                                     value={tripData.fromInput} />
                                 <datalist id="aritports">
                                     {autoCompleteFrom.map((item) => (
-                                        <option key={item.item.code} value={item.item.name} />
+                                        <option key={`${item.item.code}/${item.item.country}`} value={`${item.item.name},${item.item.code}`} />
                                     ))}
                                 </datalist>
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
                                 <input type="text"
-                                    list='aritports'
+                                    list='toaritports'
                                     name='to'
                                     placeholder={t("enter_your_destination")}
                                     value={tripData.toInput}
                                     onChange={(e) => setTripData({ ...tripData, toInput: e.target.value })}
                                 />
-                                <datalist id="aritports">
+                                <datalist id="toaritports">
                                     {autoCompleteTo.map((item) => (
-                                        <option key={item.item.code} value={item.item.name} />
+                                        <option key={`${item.item.code}/${item.item.country}/to`} value={`${item.item.name},${item.item.code}`} />
                                     ))}
                                 </datalist>
                             </div>

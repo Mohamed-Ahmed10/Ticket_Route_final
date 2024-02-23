@@ -2,51 +2,196 @@
   {
     "name": "Hartsfield-Jackson Atlanta International Airport",
     "code": "ATL",
-    "location": "Atlanta, Georgia, United States"
-  },
-  {
-    "name": "Heathrow Airport",
-    "code": "LHR",
-    "location": "London, United Kingdom"
-  },
-  {
-    "name": "Los Angeles International Airport",
-    "code": "LAX",
-    "location": "Los Angeles, California, United States"
-  },
-  {
-    "name": "Tokyo Haneda Airport",
-    "code": "HND",
-    "location": "Tokyo, Japan"
-  },
-  {
-    "name": "Dubai International Airport",
-    "code": "DXB",
-    "location": "Dubai, United Arab Emirates"
+    "country": "United States"
   },
   {
     "name": "Beijing Capital International Airport",
     "code": "PEK",
-    "location": "Beijing, China"
+    "country": "China"
   },
   {
-    "name": "O'Hare International Airport",
+    "name": "Los Angeles International Airport",
+    "code": "LAX",
+    "country": "United States"
+  },
+  {
+    "name": "Dubai International Airport",
+    "code": "DXB",
+    "country": "United Arab Emirates"
+  },
+  { "name": "Tokyo Haneda Airport", "code": "HND", "country": "Japan" },
+  {
+    "name": "Chicago O'Hare International Airport",
     "code": "ORD",
-    "location": "Chicago, Illinois, United States"
+    "country": "United States"
   },
   {
-    "name": "Frankfurt Airport",
-    "code": "FRA",
-    "location": "Frankfurt, Germany"
+    "name": "London Heathrow Airport",
+    "code": "LHR",
+    "country": "United Kingdom"
   },
   {
-    "name": "Singapore Changi Airport",
-    "code": "SIN",
-    "location": "Singapore"
+    "name": "Shanghai Pudong International Airport",
+    "code": "PVG",
+    "country": "China"
+  },
+  {
+    "name": "Paris Charles de Gaulle Airport",
+    "code": "CDG",
+    "country": "France"
+  },
+  {
+    "name": "Dallas/Fort Worth International Airport",
+    "code": "DFW",
+    "country": "United States"
+  },
+  {
+    "name": "Guangzhou Baiyun International Airport",
+    "code": "CAN",
+    "country": "China"
+  },
+  { "name": "Istanbul Airport", "code": "IST", "country": "Turkey" },
+  {
+    "name": "Amsterdam Airport Schiphol",
+    "code": "AMS",
+    "country": "Netherlands"
   },
   {
     "name": "Denver International Airport",
     "code": "DEN",
-    "location": "Denver, Colorado, United States"
+    "country": "United States"
+  },
+  {
+    "name": "Soekarno-Hatta International Airport",
+    "code": "CGK",
+    "country": "Indonesia"
+  },
+  {
+    "name": "Incheon International Airport",
+    "code": "ICN",
+    "country": "South Korea"
+  },
+  { "name": "Frankfurt Airport", "code": "FRA", "country": "Germany" },
+  {
+    "name": "Madrid-Barajas Adolfo Suárez Airport",
+    "code": "MAD",
+    "country": "Spain"
+  },
+  {
+    "name": "Indira Gandhi International Airport",
+    "code": "DEL",
+    "country": "India"
+  },
+  {
+    "name": "Kunming Changshui International Airport",
+    "code": "KMG",
+    "country": "China"
+  },
+  {
+    "name": "San Francisco International Airport",
+    "code": "SFO",
+    "country": "United States"
+  },
+  {
+    "name": "Chengdu Shuangliu International Airport",
+    "code": "CTU",
+    "country": "China"
+  },
+  {
+    "name": "Seattle-Tacoma International Airport",
+    "code": "SEA",
+    "country": "United States"
+  },
+  {
+    "name": "Bangkok Suvarnabhumi Airport",
+    "code": "BKK",
+    "country": "Thailand"
+  },
+  {
+    "name": "Jose Joaquin de Olmedo International Airport",
+    "code": "GYE",
+    "country": "Ecuador"
+  },
+  {
+    "name": "Phoenix Sky Harbor International Airport",
+    "code": "PHX",
+    "country": "United States"
+  },
+  {
+    "name": "Sydney Kingsford Smith Airport",
+    "code": "SYD",
+    "country": "Australia"
+  },
+  {
+    "name": "Miami International Airport",
+    "code": "MIA",
+    "country": "United States"
+  },
+  {
+    "name": "São Paulo/Guarulhos–Governador André Franco Montoro International Airport",
+    "code": "GRU",
+    "country": "Brazil"
+  },
+  { "name": "Barcelona-El Prat Airport", "code": "BCN", "country": "Spain" },
+  {
+    "name": "Las Vegas McCarran International Airport",
+    "code": "LAS",
+    "country": "United States"
+  },
+  {
+    "name": "Toronto Pearson International Airport",
+    "code": "YYZ",
+    "country": "Canada"
+  },
+  {
+    "name": "Shenzhen Bao'an International Airport",
+    "code": "SZX",
+    "country": "China"
+  },
+  {
+    "name": "Rome Leonardo da Vinci–Fiumicino Airport",
+    "code": "FCO",
+    "country": "Italy"
+  },
+  { "name": "Manchester Airport", "code": "MAN", "country": "United Kingdom" },
+  {
+    "name": "Xi'an Xianyang International Airport",
+    "code": "XIY",
+    "country": "China"
+  },
+  {
+    "name": "Newark Liberty International Airport",
+    "code": "EWR",
+    "country": "United States"
+  },
+  { "name": "Paris Orly Airport", "code": "ORY", "country": "France" },
+  {
+    "name": "John F. Kennedy International Airport",
+    "code": "JFK",
+    "country": "United States"
+  },
+  { "name": "São Paulo/Congonhas Airport", "code": "CGH", "country": "Brazil" },
+  {
+    "name": "Chhatrapati Shivaji Maharaj International Airport",
+    "code": "BOM",
+    "country": "India"
+  },
+  { "name": "Changi Airport", "code": "SIN", "country": "Singapore" },
+  {
+    "name": "London Gatwick Airport",
+    "code": "LGW",
+    "country": "United Kingdom"
+  },
+  { "name": "Dublin Airport", "code": "DUB", "country": "Ireland" },
+  { "name": "Hamad International Airport", "code": "DOH", "country": "Qatar" },
+  {
+    "name": "Riyadh King Khalid International Airport",
+    "code": "RUH",
+    "country": "Saudi Arabia"
+  },
+  {
+    "name": "Kuala Lumpur International Airport",
+    "code": "KUL",
+    "country": "Malaysia"
   }
 ]
