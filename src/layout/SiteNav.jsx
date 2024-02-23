@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import icon_transparent from "../assets/logo/icon_transparent.png"
+import logo from "../assets/logo.png"
 import { NavLink } from "react-router-dom";
 export default function SiteNav() {
 
@@ -15,7 +15,7 @@ export default function SiteNav() {
             <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand href="#">
-                        <img src={icon_transparent} alt="Icon" style={{ width: '50px' }} />
+                        <img src={logo} alt="Icon" style={{ width: '50px' }} />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
