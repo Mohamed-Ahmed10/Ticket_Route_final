@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
-import { IoAirplaneOutline } from "react-icons/io5";
+import { IoAirplaneOutline, } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
 import { PiTrain } from "react-icons/pi";
 // import { useNavigate } from 'react-router-dom';
@@ -20,15 +20,22 @@ function BookingSection() {
     // const navigate = useNavigate();
     const fuse = new Fuse(airports, { keys: ["name", "code", "location"] })
 
-    const [autoComplete, setAutoComplete] = useState([]);
+    const [autoCompleteFrom, setAutoCompleteFrom] = useState([]);
+    const [autoCompleteTo, setAutoCompleteTo] = useState([]);
 
     const [activeTap, setActiveTap] = useState("flight")
     const [oneWay, setOneWay] = useState(true);
     // const [searchTerm, setSearchTerm] = useState("");
 
     let { t } = useTranslation();
-    const [fromInput, setFromInput] = useState("")
-    const [toInput, setToInput] = useState("");
+
+    const [tripData, setTripData] = useState({
+        fromInput: "",
+        toInput: "",
+        seats: "1 Adult",
+        type: "Economy"
+    })
+
 
     // useEffect(() => {
     //     if (navigator.geolocation)
@@ -68,17 +75,15 @@ function BookingSection() {
     //     }
     // }, [location.search]);
 
-    const handleFromChange = (e) => {
-        setFromInput(e.target.value)
-    };
+
     useEffect(() => {
 
-        setAutoComplete(fuse.search(fromInput))
-        console.log(autoComplete);
-        setAutoComplete(fuse.search(toInput))
-        console.log(autoComplete);
+        setAutoCompleteFrom(fuse.search(tripData.fromInput))
+        console.log(autoCompleteFrom);
+        setAutoCompleteTo(fuse.search(tripData.toInput))
+        console.log(autoCompleteTo);
 
-    }, [fromInput, toInput])
+    }, [tripData.formInput, tripData.toInput])
     return (
         <div className='tabs'>
 
@@ -99,7 +104,7 @@ function BookingSection() {
             </div>
             {activeTap === 'flight' && (
                 <div className='booking_box'>
-                    <form action={`/search?from=${fromInput}to=${toInput}`}>
+                    <form action={`/search?from=${tripData.formInput}to=${tripData.toInput}`}>
                         <div className='trip_type'>
                             <button
                                 onClick={() => setOneWay(!oneWay)}
@@ -118,10 +123,10 @@ function BookingSection() {
                                     list='aritports'
                                     name='from'
                                     placeholder={t("enter_your_location")}
-                                    onChange={handleFromChange}
-                                    value={`${fromInput}`} />
+                                    onChange={(e) => setTripData({ ...tripData, fromInput: e.target.value })}
+                                    value={tripData.fromInput} />
                                 <datalist id="aritports">
-                                    {autoComplete.map((item) => (
+                                    {autoCompleteFrom.map((item) => (
                                         <option key={item.item.code} value={item.item.name} />
                                     ))}
                                 </datalist>
@@ -132,11 +137,11 @@ function BookingSection() {
                                     list='aritports'
                                     name='to'
                                     placeholder={t("enter_your_destination")}
-                                    value={toInput}
-                                    onChange={(e) => setToInput(e.target.value)}
+                                    value={tripData.toInput}
+                                    onChange={(e) => setTripData({ ...tripData, toInput: e.target.value })}
                                 />
                                 <datalist id="aritports">
-                                    {autoComplete.map((item) => (
+                                    {autoCompleteTo.map((item) => (
                                         <option key={item.item.code} value={item.item.name} />
                                     ))}
                                 </datalist>
@@ -204,8 +209,8 @@ function BookingSection() {
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
                                 <input type="text" placeholder={t("enter_your_location")}
-                                    onChange={(e) => setFromInput(e.target.value)}
-                                    value={`${fromInput}`}
+                                    onChange={(e) => setTripData({ ...tripData, fromInput: e.target.value })}
+                                    value={tripData.formInput}
                                 />
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
@@ -260,8 +265,8 @@ function BookingSection() {
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
                                 <input type="text" placeholder={t("enter_your_location")}
-                                    onChange={(e) => setFromInput(e.target.value)}
-                                    value={`${fromInput}`}
+                                    onChange={(e) => setTripData({ ...tripData, fromInput: e.target.value })}
+                                    value={tripData.formInput}
                                 />
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
