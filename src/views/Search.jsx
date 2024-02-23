@@ -5,20 +5,27 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
 import { useEffect, useState } from "react";
 import { trips } from '../db/trips'
+import Fuse from 'fuse.js'
+import airports from '../db/airports.json'
 
-
+const fuse = new Fuse(airports, { keys: ["name", "code", "location"] })
+console.log("fuse", fuse)
+const result = fuse.search("states")
+console.log("result", result);
 
 export default function Search() {
     let { t } = useTranslation();
-
     const [availableTickets, setAvailableTickets] = useState([]);
 
+
+
     const [searchFilterData, setSearchFilterData] = useState({
-        searchTerm: "",
         to: "",
         from: "",
         departure: "",
-        roundTrip: false
+        roundTrip: false,
+        seats: "1 Adult",
+        type: "Economy"
     });
 
 
@@ -26,7 +33,6 @@ export default function Search() {
     useEffect(() => {
         //putting query data into objects :D
         const urlParams = new URLSearchParams(location.search);
-        const searchTermFromUrl = urlParams.get("searchTerm");
         const toFromUrl = urlParams.get("to");
         const fromFromUrl = urlParams.get("from");
         const departureFromUrl = urlParams.get("departure");
@@ -34,10 +40,9 @@ export default function Search() {
 
         // making sure if one of data truly exist
 
-        if (searchTermFromUrl || toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl)
+        if (toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl)
         {
             setSearchFilterData({
-                searchTerm: searchTermFromUrl || "",
                 to: toFromUrl || "",
                 from: fromFromUrl || "",
                 departure: departureFromUrl || "",
@@ -55,6 +60,32 @@ export default function Search() {
         console.log(availableTickets);
 
     }, [location.search])
+
+    const handleChange = (e) => {
+
+
+        if (e.target.id === "from")
+        {
+            setSearchFilterData({ ...searchFilterData, from: e.target.value });
+        }
+        if (e.target.id === "to")
+        {
+            setSearchFilterData({ ...searchFilterData, to: e.target.value });
+        }
+        if (e.target.id === "departure")
+        {
+            setSearchFilterData({ ...searchFilterData, departure: e.target.value });
+        }
+        if (e.target.id === "seats")
+        {
+            setSearchFilterData({ ...searchFilterData, seats: e.target.value });
+        }
+        if (e.target.id === "type")
+        {
+            setSearchFilterData({ ...searchFilterData, type: e.target.value });
+        }
+    };
+    console.log(searchFilterData);
     return (
         <Container className="mt-4 search_view">
             <div className="d-flex justify-content-between align-content-center">
@@ -66,13 +97,18 @@ export default function Search() {
                 </div>
                 <div className="right">
                     <div className='forms_menu' >
-                        <select name="" id="">
+                        <select name="seats" id="seats" value={searchFilterData.seats} onChange={handleChange} >
                             <option value="1 Adult">1Adult</option>
+                            <option value="2 Adult">2Adult</option>
+                            <option value="3 Adult">3Adult</option>
+                            <option value="4 Adult">4Adult</option>
+                            <option value="5 Adult">5Adult</option>
                         </select>
-                        <select name="" id="">
+                        <select name="type" id="type" value={searchFilterData.type} onChange={handleChange}>
                             <option value="Economy">{t('economy')}</option>
+                            <option value="Business">{t('business')}</option>
                         </select>
-                        <select name="" id="">
+                        <select name="payment" id="payment">
                             <option value="Payment Type">{t('payment_type')}</option>
                         </select>
                     </div>
@@ -81,15 +117,17 @@ export default function Search() {
             <div className='inputs_block d-flex'>
                 <div className='input_container d-flex flex-column p-2'>
                     <label className="fw-bold">{t('from')}</label>
-                    <input type="text" placeholder={t("enter_your_location")} />
+                    <input type="text" id="from" placeholder={t("enter_your_location")}
+                        value={searchFilterData.from} onChange={handleChange}
+                    />
                 </div>
                 <div className='input_container d-flex flex-column border-start p-2'>
                     <label className="fw-bold">{t('to')}</label>
-                    <input type="text" placeholder={t("enter_your_destination")} />
+                    <input type="text" id="to" value={searchFilterData.to} onChange={handleChange} placeholder={t("enter_your_destination")} />
                 </div>
                 <div className='input_container d-flex flex-column border-start p-2'>
                     <label className="fw-bold">{t('departure')}</label>
-                    <input type="text" placeholder={t("pick_departure_date")} />
+                    <input value={searchFilterData.departure} id="departure" onChange={handleChange} type="text" placeholder={t("pick_departure_date")} />
                 </div>
                 <div className='input_container d-flex flex-column border-start p-2'>
                     <label className="fw-bold">{t('return')}</label>
@@ -102,7 +140,7 @@ export default function Search() {
                     <IoStarOutline />
                     <div>
                         <b>{t('recommended')}</b>
-                        <div className="price">5252</div>
+                        <div className="price">0</div>
                     </div>
                 </div>
                 <div className="flex-fill d-flex filter p-2">
@@ -110,14 +148,14 @@ export default function Search() {
 
                     <div>
                         <b>{t('cheapest')}</b>
-                        <div className="price">5252</div>
+                        <div className="price">0</div>
                     </div>
                 </div>
                 <div className="flex-fill d-flex filter p-2">
                     <SiMinutemailer />
                     <div>
                         <b>{t('fastest')}</b>
-                        <div className="price">5252</div>
+                        <div className="price">0</div>
                     </div>
                 </div>
             </div>
