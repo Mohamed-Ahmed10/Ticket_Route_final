@@ -49,8 +49,6 @@ export default function Search() {
                 roundTrip: roundTripFromUrl || false
             })
         }
-        console.log(searchFilterData);
-        console.log(location.search)
         const keyWord = urlParams.toString().split("=")[1]
         //FETCH DATA HERE
         console.log(keyWord)

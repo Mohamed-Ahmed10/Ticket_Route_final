@@ -3,7 +3,11 @@ import { useTranslation } from "react-i18next";
 import { IoAirplaneOutline } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
 import { PiTrain } from "react-icons/pi";
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import airports from '../db/airports.json'
+
+import Fuse from 'fuse.js'
+
 // import { Link } from 'react-router-dom';
 
 // First, get the user's location coordinates using the Geolocation API
@@ -13,61 +17,71 @@ import { useNavigate } from 'react-router-dom';
 
 
 function BookingSection() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+    const fuse = new Fuse(airports, { keys: ["name", "code", "location"] })
+
+    const [autoComplete, setAutoComplete] = useState([]);
 
     const [activeTap, setActiveTap] = useState("flight")
     const [oneWay, setOneWay] = useState(true);
-    const [searchTerm, setSearchTerm] = useState("");
+    // const [searchTerm, setSearchTerm] = useState("");
 
     let { t } = useTranslation();
     const [fromInput, setFromInput] = useState("")
-    useEffect(() => {
-        if (navigator.geolocation)
-        {
-            navigator.geolocation.getCurrentPosition(showCity);
-        } else
-        {
-            console.log("Geolocation is not supported by this browser.");
-        }
+    const [toInput, setToInput] = useState("");
 
-        function showCity(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
+    // useEffect(() => {
+    //     if (navigator.geolocation)
+    //     {
+    //         navigator.geolocation.getCurrentPosition(showCity);
+    //     } else
+    //     {
+    //         console.log("Geolocation is not supported by this browser.");
+    //     }
 
-            // Make a request to a Geocoding API (e.g. Google Maps Geocoding API)
-            const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+    //     function showCity(position) {
+    //         const latitude = position.coords.latitude;
+    //         const longitude = position.coords.longitude;
 
-            fetch(url)
-                .then((response) => response.json())
-                .then((data) => {
-                    // Parse the city name from the API response
-                    const city = data
-                    console.log(city);
-                    setFromInput(city.city)
-                })
-                .catch((error) => console.log(error));
-        }
-    }, [])
+    //         // Make a request to a Geocoding API (e.g. Google Maps Geocoding API)
+    //         const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
 
-    const handleSearch = (e) => {
-        e.preventDefault();
-        const urlParams = new URLSearchParams(window.location.search);
-        urlParams.set("searchTerm", searchTerm);
-        const searchQuery = urlParams.toString();
-        navigate(`/search?${searchQuery}`);
+    //         fetch(url)
+    //             .then((response) => response.json())
+    //             .then((data) => {
+    //                 // Parse the city name from the API response
+    //                 const city = data
+    //                 console.log(city);
+    //                 setFromInput(city.city)
+    //             })
+    //             .catch((error) => console.log(error));
+    //     }
+    // }, [])
+
+
+    // useEffect(() => {
+    //     const urlParams = new URLSearchParams(location.search);
+    //     const searchTermFromUrl = urlParams.get("searchTerm");
+    //     if (searchTermFromUrl)
+    //     {
+    //         setSearchTerm(searchTermFromUrl);
+    //     }
+    // }, [location.search]);
+
+    const handleFromChange = (e) => {
+        setFromInput(e.target.value)
     };
-
     useEffect(() => {
-        const urlParams = new URLSearchParams(location.search);
-        const searchTermFromUrl = urlParams.get("searchTerm");
-        if (searchTermFromUrl)
-        {
-            setSearchTerm(searchTermFromUrl);
-        }
-    }, [location.search]);
 
+        setAutoComplete(fuse.search(fromInput))
+        console.log(autoComplete);
+        setAutoComplete(fuse.search(toInput))
+        console.log(autoComplete);
+
+    }, [fromInput, toInput])
     return (
         <div className='tabs'>
+
             <div className='tap_buttons_container'>
                 <button className={`${activeTap == 'flight' ? "active_button" : ''} `} onClick={() => setActiveTap('flight')} id='flight'>
                     <IoAirplaneOutline className={`${activeTap == 'flight' ? 'active_icon' : ''} me-1`} />
@@ -85,7 +99,7 @@ function BookingSection() {
             </div>
             {activeTap === 'flight' && (
                 <div className='booking_box'>
-                    <form action="">
+                    <form action={`/search?from=${fromInput}to=${toInput}`}>
                         <div className='trip_type'>
                             <button
                                 onClick={() => setOneWay(!oneWay)}
@@ -101,23 +115,35 @@ function BookingSection() {
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
                                 <input type="text"
+                                    list='aritports'
                                     name='from'
                                     placeholder={t("enter_your_location")}
-                                    onChange={(e) => setFromInput(e.target.value)}
+                                    onChange={handleFromChange}
                                     value={`${fromInput}`} />
+                                <datalist id="aritports">
+                                    {autoComplete.map((item) => (
+                                        <option key={item.item.code} value={item.item.name} />
+                                    ))}
+                                </datalist>
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
                                 <input type="text"
+                                    list='aritports'
                                     name='to'
                                     placeholder={t("enter_your_destination")}
-                                    value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    value={toInput}
+                                    onChange={(e) => setToInput(e.target.value)}
                                 />
+                                <datalist id="aritports">
+                                    {autoComplete.map((item) => (
+                                        <option key={item.item.code} value={item.item.name} />
+                                    ))}
+                                </datalist>
                             </div>
                             <div className='input_container d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('departure')}</label>
-                                <input type="text"
+                                <input type="date"
                                     name="departure"
                                     placeholder={t("pick_departure_date")} />
                             </div>
@@ -137,18 +163,26 @@ function BookingSection() {
                             <div className='forms_menu' >
                                 <select name="seats" id="">
                                     <option value="1 Adult">1Adult</option>
+                                    <option value="2 Adult">2Adult</option>
+                                    <option value="3 Adult">3Adult</option>
+                                    <option value="4 Adult">4Adult</option>
+                                    <option value="5 Adult">5Adult</option>
                                 </select>
                                 <select name="package" id="">
                                     <option value="Economy">{t('economy')}</option>
+                                    <option value="Business">{t('business')}</option>
                                 </select>
                                 <select name="payment" id="">
                                     <option value="Payment Type">{t('payment_type')}</option>
                                 </select>
                                 <button className='submit_booking primary_btn link-underline link-underline-opacity-0'
-                                    onClick={handleSearch}
+
                                 >{t('search')}</button>
                             </div>
                         </div>
+                        <datalist>
+                            <option value="Browser">browser</option>
+                        </datalist>
                     </form>
                 </div>
             )}
