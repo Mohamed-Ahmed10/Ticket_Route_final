@@ -25,7 +25,7 @@ export default function SiteNav() {
                             <NavLink to="/contact" className="mx-4 nav-link link-offset-3 ">{t('contact_us')}</NavLink>
                             <NavLink to="/faq" className="mx-4 nav-link link-offset-3 ">{t('faq')}</NavLink>
                         </Nav>
-                        <NavDropdown title={`${i18n.language}`}>
+                        <NavDropdown title={`${i18n.language}`} className="text-center">
                             <NavDropdown.Item href="#" onClick={() => handleLanguage('en')}>English</NavDropdown.Item>
                             <NavDropdown.Item href="#" onClick={() => handleLanguage('ar')}>عربى</NavDropdown.Item>
                         </NavDropdown>

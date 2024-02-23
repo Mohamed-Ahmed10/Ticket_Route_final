@@ -82,10 +82,13 @@ input {
 
 .nav-item {
   background: #fff;
-  padding: 10px;
   border-radius: 15px;
   width: 60px;
   text-align: center;
+}
+
+.nav-item > a {
+  padding: 10px;
 }
 
 .dropdown-menu[data-bs-popper] {
