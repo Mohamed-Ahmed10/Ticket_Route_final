@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap"
+import { Container, Card, Row, Col } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
 import { IoStarOutline } from "react-icons/io5";
 import { BsCurrencyDollar } from "react-icons/bs";
@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import { trips } from '../db/trips'
 import Fuse from 'fuse.js'
 import airports from '../db/airports.json'
+import airplane from "../assets/test_image.png"
+import { IoMdAlarm } from "react-icons/io";
+
 
 const fuse = new Fuse(airports, { keys: ["name", "code", "location"] })
 console.log("fuse", fuse)
@@ -17,8 +20,6 @@ export default function Search() {
     let { t } = useTranslation();
     const [availableTickets, setAvailableTickets] = useState([]);
 
-
-
     const [searchFilterData, setSearchFilterData] = useState({
         to: "",
         from: "",
@@ -27,8 +28,6 @@ export default function Search() {
         seats: "1 Adult",
         type: "Economy"
     });
-
-
 
     useEffect(() => {
         //putting query data into objects :D
@@ -40,8 +39,7 @@ export default function Search() {
 
         // making sure if one of data truly exist
 
-        if (toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl)
-        {
+        if (toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl) {
             setSearchFilterData({
                 to: toFromUrl || "",
                 from: fromFromUrl || "",
@@ -57,29 +55,25 @@ export default function Search() {
         setAvailableTickets(filteredTickets)
         console.log(availableTickets);
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location.search])
 
     const handleChange = (e) => {
 
 
-        if (e.target.id === "from")
-        {
+        if (e.target.id === "from") {
             setSearchFilterData({ ...searchFilterData, from: e.target.value });
         }
-        if (e.target.id === "to")
-        {
+        if (e.target.id === "to") {
             setSearchFilterData({ ...searchFilterData, to: e.target.value });
         }
-        if (e.target.id === "departure")
-        {
+        if (e.target.id === "departure") {
             setSearchFilterData({ ...searchFilterData, departure: e.target.value });
         }
-        if (e.target.id === "seats")
-        {
+        if (e.target.id === "seats") {
             setSearchFilterData({ ...searchFilterData, seats: e.target.value });
         }
-        if (e.target.id === "type")
-        {
+        if (e.target.id === "type") {
             setSearchFilterData({ ...searchFilterData, type: e.target.value });
         }
     };
@@ -157,6 +151,99 @@ export default function Search() {
                     </div>
                 </div>
             </div>
+            <Card className="my-2 shadow p-2 single_trip">
+                <Row>
+                    <Col md="2" className="d-flex align-items-center">
+                        <img src={airplane} className="py-4 img-fluid" alt="test" />
+                    </Col>
+                    <Col md="8" className="d-flex flex-row trip_details align-items-center">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
+                            <div className="d-flex justify-content-between">
+                                <span className="fw-bold">10:00</span>
+                                <span className="text-secondary">
+                                    <IoMdAlarm className="mb-1 me-1" />
+                                    02h 00m
+                                </span>
+                                <span className="fw-bold">12:00</span>
+                            </div>
+                            <div className="line"></div>
+                            <div className="d-flex justify-content-between">
+                                <span className="fw-bold text-secondary">test</span>
+                                <span className="text-secondary">Direct</span>
+                                <span className="fw-bold text-secondary">test</span>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md="2 last text-center">
+                        <div className="text-secondary mt-4">From 7 Websites</div>
+                        <div className="price my-2">6,570</div>
+                        <div className="text-secondary my-2">Per Person</div>
+                    </Col>
+                </Row>
+            </Card>
+            <Card className="my-2 shadow p-2 single_trip">
+                <Row>
+                    <Col md="2" className="d-flex align-items-center">
+                        <img src={airplane} className="py-4 img-fluid" alt="test" />
+                    </Col>
+                    <Col md="8" className="d-flex flex-row trip_details align-items-center">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
+                            <div className="d-flex justify-content-between">
+                                <span className="fw-bold">10:00</span>
+                                <span className="text-secondary">
+                                    <IoMdAlarm className="mb-1 me-1" />
+                                    02h 00m
+                                </span>
+                                <span className="fw-bold">12:00</span>
+                            </div>
+                            <div className="line"></div>
+                            <div className="d-flex justify-content-between">
+                                <span className="fw-bold text-secondary">test</span>
+                                <span className="text-secondary">Direct</span>
+                                <span className="fw-bold text-secondary">test</span>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md="2 last text-center">
+                        <div className="text-secondary mt-4">From 7 Websites</div>
+                        <div className="price my-2">6,570</div>
+                        <div className="text-secondary my-2">Per Person</div>
+                    </Col>
+                </Row>
+            </Card>
+            <Card className="my-2 shadow p-2 single_trip">
+                <Row>
+                    <Col md="2" className="d-flex align-items-center">
+                        <img src={airplane} className="py-4 img-fluid" alt="test" />
+                    </Col>
+                    <Col md="8" className="d-flex flex-row trip_details align-items-center">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
+                            <div className="d-flex justify-content-between">
+                                <span className="fw-bold">10:00</span>
+                                <span className="text-secondary">
+                                    <IoMdAlarm className="mb-1 me-1" />
+                                    02h 00m
+                                </span>
+                                <span className="fw-bold">12:00</span>
+                            </div>
+                            <div className="line"></div>
+                            <div className="d-flex justify-content-between">
+                                <span className="fw-bold text-secondary">test</span>
+                                <span className="text-secondary">Direct</span>
+                                <span className="fw-bold text-secondary">test</span>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md="2 last text-center">
+                        <div className="text-secondary mt-4">From 7 Websites</div>
+                        <div className="price my-2">6,570</div>
+                        <div className="text-secondary my-2">Per Person</div>
+                    </Col>
+                </Row>
+            </Card>
         </Container>
     )
 }

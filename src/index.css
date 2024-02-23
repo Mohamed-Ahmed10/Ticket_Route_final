@@ -170,11 +170,11 @@ input {
   padding: 10px 25px;
 }
 
-.tap_buttons_container > :first-child {
+.tap_buttons_container> :first-child {
   border-top-left-radius: 10px;
 }
 
-.tap_buttons_container > :last-child {
+.tap_buttons_container> :last-child {
   border-top-right-radius: 10px;
 }
 
@@ -223,6 +223,7 @@ button.active_button {
 .inputs_block label.disabled {
   text-decoration: line-through;
 }
+
 .input_container.disabled {
   background: #c1c1c1;
   border-radius: 15px;
@@ -539,7 +540,7 @@ button.active_button {
   margin-top: 10px;
 }
 
-.search_view .inputs_block > * {
+.search_view .inputs_block>* {
   flex: 1;
 }
 
@@ -562,4 +563,39 @@ button.active_button {
 
 .price::after {
   content: 'EGP';
+}
+
+.trip_details {
+  min-height: 150px;
+  font-size: 0.8rem;
+}
+
+.line {
+  height: 3px;
+  width: 95%;
+  background-color: #C1C1C1;
+  position: relative;
+  margin: 5% auto;
+}
+
+.line::after,
+.line::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 7px;
+  width: 7px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: #FFF
+}
+
+.line::before {
+  left: initial;
+  right: 0;
+}
+
+.single_trip .last {
+  border-inline-start: 1px solid #c1c1c1
 }
