@@ -4,14 +4,14 @@ import { IoStarOutline } from "react-icons/io5";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
 import { useEffect, useState } from "react";
-import { trips } from '../db/trips'
+// import { trips } from '../db/trips'
 import Fuse from 'fuse.js'
 import airports from '../db/airports.json'
 import airplane from "../assets/test_image.png"
 import { IoMdAlarm } from "react-icons/io";
 
 
-const fuse = new Fuse(airports, { keys: ["name", "code", "location"] })
+const fuse = new Fuse(airports, { keys: ["name", "code", "country"] })
 console.log("fuse", fuse)
 const result = fuse.search("states")
 console.log("result", result);
@@ -51,9 +51,9 @@ export default function Search() {
         //FETCH DATA HERE
         console.log(keyWord)
         //ON CHANGE INPUTS HERE :D
-        const filteredTickets = trips.filter((ticket) => ticket.name.includes(keyWord));
-        setAvailableTickets(filteredTickets)
-        console.log(availableTickets);
+        // const filteredTickets = trips.filter((ticket) => ticket.name.includes(keyWord));
+        // setAvailableTickets(filteredTickets)
+        // console.log(availableTickets);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location.search])
@@ -77,7 +77,30 @@ export default function Search() {
             setSearchFilterData({ ...searchFilterData, type: e.target.value });
         }
     };
-    console.log(searchFilterData);
+    const fromCode = searchFilterData.from.split(",")[1]
+    const toCode = searchFilterData.from.split(",")[1]
+    const departureDate = searchFilterData.departure
+
+    useEffect(() => {
+        const fetchTrips = async () => {
+            try {
+                const res = await fetch(`https://serpapi.com/search.json?engine=google_flights&departure_id=${fromCode}&arrival_id=${toCode}&outbound_date=${departureDate}&return_date=2024-03-01&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`, {
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8',
+                        'Access-Control-Allow-Origin': '*'
+                    }
+                });
+                const data = await res.json();
+                console.log(data);
+                setAvailableTickets(data)
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchTrips();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     return (
         <Container className="mt-4 search_view">
             <div className="d-flex justify-content-between align-content-center">
@@ -244,6 +267,11 @@ export default function Search() {
                     </Col>
                 </Row>
             </Card>
+            {availableTickets ?
+                <div>
+                    {availableTickets.map((item, index) => <h5 key={`${item.search_metadata.id}/${index}`}>Result</h5>)}
+                </div>
+                : <h5>No data</h5>}
         </Container>
     )
 }
