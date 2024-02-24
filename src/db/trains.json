@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Cairo Ramses Station",
+        "city": "Cairo"
+    },
+    {
+        "name": "Alexandria Station",
+        "city": "Alexandria"
+    },
+    {
+        "name": "Aswan Station",
+        "city": "Aswan"
+    },
+    {
+        "name": "Luxor Station",
+        "city": "Luxor"
+    },
+    {
+        "name": "Giza Station",
+        "city": "Giza"
+    },
+    {
+        "name": "Port Said Station",
+        "city": "Port Said"
+    },
+    {
+        "name": "Tanta Station",
+        "city": "Tanta"
+    },
+    {
+        "name": "Mansoura Station",
+        "city": "Mansoura"
+    },
+    {
+        "name": "Damietta Station",
+        "city": "Damietta"
+    },
+    {
+        "name": "Zagazig Station",
+        "city": "Zagazig"
+    },
+    {
+        "name": "Assiut Station",
+        "city": "Assiut"
+    },
+    {
+        "name": "Minya Station",
+        "city": "Minya"
+    },
+    {
+        "name": "Sohag Station",
+        "city": "Sohag"
+    },
+    {
+        "name": "Beni Suef Station",
+        "city": "Beni Suef"
+    },
+    {
+        "name": "Kafr El Sheikh Station",
+        "city": "Kafr El Sheikh"
+    },
+    {
+        "name": "Ismailia Station",
+        "city": "Ismailia"
+    },
+    {
+        "name": "Suez Station",
+        "city": "Suez"
+    },
+    {
+        "name": "Al-Mahalla al-Kubra Station",
+        "city": "Al-Mahalla al-Kubra"
+    },
+    {
+        "name": "Banha Station",
+        "city": "Banha"
+    },
+    {
+        "name": "Manshiyat Naser Station",
+        "city": "Cairo"
+    }
+]
