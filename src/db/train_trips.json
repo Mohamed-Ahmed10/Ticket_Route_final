@@ -1,74 +1,74 @@
 [
   {
-    "company": "gobus",
+    "company": "railway",
     "company_log": "image",
     "to": "portsaid",
     "from": "cairo",
-    "price": 150,
+    "price": 30,
+    "arrival": "16:00",
+    "departure": "13:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 50,
     "arrival": "10:00",
     "departure": "12:00"
   },
   {
-    "company": "gobus",
+    "company": "railway",
     "company_log": "image",
     "to": "portsaid",
     "from": "cairo",
-    "price": 150,
+    "price": 45,
+    "arrival": "18:00",
+    "departure": "15:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 35,
     "arrival": "10:00",
     "departure": "12:00"
   },
   {
-    "company": "gobus",
+    "company": "railway",
     "company_log": "image",
     "to": "portsaid",
     "from": "cairo",
-    "price": 150,
+    "price": 27,
     "arrival": "10:00",
     "departure": "12:00"
   },
   {
-    "company": "gobus",
+    "company": "railway",
     "company_log": "image",
     "to": "portsaid",
     "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
+    "price": 30,
+    "arrival": "09:00",
+    "departure": "06:00"
   },
   {
-    "company": "eastbus",
+    "company": "railway",
     "company_log": "image",
     "to": "portsaid",
     "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
+    "price": 42.5,
+    "arrival": "14:00",
+    "departure": "11:00"
   },
   {
-    "company": "eastbus",
+    "company": "railway",
     "company_log": "image",
     "to": "portsaid",
     "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
-  },
-  {
-    "company": "eastbus",
-    "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
-  },
-  {
-    "company": "eastbus",
-    "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
   }
 ]

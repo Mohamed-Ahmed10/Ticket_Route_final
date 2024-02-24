@@ -5,8 +5,53 @@
     "to": "portsaid",
     "from": "cairo",
     "price": 150,
+    "arrival": "06:00",
+    "departure": "08:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 155,
+    "arrival": "07:00",
+    "departure": "09:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 145,
+    "arrival": "09:00",
+    "departure": "11:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 130,
     "arrival": "10:00",
     "departure": "12:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 125,
+    "arrival": "11:00",
+    "departure": "13:00"
   },
   {
     "company": "gobus",
@@ -14,26 +59,8 @@
     "to": "portsaid",
     "from": "cairo",
     "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
-  },
-  {
-    "company": "gobus",
-    "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
-  },
-  {
-    "company": "gobus",
-    "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
+    "arrival": "14:00",
+    "departure": "16:00"
   },
   {
     "company": "eastbus",
@@ -41,34 +68,7 @@
     "to": "portsaid",
     "from": "cairo",
     "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
-  },
-  {
-    "company": "eastbus",
-    "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
-  },
-  {
-    "company": "eastbus",
-    "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
-  },
-  {
-    "company": "eastbus",
-    "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
-    "price": 150,
-    "arrival": "10:00",
-    "departure": "12:00"
+    "arrival": "15:00",
+    "departure": "17:00"
   }
 ]

@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Card, Row, Col } from "react-bootstrap"
 import { IoMdAlarm } from "react-icons/io";
+import gobusLogo from '../assets/partners/go_bus.png'
+import fastbusLogo from '../assets/partners/fast_bus.png'
+import railwayLogo from '../assets/partners/railway.png'
 
 const TicketCards = ({ availableTickets, searchVech }) => {
     return (
@@ -51,25 +54,24 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                         <Card key={`${item}/${i}`} className="my-2 shadow p-2 single_trip">
                             <Row>
                                 <Col md="2" className="d-flex align-items-center">
-                                    <img src={item.airline_logo
-                                    } className="py-4 img-fluid" alt="test" />
+                                    <img src={item.company == 'gobus' ? gobusLogo : item.company == 'eastbus' ? fastbusLogo : railwayLogo} className="py-4 img-fluid" alt="test" />
                                 </Col>
                                 <Col md="8" className="d-flex flex-row trip_details align-items-center">
                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                     <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
                                         <div className="d-flex justify-content-between">
-                                            <span className="fw-bold">10:00</span>
+                                            <span className="fw-bold">{item.departure}</span>
                                             <span className="text-secondary">
                                                 <IoMdAlarm className="mb-1 me-1" />
                                                 02h 00m
                                             </span>
-                                            <span className="fw-bold">12:00</span>
+                                            <span className="fw-bold">{item.arrival}</span>
                                         </div>
                                         <div className="line"></div>
                                         <div className="d-flex justify-content-between">
-                                            <span className="fw-bold text-secondary">{item.company}</span>
+                                            <span className="fw-bold text-secondary">{item.from}</span>
                                             <span className="text-secondary">{item.company}</span>
-                                            <span className="fw-bold text-secondary">{item.company}</span>
+                                            <span className="fw-bold text-secondary">{item.to}</span>
                                         </div>
                                     </div>
                                 </Col>
