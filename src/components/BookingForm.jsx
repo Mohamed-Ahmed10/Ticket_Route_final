@@ -31,8 +31,10 @@ const BookingForm = ({ jsonLists, activeTap }) => {
         fromInput: "",
         toInput: "",
         seats: "1 Adult",
-        type: "Economy"
+        type: "Economy",
+        departure: ""
     })
+    console.log(tripData)
     const fuse = new Fuse(jsonLists, { keys: ["name", "code", "country", "city"] })
     activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput
     let { t } = useTranslation();
@@ -44,26 +46,25 @@ const BookingForm = ({ jsonLists, activeTap }) => {
         setAutoCompleteFrom(fuse.search(activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput))
     }, [activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput])
 
-    const { fromInput, toInput, departure } = busTrip;
 
 
 
     // Create query string for flight
-    const flightSearchData = `from=${encodeURIComponent(fromInput)}&to=${encodeURIComponent(toInput)}&departure=${encodeURIComponent(departure)}&oneway=${oneWay}`;
+    const flightSearchData = `from=${(tripData.fromInput)}&to=${(tripData.toInput)}&departure=${(tripData.departure)}&oneway=${oneWay}`;
 
     let handleFlightSubmit = (e) => {
         e.preventDefault()
         navigate(`/search?${flightSearchData}`)
     }
     // Create query string for bus
-    const busSearchData = `from=${encodeURIComponent(fromInput)}&to=${encodeURIComponent(toInput)}&departure=${encodeURIComponent(departure)}`;
+    const busSearchData = `from=${(busTrip.fromInput)}&to=${(busTrip.toInput)}&departure=${(busTrip.departure)}`;
 
     let handleBusSubmit = (e) => {
         e.preventDefault()
         navigate(`/search?${busSearchData}`)
     }
     // Create query string for train
-    const trainSearchData = `from=${encodeURIComponent(fromInput)}&to=${encodeURIComponent(toInput)}&departure=${encodeURIComponent(departure)}`;
+    const trainSearchData = `from=${(trainTrip.fromInput)}&to=${(trainTrip.toInput)}&departure=${(trainTrip.departure)}`;
 
     let handleTrainSubmit = (e) => {
         e.preventDefault()
@@ -124,7 +125,12 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         <label className="fw-bold">{t('departure')}</label>
                         <input type="date"
                             name="departure"
-                            placeholder={t("pick_departure_date")} />
+                            placeholder={t("pick_departure_date")}
+                            value={activeTap == "flight" ? tripData.departure : activeTap == "bus" ? busTrip.departure : trainTrip.departure}
+                            onChange={
+                                activeTap == "flight" ? (e) => setTripData({ ...tripData, departure: e.target.value }) : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, departure: e.target.value }) : (e) => setTrainTrip({ ...trainTrip, departure: e.target.value })
+                            }
+                        />
                     </div>
                     {!oneWay && (
                         <div className={`input_container flex-fill d-flex flex-column p-2 ${oneWay && 'disabled'}`}>
