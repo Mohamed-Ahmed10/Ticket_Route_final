@@ -188,5 +188,86 @@
     "name": "Riyadh King Khalid International Airport",
     "code": "RUH",
     "country": "Saudi Arabia"
+  },
+  {
+    "name": "Cairo International Airport",
+    "code": "CAI",
+    "country": "Egypt"
+  },
+
+  {
+    "name": "Hamad International Airport",
+    "code": "DOH",
+    "country": "Qatar"
+  },
+  {
+    "name": "Abu Dhabi International Airport",
+    "code": "AUH",
+    "country": "United Arab Emirates"
+  },
+  {
+    "name": "King Abdulaziz International Airport",
+    "code": "JED",
+    "country": "Saudi Arabia"
+  },
+  {
+    "name": "Kuwait International Airport",
+    "code": "KWI",
+    "country": "Kuwait"
+  },
+  {
+    "name": "Bahrain International Airport",
+    "code": "BAH",
+    "country": "Bahrain"
+  },
+  {
+    "name": "Queen Alia International Airport",
+    "code": "AMM",
+    "country": "Jordan"
+  },
+  {
+    "name": "Beirut-Rafic Hariri International Airport",
+    "code": "BEY",
+    "country": "Lebanon"
+  },
+  {
+    "name": "Mohammed V International Airport",
+    "code": "CMN",
+    "country": "Morocco"
+  },
+  {
+    "name": "Muscat International Airport",
+    "code": "MCT",
+    "country": "Oman"
+  },
+  {
+    "name": "Tunis-Carthage International Airport",
+    "code": "TUN",
+    "country": "Tunisia"
+  },
+  {
+    "name": "Baghdad International Airport",
+    "code": "BGW",
+    "country": "Iraq"
+  },
+  {
+    "name": "Sana'a International Airport",
+    "code": "SAH",
+    "country": "Yemen"
+  },
+  {
+    "name": "Khartoum International Airport",
+    "code": "KRT",
+    "country": "Sudan"
+  },
+  {
+    "name": "Tripoli International Airport",
+    "code": "TIP",
+    "country": "Libya"
+  },
+  {
+    "name": "Damascus International Airport",
+    "code": "DAM",
+    "country": "Syria"
   }
 ]

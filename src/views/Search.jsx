@@ -24,7 +24,7 @@ import trainTrips from '../db/train_trips.json'
 export default function Search() {
     let { t } = useTranslation();
     const [fromCodeState, setFromCodeState] = useState("CAI")
-    const [toCodeState, setToCodeState] = useState("ORY")
+    const [toCodeState, setToCodeState] = useState("RUH")
     const [departDateState, setDepartDateState] = useState("2024-02-27")
     const [availableTickets, setAvailableTickets] = useState([]);
 
