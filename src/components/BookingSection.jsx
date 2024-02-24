@@ -6,6 +6,7 @@ import { PiTrain } from "react-icons/pi";
 // import { useNavigate } from 'react-router-dom';
 import airports from '../db/airports.json'
 import busStations from '../db/bus_stations.json'
+import TrainStations from '../db/trains.json'
 import Fuse from 'fuse.js'
 
 
@@ -63,14 +64,29 @@ function BookingSection() {
     }, [busTrip.toInput])
 
 
-    console.log(autoCompleteBusFrom)
-    // console.log("Bus " + autoCompleteBusTo)
 
-    // console.log(busStations)
+    /* *******************************  For Train ***************************************/
+
+
+    const [TrainTrip, setTrainTrip] = useState({
+        fromInput: "",
+        toInput: "",
+    })
+    const TrainFuse = new Fuse(TrainStations, { keys: ["name", "city"] })
+
+    const [autoCompleteTrainFrom, setAutoCompleteTrainFrom] = useState([]);
+    const [autoCompleteTrainTo, setAutoCompleteTrainTo] = useState([]);
+
+    useEffect(() => {
+        setAutoCompleteTrainFrom(TrainFuse.search(TrainTrip.fromInput))
+    }, [TrainTrip.fromInput])
+
+    useEffect(() => {
+        setAutoCompleteTrainTo(TrainFuse.search(TrainTrip.toInput))
+    }, [TrainTrip.toInput])
 
     return (
         <div className='tabs'>
-
             <div className='tap_buttons_container'>
                 <button className={`${activeTap == 'flight' ? "active_button" : ''} `} onClick={() => setActiveTap('flight')} id='flight'>
                     <IoAirplaneOutline className={`${activeTap == 'flight' ? 'active_icon' : ''} me-1`} />
@@ -88,7 +104,7 @@ function BookingSection() {
             </div>
             {activeTap === 'flight' && (
                 <div className='booking_box'>
-                    <form action={`/search?airPlaneFrom=${tripData.fromInput}to=${tripData.toInput}`}>
+                    <form action={`/search?`}>
                         <div className='trip_type'>
                             <button
                                 onClick={() => setOneWay(!oneWay)}
@@ -177,7 +193,7 @@ function BookingSection() {
             )}
             {activeTap === 'bus' && (
                 <div className='booking_box'>
-                    <form action={`/search?from=${busTrip.fromInput}to=${busTrip.toInput}`}>
+                    <form action={`/search?`}>
                         <div className='trip_type'>
                             <button
                                 type='button'
@@ -233,7 +249,7 @@ function BookingSection() {
             )}
             {activeTap === 'train' && (
                 <div className='booking_box'>
-                    <form action="">
+                    <form action={`/search?`}>
                         <div className='trip_type'>
                             <button
                                 onClick={() => setOneWay(!oneWay)}
@@ -243,18 +259,41 @@ function BookingSection() {
                         <div className='inputs_block d-flex'>
                             <div className='input_container flex-fill d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('from')}</label>
-                                <input type="text" placeholder={t("enter_your_location")}
-                                    onChange={(e) => setTripData({ ...tripData, fromInput: e.target.value })}
-                                    value={tripData.fromInput}
+                                <input
+                                    list="trainStationsFrom"
+                                    type="text"
+                                    name="trainFrom"
+                                    placeholder={t("enter_your_location")}
+                                    onChange={(e) => setTrainTrip({ ...TrainTrip, fromInput: e.target.value })}
+                                    value={TrainTrip.fromInput}
                                 />
+                                <datalist id="trainStationsFrom">
+                                    {autoCompleteTrainFrom.map((item) => (
+                                        <option key={`${Math.random()}`} value={`${item.item.name}`} />
+                                    ))}
+                                </datalist>
                             </div>
                             <div className='input_container flex-fill d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('to')}</label>
-                                <input type="text" placeholder={t("enter_your_destination")} />
+                                <input
+                                    list="trainStationsTo"
+                                    type="text"
+                                    name="trainTo"
+                                    placeholder={t("enter_your_location")}
+                                    onChange={(e) => setTrainTrip({ ...TrainTrip, toInput: e.target.value })}
+                                    value={TrainTrip.toInput}
+                                />
+                                <datalist id="trainStationsTo">
+                                    {autoCompleteTrainTo.map((item) => (
+                                        <option key={`${Math.random()}`} value={`${item.item.name}`} />
+                                    ))}
+                                </datalist>
                             </div>
                             <div className='input_container flex-fill d-flex flex-column p-2'>
                                 <label className="fw-bold">{t('departure')}</label>
-                                <input type="text" placeholder={t("pick_departure_date")} />
+                                <input type="date"
+                                    name="departure"
+                                    placeholder={t("pick_departure_date")} />
                             </div>
                         </div>
                         <div className='actions_block flex-row-reverse'>
