@@ -1,0 +1,74 @@
+[
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "portsaid",
+    "from": "cairo",
+    "price": 150,
+    "arrival": "10:00",
+    "departure": "12:00"
+  }
+]

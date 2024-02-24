@@ -50,21 +50,21 @@ const BookingForm = ({ jsonLists, activeTap }) => {
 
 
     // Create query string for flight
-    const flightSearchData = `from=${(tripData.fromInput)}&to=${(tripData.toInput)}&departure=${(tripData.departure)}&oneway=${oneWay}`;
+    const flightSearchData = `from=${(tripData.fromInput)}&to=${(tripData.toInput)}&departure=${(tripData.departure)}&oneway=${oneWay}&vech=flight`;
 
     let handleFlightSubmit = (e) => {
         e.preventDefault()
         navigate(`/search?${flightSearchData}`)
     }
     // Create query string for bus
-    const busSearchData = `from=${(busTrip.fromInput)}&to=${(busTrip.toInput)}&departure=${(busTrip.departure)}`;
+    const busSearchData = `from=${(busTrip.fromInput)}&to=${(busTrip.toInput)}&departure=${(busTrip.departure)}&vech=bus`;
 
     let handleBusSubmit = (e) => {
         e.preventDefault()
         navigate(`/search?${busSearchData}`)
     }
     // Create query string for train
-    const trainSearchData = `from=${(trainTrip.fromInput)}&to=${(trainTrip.toInput)}&departure=${(trainTrip.departure)}`;
+    const trainSearchData = `from=${(trainTrip.fromInput)}&to=${(trainTrip.toInput)}&departure=${(trainTrip.departure)}&vech=train`;
 
     let handleTrainSubmit = (e) => {
         e.preventDefault()
@@ -144,10 +144,10 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                 </div>
                 <div className='actions_block'>
                     <div className='checkbox_container'>
-                        
+
                     </div>
                     <div className='forms_menu' >
-                        
+
                         <button className='submit_booking primary_btn link-underline link-underline-opacity-0'
                         >{t('search')}</button>
                     </div>

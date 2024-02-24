@@ -1,4 +1,4 @@
-import { Container, Card, Row, Col } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
 import { IoStarOutline } from "react-icons/io5";
 import { BsCurrencyDollar } from "react-icons/bs";
@@ -8,7 +8,11 @@ import { useEffect, useState } from "react";
 // import Fuse from 'fuse.js'
 // import airports from '../db/airports.json'
 // import airplane from "../assets/test_image.png"
-import { IoMdAlarm } from "react-icons/io";
+
+import { useSearchParams } from "react-router-dom";
+import TicketCards from "../components/TicketCards";
+import busTrips from '../db/bus_trips.json'
+import trainTrips from '../db/train_trips.json'
 // import { FaChrome } from "react-icons/fa6";
 
 
@@ -32,6 +36,8 @@ export default function Search() {
         seats: "1 Adult",
         type: "Economy"
     });
+    const [params] = useSearchParams()
+    const searchVech = params.get('vech');
 
     useEffect(() => {
         //putting query data into objects :D
@@ -90,7 +96,6 @@ export default function Search() {
 
 
     useEffect(() => {
-
         // console.log(fromCodeState, toCodeState);
         const fetchTrips = async () => {
             try
@@ -101,7 +106,16 @@ export default function Search() {
                 const res = await fetch(`api/search.json?engine=google_flights&departure_id=${fromCodeState}&arrival_id=${toCodeState}&outbound_date=${departDateState}&return_date=2024-03-01&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`);
                 const data = await res.json();
                 // console.log(data);
-                setAvailableTickets(data)
+                if (searchVech == 'flight')
+                {
+                    setAvailableTickets(data)
+                } else if (searchVech == 'bus')
+                {
+                    setAvailableTickets(busTrips)
+                } else
+                {
+                    setAvailableTickets(trainTrips)
+                }
             } catch (error)
             {
                 console.log(error);
@@ -185,43 +199,8 @@ export default function Search() {
                     </div>
                 </div>
             </div>
-            {availableTickets.other_flights?.map((item) => ((item?.flights.map((item2, i) => (
-                <Card key={`${item2}/${i}`} className="my-2 shadow p-2 single_trip">
-                    <Row>
-                        <Col md="2" className="d-flex align-items-center">
-                            <img src={item.airline_logo
-                            } className="py-4 img-fluid" alt="test" />
-                        </Col>
-                        <Col md="8" className="d-flex flex-row trip_details align-items-center">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
-                                <div className="d-flex justify-content-between">
-                                    <span className="fw-bold">10:00</span>
-                                    <span className="text-secondary">
-                                        <IoMdAlarm className="mb-1 me-1" />
-                                        02h 00m
-                                    </span>
-                                    <span className="fw-bold">12:00</span>
-                                </div>
-                                <div className="line"></div>
-                                <div className="d-flex justify-content-between">
-                                    <span className="fw-bold text-secondary">{item2.airline}</span>
-                                    <span className="text-secondary">{item2.
-                                        airplane
-                                    }</span>
-                                    <span className="fw-bold text-secondary">{item2.airline}</span>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col md="2 last text-center">
-                            <div className="text-secondary mt-4">From 7 Websites</div>
-                            <div className="price my-2">{item.price * 30} </div>
-                            <div className="text-secondary my-2">Per Person</div>
-                        </Col>
-                    </Row>
-                </Card>
-            )))))}
 
+            <TicketCards availableTickets={availableTickets} searchVech={searchVech} />
 
 
         </Container>
