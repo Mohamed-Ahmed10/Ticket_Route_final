@@ -38,6 +38,7 @@ export default function Search() {
     });
     const [params] = useSearchParams()
     const searchVech = params.get('vech');
+    // const searchOneway = params.get('oneway');
 
     useEffect(() => {
         //putting query data into objects :D
@@ -132,7 +133,10 @@ export default function Search() {
                 <div className="left">
                     <div className='trip_type'>
                         <button className='secondary_btn'>{t('one_way')}</button>
-                        <button className='secondary_btn'>{t('round_trip')}</button>
+                        {searchVech == 'flight' && (
+
+                            <button className='secondary_btn'>{t('round_trip')}</button>
+                        )}
                     </div>
                 </div>
                 <div className="right">
@@ -169,10 +173,10 @@ export default function Search() {
                     <label className="fw-bold">{t('departure')}</label>
                     <input value={searchFilterData.departure} id="departure" onChange={handleChange} type="text" placeholder={t("pick_departure_date")} />
                 </div>
-                <div className='input_container d-flex flex-column border-start p-2'>
+                {/* <div className='input_container d-flex flex-column border-start p-2'>
                     <label className="fw-bold">{t('return')}</label>
                     <input type="text" placeholder={t("pick_return_date")} />
-                </div>
+                </div> */}
             </div>
             <hr className="my-4" />
             <div className="d-flex filter_parent">
@@ -180,7 +184,7 @@ export default function Search() {
                     <IoStarOutline />
                     <div>
                         <b>{t('recommended')}</b>
-                        <div className="price">0</div>
+                        <div className="price">000 </div>
                     </div>
                 </div>
                 <div className="flex-fill d-flex filter p-2">
@@ -188,14 +192,14 @@ export default function Search() {
 
                     <div>
                         <b>{t('cheapest')}</b>
-                        <div className="price">0</div>
+                        <div className="price">000 </div>
                     </div>
                 </div>
                 <div className="flex-fill d-flex filter p-2">
                     <SiMinutemailer />
                     <div>
                         <b>{t('fastest')}</b>
-                        <div className="price">0</div>
+                        <div className="price">000 </div>
                     </div>
                 </div>
             </div>

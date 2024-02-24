@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Card, Row, Col } from "react-bootstrap"
+import { Card, Row, Col, Spinner } from "react-bootstrap"
 import { IoMdAlarm } from "react-icons/io";
 import gobusLogo from '../assets/partners/go_bus.png'
 import fastbusLogo from '../assets/partners/fast_bus.png'
@@ -10,6 +10,13 @@ const TicketCards = ({ availableTickets, searchVech }) => {
         <>
             {searchVech == 'flight' ? (
                 <>
+                    {!availableTickets && (
+                        <div>
+                            <p>Loading please wait..</p>
+                            <Spinner animation="grow" variant="secondary" />
+                        </div>
+
+                    )}
                     {availableTickets.other_flights?.map((item) => ((item?.flights.map((item2, i) => (
                         <Card key={`${item2}/${i}`} className="my-2 shadow p-2 single_trip">
                             <Row>
@@ -50,6 +57,10 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                 </>
             ) :
                 <>
+                    {!availableTickets && (
+                        <Spinner animation="grow" variant="secondary" />
+
+                    )}
                     {availableTickets.map((item, i) => (
                         <Card key={`${item}/${i}`} className="my-2 shadow p-2 single_trip">
                             <Row>
