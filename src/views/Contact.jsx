@@ -35,7 +35,7 @@ export default function Contact() {
                 </div>
                 <div className="d-flex align-items-start">
                     <FaPhoneAlt style={{ fontSize: '30px', color: '#2582c0' }} />
-                    <p className="ps-3">Call Us <a href="#">12332484233</a>
+                    <p className="ps-3">Call Us <a href="#">1-800-123-4567</a>
                     </p>
                 </div>
 
