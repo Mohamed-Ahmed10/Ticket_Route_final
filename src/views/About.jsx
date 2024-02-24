@@ -23,7 +23,6 @@ export default function About() {
                     <li>John Doe - CEO</li>
                     <li>Jane Smith - Head of Operations</li>
                     <li>Michael Johnson - Customer Support Manager</li>
-                    {/* Add more team members as needed */}
                 </ul>
                 <p>If you have any questions or concerns, feel free to contact us:</p>
                 <div className="py-3 d-flex justify-content-evenly">
