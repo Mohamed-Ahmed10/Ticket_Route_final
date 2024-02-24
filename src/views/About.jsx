@@ -1,43 +1,42 @@
-import { Container } from "react-bootstrap";
-import { FaPhoneAlt } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
+import { Container, Row, Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import aboutImage from "../assets/about.png";
+import { FaQuoteRight } from "react-icons/fa";
+
 
 export default function About() {
+    let { t } = useTranslation()
     return (
         <Container>
-            <div className="my-3">
-                <h1>About Us</h1>
-                <p>Welcome to our ticket booking company!</p>
-                <p>
-                    We strive to provide you with the best ticket booking experience for all your travel needs.
-                </p>
-                <h2>Our Mission</h2>
-                <p>
-                    Our mission is to make traveling easier and more convenient for everyone by offering a seamless ticket booking platform.
-                </p>
-                <h2>Our Team</h2>
-                <p>
-                    Meet our dedicated team of professionals who work tirelessly to ensure your satisfaction:
-                </p>
-                <ul>
-                    <li>John Doe - CEO</li>
-                    <li>Jane Smith - Head of Operations</li>
-                    <li>Michael Johnson - Customer Support Manager</li>
-                </ul>
-                <p>If you have any questions or concerns, feel free to contact us:</p>
-                <div className="py-3 d-flex justify-content-evenly">
-                    <div className="d-flex align-items-start">
-                        <IoMdMail style={{ fontSize: '30px', color: '#2582c0' }} />
-                        <p className="ps-3"> Mail Us <a href="#">tickets-route@email.com</a>
-                        </p>
-                    </div>
-                    <div className="d-flex align-items-start">
-                        <FaPhoneAlt style={{ fontSize: '30px', color: '#2582c0' }} />
-                        <p className="ps-3">Call Us <a href="#">1-800-123-4567</a>
-                        </p>
-                    </div>
+            <div className="about_hero">
+
+                <div className="background_box"></div>
+                <Row className="about_intro">
+                    <Col>
+                        <img src={aboutImage} className="w-75 mt-4" alt="image" />
+                    </Col>
+                    <Col>
+                        <h2 className="mb-4 hero_intro">{t("about_heading")}</h2>
+                        <p className="mt-4">{t("about_desc")}</p>
+                    </Col>
+                </Row>
+
+                <div>
+                    <h2>{t("why_us")}</h2>
+                    <p>{t("why_desc")} {t("why_desc2")} {t("why_desc3")}</p>
+                </div>
+                <div className="my-4">
+                    <h2>{t("our_mission")}</h2>
+                    <p>{t("mission_desc")}</p>
+                </div>
+                <div className="quote">
+                    <FaQuoteRight />
+                    <p className="py-2">{t("quote")}</p>
+                    <div className="text-end">{t("quote_author")}</div>
                 </div>
             </div>
         </Container>
     )
 }
+
+

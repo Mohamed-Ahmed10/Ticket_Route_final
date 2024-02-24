@@ -10,7 +10,7 @@ function Hero() {
         <div className="hero">
             <div className="background_box"></div>
             <section id="hero_section">
-                <div className="hero_text_box">
+                <div className="hero_text_box mt-3">
                     <p className="d-flex align-items-center gap-2" ><PiPaperPlaneTilt style={{ color: '#2582C0' }} /> {t('her_sup_p')}</p>
                     <h3 className="bold" >
                         {t('hero_heading')} <br />

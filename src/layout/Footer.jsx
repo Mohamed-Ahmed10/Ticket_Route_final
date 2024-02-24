@@ -27,9 +27,9 @@ export default function Footer() {
             </div>
             <div className="footer_socials">
                 <form>
-                    <input type="text" placeholder="Enter your email address" />
+                    <input type="text" placeholder={t("email_placeholder")} />
                     <FaRegEnvelope className="footer_input_icon" />
-                    <button className="primary_btn">subscribe</button>
+                    <button className="primary_btn">{t('subscribe')}</button>
                 </form>
                 <div className="social_icons">
                     <a href="#">
