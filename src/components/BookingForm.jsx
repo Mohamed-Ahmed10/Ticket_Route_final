@@ -93,6 +93,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         <input type="text"
                             list='Data'
                             name='from'
+                            autoComplete="off"
                             placeholder={t("enter_your_location")}
                             onChange={activeTap == "flight" ? (e) => setTripData({ ...tripData, fromInput: e.target.value }) : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, fromInput: e.target.value }) : (e) => setTrainTrip({ ...trainTrip, fromInput: e.target.value })}
 
@@ -109,6 +110,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         <input type="text"
                             list='toData'
                             name='to'
+                            autoComplete="off"
                             placeholder={t("enter_your_destination")}
                             value={activeTap == "flight" ? tripData.toInput : activeTap == "bus" ? busTrip.toInput : trainTrip.toInput}
                             onChange={
@@ -125,6 +127,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         <label className="fw-bold">{t('departure')}</label>
                         <input type="date"
                             name="departure"
+                            autoComplete="off"
                             placeholder={t("pick_departure_date")}
                             value={activeTap == "flight" ? tripData.departure : activeTap == "bus" ? busTrip.departure : trainTrip.departure}
                             onChange={
@@ -141,27 +144,10 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                 </div>
                 <div className='actions_block'>
                     <div className='checkbox_container'>
-                        <input
-                            className="form-check-input mt-0" id="direct"
-                            name='direct'
-                            type="checkbox" value="" />
-                        <label htmlFor="direct">{t('direct_trips')}</label>
+                        
                     </div>
                     <div className='forms_menu' >
-                        <select name="seats" id="">
-                            <option value="1 Adult">1Adult</option>
-                            <option value="2 Adult">2Adult</option>
-                            <option value="3 Adult">3Adult</option>
-                            <option value="4 Adult">4Adult</option>
-                            <option value="5 Adult">5Adult</option>
-                        </select>
-                        <select name="package" id="">
-                            <option value="Economy">{t('economy')}</option>
-                            <option value="Business">{t('business')}</option>
-                        </select>
-                        <select name="payment" id="">
-                            <option value="Payment Type">{t('payment_type')}</option>
-                        </select>
+                        
                         <button className='submit_booking primary_btn link-underline link-underline-opacity-0'
                         >{t('search')}</button>
                     </div>
