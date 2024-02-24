@@ -221,9 +221,6 @@ export default function Search() {
                     </Row>
                 </Card>
             )))))}
-
-
-
         </Container>
     )
 }

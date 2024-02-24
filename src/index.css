@@ -87,7 +87,7 @@ input {
   text-align: center;
 }
 
-.nav-item > a {
+.nav-item>a {
   padding: 10px;
 }
 
@@ -149,6 +149,11 @@ input {
   z-index: -1;
 }
 
+.about_hero .background_box {
+  right: initial;
+  left: 0;
+}
+
 .rtl .background_box {
   right: 65%;
 }
@@ -174,12 +179,13 @@ input {
 }
 
 .tap_buttons_container> :first-child {
-  border-top-left-radius: 10px;
+  border-start-start-radius: 10px;
 }
 
 .tap_buttons_container> :last-child {
-  border-top-right-radius: 10px;
+  border-start-end-radius: 10px;
 }
+
 
 button.active_button {
   border-bottom: 2px solid #2582c0;
@@ -601,4 +607,28 @@ button.active_button {
 
 .single_trip .last {
   border-inline-start: 1px solid #c1c1c1
+}
+
+/******************************* About view***********************************/
+
+.about_hero h2 {
+  color: #2582C0;
+  font-weight: 800;
+  margin-top: 10%;
+}
+
+.about_hero .hero_intro {
+  padding-top: 20%;
+}
+
+.about_intro p {
+  color: #414141
+}
+
+.quote {
+  border-radius: 10px;
+  width: 50%;
+  margin: 30px 0;
+  padding: 20px;
+  background: #F6871226;
 }
