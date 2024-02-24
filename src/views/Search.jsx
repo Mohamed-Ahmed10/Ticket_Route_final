@@ -5,17 +5,17 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
 import { useEffect, useState } from "react";
 // import { trips } from '../db/trips'
-import Fuse from 'fuse.js'
-import airports from '../db/airports.json'
-import airplane from "../assets/test_image.png"
+// import Fuse from 'fuse.js'
+// import airports from '../db/airports.json'
+// import airplane from "../assets/test_image.png"
 import { IoMdAlarm } from "react-icons/io";
 // import { FaChrome } from "react-icons/fa6";
 
 
-const fuse = new Fuse(airports, { keys: ["name", "code", "country"] })
-console.log("fuse", fuse)
-const result = fuse.search("states")
-console.log("result", result);
+// const fuse = new Fuse(airports, { keys: ["name", "code", "country"] })
+// console.log("fuse", fuse)
+// const result = fuse.search("states")
+// console.log("result", result);
 
 export default function Search() {
     let { t } = useTranslation();
@@ -53,9 +53,9 @@ export default function Search() {
             })
         }
 
-        const keyWord = urlParams.toString().split("=")[1]
+        // const keyWord = urlParams.toString().split("=")[1]
         //FETCH DATA HERE
-        console.log(keyWord)
+        // console.log(keyWord)
         //ON CHANGE INPUTS HERE :D
         // const filteredTickets = trips.filter((ticket) => ticket.name.includes(keyWord));
         // setAvailableTickets(filteredTickets)
@@ -91,7 +91,7 @@ export default function Search() {
 
     useEffect(() => {
 
-        console.log(fromCodeState, toCodeState);
+        // console.log(fromCodeState, toCodeState);
         const fetchTrips = async () => {
             try
             {
@@ -100,7 +100,7 @@ export default function Search() {
                 setDepartDateState(searchFilterData.departure)
                 const res = await fetch(`api/search.json?engine=google_flights&departure_id=${fromCodeState}&arrival_id=${toCodeState}&outbound_date=${departDateState}&return_date=2024-03-01&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`);
                 const data = await res.json();
-                console.log(data);
+                // console.log(data);
                 setAvailableTickets(data)
             } catch (error)
             {
@@ -110,7 +110,8 @@ export default function Search() {
         fetchTrips();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-    console.log(availableTickets.other_flights);
+    console.log(availableTickets.other_flights)
+
     return (
         <Container className="mt-4 search_view">
             <div className="d-flex justify-content-between align-content-center">
@@ -184,37 +185,43 @@ export default function Search() {
                     </div>
                 </div>
             </div>
-            {availableTickets ? (<Card className="my-2 shadow p-2 single_trip">
-                <Row>
-                    <Col md="2" className="d-flex align-items-center">
-                        <img src={airplane} className="py-4 img-fluid" alt="test" />
-                    </Col>
-                    <Col md="8" className="d-flex flex-row trip_details align-items-center">
-                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
-                            <div className="d-flex justify-content-between">
-                                <span className="fw-bold">10:00</span>
-                                <span className="text-secondary">
-                                    <IoMdAlarm className="mb-1 me-1" />
-                                    02h 00m
-                                </span>
-                                <span className="fw-bold">12:00</span>
+            {availableTickets.other_flights?.map((item) => ((item?.flights.map((item2, i) => (
+                <Card key={`${item2}/${i}`} className="my-2 shadow p-2 single_trip">
+                    <Row>
+                        <Col md="2" className="d-flex align-items-center">
+                            <img src={item.airline_logo
+                            } className="py-4 img-fluid" alt="test" />
+                        </Col>
+                        <Col md="8" className="d-flex flex-row trip_details align-items-center">
+                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
+                                <div className="d-flex justify-content-between">
+                                    <span className="fw-bold">10:00</span>
+                                    <span className="text-secondary">
+                                        <IoMdAlarm className="mb-1 me-1" />
+                                        02h 00m
+                                    </span>
+                                    <span className="fw-bold">12:00</span>
+                                </div>
+                                <div className="line"></div>
+                                <div className="d-flex justify-content-between">
+                                    <span className="fw-bold text-secondary">{item2.airline}</span>
+                                    <span className="text-secondary">{item2.
+                                        airplane
+                                    }</span>
+                                    <span className="fw-bold text-secondary">{item2.airline}</span>
+                                </div>
                             </div>
-                            <div className="line"></div>
-                            <div className="d-flex justify-content-between">
-                                <span className="fw-bold text-secondary">test</span>
-                                <span className="text-secondary">Direct</span>
-                                <span className="fw-bold text-secondary">test</span>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col md="2 last text-center">
-                        <div className="text-secondary mt-4">From 7 Websites</div>
-                        <div className="price my-2">6,570</div>
-                        <div className="text-secondary my-2">Per Person</div>
-                    </Col>
-                </Row>
-            </Card>) : ""}
+                        </Col>
+                        <Col md="2 last text-center">
+                            <div className="text-secondary mt-4">From 7 Websites</div>
+                            <div className="price my-2">{item.price * 30} </div>
+                            <div className="text-secondary my-2">Per Person</div>
+                        </Col>
+                    </Row>
+                </Card>
+            )))))}
+
 
 
         </Container>
