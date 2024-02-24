@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { IoAirplaneOutline, } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
 import { PiTrain } from "react-icons/pi";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import airports from '../db/airports.json'
 import busStations from '../db/bus_stations.json'
 import TrainStations from '../db/trains.json'
@@ -12,7 +12,7 @@ import Fuse from 'fuse.js'
 
 function BookingSection() {
     let { t } = useTranslation();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [activeTap, setActiveTap] = useState("flight")
 
 
@@ -49,6 +49,7 @@ function BookingSection() {
     const [busTrip, setBusTrip] = useState({
         fromInput: "",
         toInput: "",
+        departure: ""
     })
     const busFuse = new Fuse(busStations, { keys: ["name", "city"] })
 
@@ -64,6 +65,15 @@ function BookingSection() {
     }, [busTrip.toInput])
 
 
+    const { fromInput, toInput, departure } = busTrip;
+
+    // Create query string
+    const busSearchData = `from=${encodeURIComponent(fromInput)}&to=${encodeURIComponent(toInput)}&departure=${encodeURIComponent(departure)}`;
+
+    let handleBusSubmit = (e) => {
+        e.preventDefault()
+        navigate(`/search?${busSearchData}`)
+    }
 
     /* *******************************  For Train ***************************************/
 
@@ -71,6 +81,7 @@ function BookingSection() {
     const [TrainTrip, setTrainTrip] = useState({
         fromInput: "",
         toInput: "",
+        departure: ""
     })
     const TrainFuse = new Fuse(TrainStations, { keys: ["name", "city"] })
 
@@ -84,6 +95,9 @@ function BookingSection() {
     useEffect(() => {
         setAutoCompleteTrainTo(TrainFuse.search(TrainTrip.toInput))
     }, [TrainTrip.toInput])
+
+
+
 
     return (
         <div className='tabs'>
@@ -193,7 +207,7 @@ function BookingSection() {
             )}
             {activeTap === 'bus' && (
                 <div className='booking_box'>
-                    <form action={`/search?`}>
+                    <form onSubmit={handleBusSubmit}>
                         <div className='trip_type'>
                             <button
                                 type='button'
@@ -236,7 +250,10 @@ function BookingSection() {
                                 <label className="fw-bold">{t('departure')}</label>
                                 <input type="date"
                                     name="departure"
-                                    placeholder={t("pick_departure_date")} />
+                                    placeholder={t("pick_departure_date")}
+                                    onChange={(e) => setBusTrip({ ...busTrip, departure: e.target.value })}
+                                    value={busTrip.departure}
+                                />
                             </div>
                         </div>
                         <div className='actions_block flex-row-reverse'>
@@ -293,6 +310,8 @@ function BookingSection() {
                                 <label className="fw-bold">{t('departure')}</label>
                                 <input type="date"
                                     name="departure"
+                                    onChange={(e) => setTrainTrip({ ...TrainTrip, departure: e.target.value })}
+                                    value={TrainTrip.departure}
                                     placeholder={t("pick_departure_date")} />
                             </div>
                         </div>
