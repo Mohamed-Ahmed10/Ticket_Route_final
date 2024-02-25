@@ -47,5 +47,10 @@
   "quote": "Travel is fatal to prejudice, bigotry, and narrow-mindedness, and many of our people need it sorely on these accounts. Broad, wholesome, charitable views of men and things cannot be acquired by vegetating in one little corner of the earth all one’s lifetime.",
   "quote_author": "Mark Twain, 1869",
   "subscribe": "Subscribe",
-  "email_placeholder": "Enter your email address"
+  "email_placeholder": "Enter your email address",
+  "date_leave":"Leave date",
+  "time_leave":"Leave time",
+  "date_arrival":"Arrival date",
+  "time_arrival":"Arrival time",
+  "plane_model":"Plane model"
 }

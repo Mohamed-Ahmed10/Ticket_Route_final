@@ -47,8 +47,6 @@ const BookingForm = ({ jsonLists, activeTap }) => {
     }, [activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput])
 
 
-
-
     // Create query string for flight
     const flightSearchData = `from=${(tripData.fromInput)}&to=${(tripData.toInput)}&departure=${(tripData.departure)}&oneway=${oneWay}&vech=flight`;
 
