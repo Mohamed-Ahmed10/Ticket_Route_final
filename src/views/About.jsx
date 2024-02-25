@@ -2,6 +2,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import aboutImage from "../assets/about.png";
 import { FaQuoteRight } from "react-icons/fa";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { GiSummits } from "react-icons/gi";
+import { BiWorld } from "react-icons/bi";
+import { LuHeartHandshake } from "react-icons/lu";
+
 
 
 export default function About() {
@@ -22,18 +27,59 @@ export default function About() {
                 </Row>
 
                 <div>
-                    <h2>{t("why_us")}</h2>
-                    <p>{t("why_desc")} {t("why_desc2")} {t("why_desc3")}</p>
+                    <h2 className="mb-4">{t("why_us")}</h2>
+                    <p>{t("why_desc")}</p>
                 </div>
-                <div className="my-4">
-                    <h2>{t("our_mission")}</h2>
-                    <p>{t("mission_desc")}</p>
-                </div>
-                <div className="quote">
-                    <FaQuoteRight />
-                    <p className="py-2">{t("quote")}</p>
-                    <div className="text-end">{t("quote_author")}</div>
-                </div>
+                <Row>
+                    <Col md={6} className="pe-4">
+                        <h2 className="mb-4">{t("our_mission")}</h2>
+                        <p>{t("mission_desc")}</p>
+                        <div className="quote">
+                            <FaQuoteRight />
+                            <p className="py-2">{t("quote")}</p>
+                            <div className="text-end">{t("quote_author")}</div>
+                        </div>
+                    </Col>
+                    <Col md={6} className="values ps-4">
+                        <h2 className="mb-4">{t("core_values")}</h2>
+                        <div className="d-flex">
+                            <div className="flex-shrink-0 pt-2">
+                                <GiCommercialAirplane />
+                            </div>
+                            <div className="flex-grow-1 ms-3">
+                                <h5>{t("value1")}</h5>
+                                <p>{t("value1_desc")}</p>
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className="flex-shrink-0 pt-2">
+                                <GiSummits />
+                            </div>
+                            <div className="flex-grow-1 ms-3">
+                                <h5>{t("value2")}</h5>
+                                <p>{t("value2_desc")}</p>
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className="flex-shrink-0 pt-2">
+                                <BiWorld />
+                            </div>
+                            <div className="flex-grow-1 ms-3">
+                                <h5>{t("value3")}</h5>
+                                <p>{t("value3_desc")}</p>
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className="flex-shrink-0 pt-2">
+                                <LuHeartHandshake />
+                            </div>
+                            <div className="flex-grow-1 ms-3">
+                                <h5>{t("value4")}</h5>
+                                <p>{t("value4_desc")}</p>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
             </div>
         </Container>
     )
