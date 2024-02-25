@@ -23,9 +23,9 @@ import trainTrips from '../db/train_trips.json'
 
 export default function Search() {
     let { t } = useTranslation();
-    const [fromCodeState, setFromCodeState] = useState("CAI")
-    const [toCodeState, setToCodeState] = useState("RUH")
-    const [departDateState, setDepartDateState] = useState("2024-02-27")
+    // const [fromCodeState, setFromCodeState] = useState("CAI")
+    // const [toCodeState, setToCodeState] = useState("RUH")
+    // const [departDateState, setDepartDateState] = useState("2024-02-27")
     const [availableTickets, setAvailableTickets] = useState([]);
 
     const [searchFilterData, setSearchFilterData] = useState({
@@ -38,6 +38,9 @@ export default function Search() {
     });
     const [params] = useSearchParams()
     const searchVech = params.get('vech');
+    const toParam = params.get('to').split(",")[1];
+    const fromParam = params.get('from').split(",")[1];
+    const departureParam = params.get('departure');
     // const searchOneway = params.get('oneway');
 
     useEffect(() => {
@@ -50,7 +53,8 @@ export default function Search() {
 
         // making sure if one of data truly exist
 
-        if (toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl) {
+        if (toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl)
+        {
             setSearchFilterData({
                 to: toFromUrl || "",
                 from: fromFromUrl || "",
@@ -71,19 +75,24 @@ export default function Search() {
     }, [location.search])
 
     const handleChange = (e) => {
-        if (e.target.id === "from") {
+        if (e.target.id === "from")
+        {
             setSearchFilterData({ ...searchFilterData, from: e.target.value });
         }
-        if (e.target.id === "to") {
+        if (e.target.id === "to")
+        {
             setSearchFilterData({ ...searchFilterData, to: e.target.value });
         }
-        if (e.target.id === "departure") {
+        if (e.target.id === "departure")
+        {
             setSearchFilterData({ ...searchFilterData, departure: e.target.value });
         }
-        if (e.target.id === "seats") {
+        if (e.target.id === "seats")
+        {
             setSearchFilterData({ ...searchFilterData, seats: e.target.value });
         }
-        if (e.target.id === "type") {
+        if (e.target.id === "type")
+        {
             setSearchFilterData({ ...searchFilterData, type: e.target.value });
         }
     };
@@ -93,21 +102,26 @@ export default function Search() {
     useEffect(() => {
         // console.log(fromCodeState, toCodeState);
         const fetchTrips = async () => {
-            try {
-                setFromCodeState(searchFilterData.from.split(",")[1])
-                setToCodeState(searchFilterData.from.split(",")[1])
-                setDepartDateState(searchFilterData.departure)
-                const res = await fetch(`api/search.json?engine=google_flights&departure_id=${fromCodeState}&arrival_id=${toCodeState}&outbound_date=${departDateState}&return_date=2024-03-01&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`);
+            try
+            {
+                // setFromCodeState(searchFilterData.from.split(",")[1])
+                // setToCodeState(searchFilterData.from.split(",")[1])
+                // setDepartDateState(searchFilterData.departure)
+                const res = await fetch(`api/search.json?engine=google_flights&departure_id=${fromParam}&arrival_id=${toParam}&outbound_date=${departureParam}&return_date=2024-03-01&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`);
                 const data = await res.json();
                 // console.log(data);
-                if (searchVech == 'flight') {
+                if (searchVech == 'flight')
+                {
                     setAvailableTickets(data)
-                } else if (searchVech == 'bus') {
+                } else if (searchVech == 'bus')
+                {
                     setAvailableTickets(busTrips)
-                } else {
+                } else
+                {
                     setAvailableTickets(trainTrips)
                 }
-            } catch (error) {
+            } catch (error)
+            {
                 console.log(error);
             }
         };
