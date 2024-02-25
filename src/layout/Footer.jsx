@@ -1,5 +1,5 @@
 
-import icon_transparent from "../assets/logo/icon_transparent.png"
+import icon_transparent from "../assets/logo.png"
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";

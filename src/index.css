@@ -627,10 +627,13 @@ button.active_button {
 
 .quote {
   border-radius: 10px;
-  width: 50%;
   margin: 30px 0;
   padding: 20px;
   background: #F6871226;
+}
+
+.values svg {
+  font-size: 2rem;
 }
 
 /***************** Loader *********************** */
