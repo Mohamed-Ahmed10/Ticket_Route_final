@@ -41,7 +41,7 @@ export default function Search() {
     const toParam = params.get('to').split(",")[1];
     const fromParam = params.get('from').split(",")[1];
     const departureParam = params.get('departure');
-    // const searchOneway = params.get('oneway');
+    const searchOneway = params.get('oneway');
 
     useEffect(() => {
         //putting query data into objects :D
@@ -50,6 +50,7 @@ export default function Search() {
         const fromFromUrl = urlParams.get("from");
         const departureFromUrl = urlParams.get("departure");
         const roundTripFromUrl = urlParams.get("roundTrip");
+
 
         // making sure if one of data truly exist
 
@@ -107,7 +108,7 @@ export default function Search() {
                 // setFromCodeState(searchFilterData.from.split(",")[1])
                 // setToCodeState(searchFilterData.from.split(",")[1])
                 // setDepartDateState(searchFilterData.departure)
-                const res = await fetch(`api/search.json?engine=google_flights&departure_id=${fromParam}&arrival_id=${toParam}&outbound_date=${departureParam}&return_date=2024-03-01&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`);
+                const res = await fetch(`api/search.json?engine=google_flights&departure_id=${fromParam}&arrival_id=${toParam}&outbound_date=${departureParam}&type=${searchOneway ? 2 : 1}&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`);
                 const data = await res.json();
                 // console.log(data);
                 if (searchVech == 'flight')
