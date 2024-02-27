@@ -42,6 +42,8 @@ export default function Search() {
     const fromParam = params.get('from').split(",")[1];
     const departureParam = params.get('departure');
     const searchOneway = params.get('oneway');
+    const originalFrom = params.get('from');
+    const originalTo = params.get('to');
 
     useEffect(() => {
         //putting query data into objects :D
@@ -126,10 +128,19 @@ export default function Search() {
                 console.log(error);
             }
         };
-        fetchTrips();
+        if (searchVech == 'flight')
+        {
+
+            fetchTrips();
+        } else
+        {
+            return
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    console.log('From: ', originalFrom);
+    console.log('to: ', originalTo);
     return (
         <Container className="mt-4 search_view">
             {/* <div className='trip_type'>
