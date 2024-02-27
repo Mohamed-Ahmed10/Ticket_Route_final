@@ -2,8 +2,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Port Said Station",
+    "from": "Cairo Ramses Station",
     "price": 30,
     "arrival": "16:00",
     "departure": "20:00"
@@ -11,8 +11,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Port Said Station",
+    "from": "Cairo Ramses Station",
     "price": 50,
     "arrival": "10:00",
     "departure": "12:00"
@@ -20,8 +20,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Ramses Station",
+    "from": "Port Said Station",
     "price": 45,
     "arrival": "18:00",
     "departure": "21:00"
@@ -29,8 +29,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Ramses Station",
+    "from": "Port Said Station",
     "price": 35,
     "arrival": "10:00",
     "departure": "12:00"
@@ -38,8 +38,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Banha Station",
+    "from": "Cairo Ramses Station",
     "price": 27,
     "arrival": "10:00",
     "departure": "12:00"
@@ -47,8 +47,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Banha Station",
+    "from": "Cairo Ramses Station",
     "price": 30,
     "arrival": "09:00",
     "departure": "06:00"
@@ -56,8 +56,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Ramses Station",
+    "from": "Banha Station",
     "price": 42.5,
     "arrival": "14:00",
     "departure": "11:00"
@@ -65,8 +65,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Ramses Station",
+    "from": "Banha Station",
     "price": 38,
     "arrival": "13:00",
     "departure": "10:00"

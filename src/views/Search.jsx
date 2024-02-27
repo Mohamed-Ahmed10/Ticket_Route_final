@@ -134,6 +134,11 @@ export default function Search() {
             let ticketsArray = busTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
             console.log(ticketsArray);
             setAvailableTickets(ticketsArray)
+        } else if (searchVech == 'train')
+        {
+            let ticketsArray = trainTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
+            console.log(ticketsArray);
+            setAvailableTickets(ticketsArray)
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
