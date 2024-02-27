@@ -16,10 +16,6 @@ import trainTrips from '../db/train_trips.json'
 // import { FaChrome } from "react-icons/fa6";
 
 
-// const fuse = new Fuse(airports, { keys: ["name", "code", "country"] })
-// console.log("fuse", fuse)
-// const result = fuse.search("states")
-// console.log("result", result);
 
 export default function Search() {
     let { t } = useTranslation();
@@ -132,15 +128,20 @@ export default function Search() {
         {
 
             fetchTrips();
-        } else
+        } else if (searchVech == 'bus')
         {
-            return
+            // let TicketsArray = JSON.parse(busTrips)
+            let ticketsArray = busTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
+            console.log(ticketsArray);
+            setAvailableTickets(ticketsArray)
         }
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     console.log('From: ', originalFrom);
     console.log('to: ', originalTo);
+    console.log(availableTickets);
     return (
         <Container className="mt-4 search_view">
             {/* <div className='trip_type'>

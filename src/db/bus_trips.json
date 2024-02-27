@@ -2,8 +2,8 @@
   {
     "company": "gobus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Port Said Bus Station",
+    "from": "Cairo Gateway Bus Station",
     "price": 150,
     "arrival": "06:00",
     "departure": "08:00"
@@ -11,8 +11,8 @@
   {
     "company": "eastbus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Port Said Bus Station",
+    "from": "Cairo Gateway Bus Station",
     "price": 155,
     "arrival": "07:00",
     "departure": "09:00"
@@ -20,8 +20,8 @@
   {
     "company": "gobus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Gateway Bus Station",
+    "from": "Port Said Bus Station",
     "price": 145,
     "arrival": "09:00",
     "departure": "11:00"
@@ -29,8 +29,8 @@
   {
     "company": "gobus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Gateway Bus Station",
+    "from": "Port Said Bus Station",
     "price": 130,
     "arrival": "10:00",
     "departure": "12:00"
@@ -38,8 +38,8 @@
   {
     "company": "eastbus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Gateway Bus Station",
+    "from": "Alexandria Bus Station",
     "price": 150,
     "arrival": "10:00",
     "departure": "12:00"
@@ -47,8 +47,8 @@
   {
     "company": "eastbus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Cairo Gateway Bus Station",
+    "from": "Alexandria Bus Station",
     "price": 125,
     "arrival": "11:00",
     "departure": "13:00"
@@ -56,8 +56,8 @@
   {
     "company": "gobus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Alexandria Bus Station",
+    "from": "Cairo Gateway Bus Station",
     "price": 150,
     "arrival": "14:00",
     "departure": "16:00"
@@ -65,8 +65,35 @@
   {
     "company": "eastbus",
     "company_log": "image",
-    "to": "portsaid",
-    "from": "cairo",
+    "to": "Sharm el-Sheikh Bus Station",
+    "from": "Cairo Gateway Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "Sharm el-Sheikh Bus Station",
+    "from": "Cairo Gateway Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "Cairo Gateway Bus Station",
+    "from": "Sharm el-Sheikh Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "Cairo Gateway Bus Station",
+    "from": "Sharm el-Sheikh Bus Station",
     "price": 150,
     "arrival": "15:00",
     "departure": "17:00"

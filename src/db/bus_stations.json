@@ -1,42 +1,18 @@
 [
-    {
-        "name": "Cairo Gateway Bus Station",
-        "city": "Cairo"
-    },
-    {
-        "name": "Alexandria Bus Station",
-        "city": "Alexandria"
-    },
-    {
-        "name": "Tahrir Square Bus Station",
-        "city": "Cairo"
-    },
-    {
-        "name": "Ramses Square Bus Station",
-        "city": "Cairo"
-    },
-    {
-        "name": "Giza Bus Station",
-        "city": "Giza"
-    },
-    {
-        "name": "Asyut Bus Station",
-        "city": "Asyut"
-    },
-    {
-        "name": "Luxor Bus Station",
-        "city": "Luxor"
-    },
-    {
-        "name": "Hurghada Bus Station",
-        "city": "Hurghada"
-    },
-    {
-        "name": "Sharm el-Sheikh Bus Station",
-        "city": "Sharm el-Sheikh"
-    },
-    {
-        "name": "Port Said Bus Station",
-        "city": "Port Said"
-    }
+  {
+    "name": "Cairo Gateway Bus Station",
+    "city": "Cairo"
+  },
+  {
+    "name": "Alexandria Bus Station",
+    "city": "Alexandria"
+  },
+  {
+    "name": "Sharm el-Sheikh Bus Station",
+    "city": "Sharm el-Sheikh"
+  },
+  {
+    "name": "Port Said Bus Station",
+    "city": "Port Said"
+  }
 ]
