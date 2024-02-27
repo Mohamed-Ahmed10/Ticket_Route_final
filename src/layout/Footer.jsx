@@ -21,7 +21,7 @@ export default function Footer() {
                 <div className="footer_nav_links flex-wrap">
                     <Link to="/" className="w-50 nav-link link-offset-3 ">{t('home')}</Link>
                     <Link to="/about" className="w-50 nav-link link-offset-3 ">{t('about_us')}</Link>
-                    <Link to="/contact_us" className="w-50 nav-link link-offset-3 ">{t('contact_us')}</Link>
+                    <Link to="/contact" className="w-50 nav-link link-offset-3 ">{t('contact_us')}</Link>
                     <Link to="/faq" className="w-50 nav-link link-offset-3 ">{t('faq')}</Link>
                 </div>
             </div>
