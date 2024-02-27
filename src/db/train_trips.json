@@ -70,5 +70,176 @@
     "price": 38,
     "arrival": "13:00",
     "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Alexandria Station",
+    "from": "Banha Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Banha Station",
+    "from": "Alexandria Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Cairo Ramses Station",
+    "from": "Alexandria Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Alexandria Station",
+    "from": "Cairo Ramses Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Alexandria Station",
+    "from": "Port Said Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Alexandria Station",
+    "from": "Port Said Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Port Said Station",
+    "from": "Alexandria Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Port Said Station",
+    "from": "Alexandria Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Port Said Station",
+    "from": "Banha Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Banha Station",
+    "from": "Port Said Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Aswan Station",
+    "from": "Cairo Ramses Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Aswan Station",
+    "from": "Port Said Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Alexandria Station",
+    "from": "Aswan Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Port Said Station",
+    "from": "Aswan Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Aswan Station",
+    "from": "Alexandria Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Aswan Station",
+    "from": "Banha Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Banha Station",
+    "from": "Aswan Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Aswan Station",
+    "from": "Cairo Ramses Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Cairo Ramses Station",
+    "from": "Aswan Station",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "10:00"
   }
 ]
