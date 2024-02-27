@@ -97,5 +97,77 @@
     "price": 150,
     "arrival": "15:00",
     "departure": "17:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "Port Said Bus Station",
+    "from": "Alexandria Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "Alexandria Bus Station",
+    "from": "Port Said Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "Port Said Bus Station",
+    "from": "Sharm el-Sheikh Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "Sharm el-Sheikh Bus Station",
+    "from": "Port Said Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "Sharm el-Sheikh Bus Station",
+    "from": "Alexandria Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "Sharm el-Sheikh Bus Station",
+    "from": "Alexandria Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "eastbus",
+    "company_log": "image",
+    "to": "Alexandria Bus Station",
+    "from": "Sharm el-Sheikh Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
+  },
+  {
+    "company": "gobus",
+    "company_log": "image",
+    "to": "Alexandria Bus Station",
+    "from": "Sharm el-Sheikh Bus Station",
+    "price": 150,
+    "arrival": "15:00",
+    "departure": "17:00"
   }
 ]
