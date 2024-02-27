@@ -6,7 +6,7 @@
     "from": "cairo",
     "price": 30,
     "arrival": "16:00",
-    "departure": "13:00"
+    "departure": "20:00"
   },
   {
     "company": "railway",
@@ -24,7 +24,7 @@
     "from": "cairo",
     "price": 45,
     "arrival": "18:00",
-    "departure": "15:00"
+    "departure": "21:00"
   },
   {
     "company": "railway",

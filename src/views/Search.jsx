@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
-import { IoStarOutline } from "react-icons/io5";
-import { BsCurrencyDollar } from "react-icons/bs";
-import { SiMinutemailer } from "react-icons/si";
+// import { IoStarOutline } from "react-icons/io5";
+// import { BsCurrencyDollar } from "react-icons/bs";
+// import { SiMinutemailer } from "react-icons/si";
 import { useEffect, useState } from "react";
 // import { trips } from '../db/trips'
 // import Fuse from 'fuse.js'
@@ -155,7 +155,7 @@ export default function Search() {
                 </div>
             </div>
             <hr className="my-4" />
-            <div className="d-flex filter_parent">
+            {/* <div className="d-flex filter_parent">
                 <div className="flex-fill d-flex filter p-2 active">
                     <IoStarOutline />
                     <div>
@@ -178,7 +178,7 @@ export default function Search() {
                         <div className="price">000 </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <TicketCards availableTickets={availableTickets} searchVech={searchVech} />
         </Container>

@@ -41,30 +41,30 @@ const TripIdeas = () => {
         {
             city: 'Alexandria',
             by: 'bus',
-            price: 250,
+            price: 350,
             image: cityThree
         },
         {
             city: 'Sharm Elsheikh',
             by: 'flight',
-            price: 2500,
+            price: 4500,
             image: cityOne
-        },{
+        }, {
             city: 'Dahab',
             by: 'bus',
-            price: 250,
+            price: 175,
             image: cityTwo
         },
         {
             city: 'Alexandria',
             by: 'bus',
-            price: 250,
+            price: 95,
             image: cityThree
         },
         {
             city: 'Dahab',
             by: 'bus',
-            price: 250,
+            price: 310,
             image: cityTwo
         }
     ]
@@ -94,7 +94,6 @@ const TripIdeas = () => {
                                         <h4>{place.city}</h4>
                                         <div className='by'>{place.by}</div>
                                         <div className='price '>
-                                            <span>EGP</span>
                                             <span>{place.price}</span>
                                         </div>
                                     </div>

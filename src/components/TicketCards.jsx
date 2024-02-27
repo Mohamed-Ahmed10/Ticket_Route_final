@@ -22,12 +22,11 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                     {availableTickets.other_flights?.map((item) => ((item?.flights.map((item2, i) => (
                         <Card key={`${item2}/${i}`} className="my-2 shadow p-2 single_trip">
                             <Row>
-                                <Col md="2" className="d-flex align-items-center">
+                                <Col md="2" className="d-flex align-items-center justify-content-center">
                                     <img src={item.airline_logo
                                     } className="py-4 img-fluid" alt="test" />
                                 </Col>
                                 <Col md="8" className="d-flex flex-row trip_details align-items-center">
-                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                     <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
                                         <div className="d-flex justify-content-between">
                                             <span className="fw-bold text-center">

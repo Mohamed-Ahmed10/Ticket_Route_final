@@ -538,10 +538,6 @@ button.active_button {
   font-size: 0.8rem;
 }
 
-.trips_container .price :first-child {
-  font-size: 0.6rem;
-}
-
 /******************** Search view *************************** */
 .search_view .inputs_block {
   background-color: #fff;
