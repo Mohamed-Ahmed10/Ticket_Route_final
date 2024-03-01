@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import { Row, Col, Card } from "react-bootstrap"
 import { useTranslation } from 'react-i18next';
@@ -7,7 +8,7 @@ const TripIdeas = ({ trip_status }) => {
     let { t } = useTranslation()
 
     let [places, setPlaces] = useState([])
-    const [activeButton, setActiveButton] = useState('All');
+    // const [activeButton, setActiveButton] = useState('All');
 
     useEffect(() => {
         setTimeout(() => setPlaces(data_places.filter(trip => trip.by === trip_status)), 1500)

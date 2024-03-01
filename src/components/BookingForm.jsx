@@ -108,7 +108,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         </datalist>
                     </div>
                     <div className='input_container flex-fill d-flex flex-column p-2'>
-                        <label className="fw-bold">{t('departure')}</label>
+                        <label className="fw-bold">{t('date_leave')}</label>
                         <input type="date"
                             name="departure"
                             autoComplete="off"
