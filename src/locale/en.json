@@ -76,5 +76,6 @@
   "intro_message": "Welcome to the Ticket Route website. Inquire and book your trip with ease and speed.",
   "partners": "Success partners",
   "partners_desc": "Book cheap trips on out partners and you’re ready to go",
-  "trips_from_cairo": "Trip Ideas from Cairo"
+  "trips_from_cairo": "Trip Ideas from Cairo",
+  "per_person":"Per Person"
 }

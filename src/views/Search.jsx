@@ -1,4 +1,4 @@
-import { Container, Spinner } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
 // import { IoStarOutline } from "react-icons/io5";
 // import { BsCurrencyDollar } from "react-icons/bs";
@@ -53,8 +53,7 @@ export default function Search() {
 
         // making sure if one of data truly exist
 
-        if (toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl)
-        {
+        if (toFromUrl || fromFromUrl || departureFromUrl || roundTripFromUrl) {
             setSearchFilterData({
                 to: toFromUrl || "",
                 from: fromFromUrl || "",
@@ -75,24 +74,19 @@ export default function Search() {
     }, [location.search])
 
     const handleChange = (e) => {
-        if (e.target.id === "from")
-        {
+        if (e.target.id === "from") {
             setSearchFilterData({ ...searchFilterData, from: e.target.value });
         }
-        if (e.target.id === "to")
-        {
+        if (e.target.id === "to") {
             setSearchFilterData({ ...searchFilterData, to: e.target.value });
         }
-        if (e.target.id === "departure")
-        {
+        if (e.target.id === "departure") {
             setSearchFilterData({ ...searchFilterData, departure: e.target.value });
         }
-        if (e.target.id === "seats")
-        {
+        if (e.target.id === "seats") {
             setSearchFilterData({ ...searchFilterData, seats: e.target.value });
         }
-        if (e.target.id === "type")
-        {
+        if (e.target.id === "type") {
             setSearchFilterData({ ...searchFilterData, type: e.target.value });
         }
     };
@@ -102,8 +96,7 @@ export default function Search() {
     useEffect(() => {
         // console.log(fromCodeState, toCodeState);
         const fetchTrips = async () => {
-            try
-            {
+            try {
                 setIsLoading(true)
                 // setFromCodeState(searchFilterData.from.split(",")[1])
                 // setToCodeState(searchFilterData.from.split(",")[1])
@@ -111,39 +104,32 @@ export default function Search() {
                 const res = await fetch(`api/search.json?engine=google_flights&departure_id=${fromParam}&arrival_id=${toParam}&outbound_date=${departureParam}&type=${searchOneway ? 2 : 1}&currency=USD&hl=en&gl=eg&api_key=a1949d5cd8b260a18a05dfe43a4f7e23eca8002a6ff1851894367af2d252925c`);
                 const data = await res.json();
                 // console.log(data);
-                if (searchVech == 'flight')
-                {
+                if (searchVech == 'flight') {
                     setIsLoading(false)
                     setAvailableTickets(data)
-                } else if (searchVech == 'bus')
-                {
+                } else if (searchVech == 'bus') {
                     setIsLoading(false)
 
                     setAvailableTickets(busTrips)
-                } else
-                {
+                } else {
                     setIsLoading(false)
 
                     setAvailableTickets(trainTrips)
                 }
-            } catch (error)
-            {
+            } catch (error) {
                 console.log(error);
             }
         };
-        if (searchVech == 'flight')
-        {
+        if (searchVech == 'flight') {
             fetchTrips();
-        } else if (searchVech == 'bus')
-        {
+        } else if (searchVech == 'bus') {
             setIsLoading(true)
             // let TicketsArray = JSON.parse(busTrips)
             let ticketsArray = busTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
             console.log(ticketsArray);
             setAvailableTickets(ticketsArray)
             setIsLoading(false)
-        } else if (searchVech == 'train')
-        {
+        } else if (searchVech == 'train') {
             setIsLoading(true)
             let ticketsArray = trainTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
             console.log(ticketsArray);
@@ -210,9 +196,11 @@ export default function Search() {
             {availableTickets && !isLoading && (
                 <TicketCards availableTickets={availableTickets} searchVech={searchVech} />
             )}
-            {isLoading && <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </Spinner>}
+            {isLoading &&
+                <div className='d-flex justify-content-center'>
+                    <div className="loader"></div>
+                </div>
+            }
 
         </Container>
     )

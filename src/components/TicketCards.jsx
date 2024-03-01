@@ -15,7 +15,9 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                     {!availableTickets && (
                         <div>
                             <p>Loading please wait..</p>
-                            <Spinner animation="grow" variant="secondary" />
+                            <div className='d-flex justify-content-center'>
+                                <div className="loader"></div>
+                            </div>
                         </div>
 
                     )}
@@ -95,17 +97,15 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col md="2 last text-center">
-                                    <div className="text-secondary mt-4">From 7 Websites</div>
+                                <Col md="2" className="d-flex text-center flex-column justify-content-center">
                                     <div className="price my-2">{item.price} </div>
-                                    <div className="text-secondary my-2">Per Person</div>
+                                    <div className="text-secondary my-2"> {t("per_person")}</div>
                                 </Col>
                             </Row>
                         </Card>
                     ))}
                 </>
             }
-
         </>
     )
 }

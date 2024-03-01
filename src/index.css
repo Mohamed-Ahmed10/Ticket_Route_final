@@ -571,6 +571,10 @@ button.active_button {
 }
 
 /******************** Search view *************************** */
+.search_view {
+  min-height: 80vh
+}
+
 .search_view .inputs_block {
   background-color: #fff;
   padding: 0;

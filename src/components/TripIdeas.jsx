@@ -17,7 +17,6 @@ const TripIdeas = ({ trip_status }) => {
     // const handleButtonClick = (buttonName) => {
     //     setActiveButton(buttonName)
     //     console.log(places.filter((place => place.categories.find(category => category === activeButton))))
-
     // };
 
     // let buttons_data = ['All', 'Romantic', 'Nature', 'Family-friendly', 'BackPacking', 'Beach', 'Cultural', 'Summer']
