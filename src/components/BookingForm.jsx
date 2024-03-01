@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import Fuse from 'fuse.js'
@@ -5,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 
 // import airports from '../db/airports.json'
-
 
 
 const BookingForm = ({ jsonLists, activeTap }) => {
@@ -34,7 +34,6 @@ const BookingForm = ({ jsonLists, activeTap }) => {
         type: "Economy",
         departure: ""
     })
-    console.log(tripData)
     const fuse = new Fuse(jsonLists, { keys: ["name", "code", "country", "city"] })
     activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput
     let { t } = useTranslation();
@@ -72,19 +71,6 @@ const BookingForm = ({ jsonLists, activeTap }) => {
     return (
         <div className='booking_box'>
             <form action={`/search?`} onSubmit={activeTap == 'flight' ? handleFlightSubmit : activeTap == 'bus' ? handleBusSubmit : handleTrainSubmit} >
-                <div className='trip_type'>
-                    <button
-                        onClick={() => setOneWay(!oneWay)}
-                        type='button'
-                        className={`secondary_btn ${oneWay && 'secondary_active'}`}>{t('one_way')}</button>
-                    {activeTap == 'flight' && (
-                        <button
-
-                            onClick={() => setOneWay(!oneWay)}
-                            type='button'
-                            className={`secondary_btn ${!oneWay && 'secondary_active'}`}>{t('round_trip')}</button>
-                    )}
-                </div>
                 <div className='inputs_block d-flex'>
                     <div className='input_container flex-fill d-flex flex-column p-2'>
                         <label className="fw-bold">{t('from')}</label>

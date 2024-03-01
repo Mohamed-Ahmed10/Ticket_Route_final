@@ -3,9 +3,9 @@
   "about_us": "About us",
   "contact_us": "Contact us",
   "faq": "FAQ",
-  "train":"Train",
-  "bus":"Bus",
-  "airplane":"Airplane",
+  "train": "Train",
+  "bus": "Bus",
+  "airplane": "Airplane",
   "her_sup_p": "Book your next trip with best prices",
   "hero_heading": "The best affordable",
   "hero_heading2": "Trips with Ticket Route",
@@ -72,5 +72,9 @@
   "question4": "How can the system prevent double bookings or overbooking?",
   "answer4": "To prevent double bookings or overbooking, the system can implement a real-time inventory management system that updates seat availability instantly. When a user selects a seat or ticket, it is temporarily reserved for a specific time window. If the reservation is not completed within that time, the seat becomes available again.",
   "question5": "How can users receive their tickets after making a reservation?",
-  "answer5": "After making a reservation, users can receive their tickets through various methods. This can include email delivery, SMS or mobile app notifications, or by printing the tickets at a physical ticket booth or self-service kiosk using a unique reservation code or QR code."
+  "answer5": "After making a reservation, users can receive their tickets through various methods. This can include email delivery, SMS or mobile app notifications, or by printing the tickets at a physical ticket booth or self-service kiosk using a unique reservation code or QR code.",
+  "intro_message": "Welcome to the Ticket Route website. Inquire and book your trip with ease and speed.",
+  "partners": "Success partners",
+  "partners_desc": "Book cheap trips on out partners and you’re ready to go",
+  "trips_from_cairo": "Trip Ideas from Cairo"
 }

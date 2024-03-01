@@ -7,8 +7,8 @@ export default function Bus() {
     return (
         <Container>
             <Hero trip_status="bus" />
-            <Partners />
-            <TripIdeas />
+            <Partners trip_status="bus"/>
+            <TripIdeas trip_status="bus"/>
         </Container>
     )
 }

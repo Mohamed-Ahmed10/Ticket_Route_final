@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import aboutImage from "../assets/about.png";
+import aboutImage from "../assets/about.jpg";
 import { FaQuoteRight } from "react-icons/fa";
 import { GiCommercialAirplane } from "react-icons/gi";
 import { GiSummits } from "react-icons/gi";
@@ -14,18 +14,16 @@ export default function About() {
     return (
         <Container>
             <div className="about_hero">
-
                 <div className="background_box"></div>
                 <Row className="about_intro">
                     <Col>
-                        <img src={aboutImage} className="w-75 mt-4" alt="image" />
+                        <img src={aboutImage} className="w-75 mt-4 rounded-4 img-fluid" alt="image" />
                     </Col>
                     <Col>
                         <h2 className="mb-4 hero_intro">{t("about_heading")}</h2>
                         <p className="mt-4">{t("about_desc")}</p>
                     </Col>
                 </Row>
-
                 <div>
                     <h2 className="mb-4">{t("why_us")}</h2>
                     <p>{t("why_desc")}</p>
@@ -42,36 +40,36 @@ export default function About() {
                     </Col>
                     <Col md={6} className="values ps-4">
                         <h2 className="mb-4">{t("core_values")}</h2>
-                        <div className="d-flex">
+                        <div className="d-flex align-content-center">
                             <div className="flex-shrink-0 pt-2">
-                                <GiCommercialAirplane />
+                                <GiCommercialAirplane className="m-3"/>
                             </div>
                             <div className="flex-grow-1 ms-3">
                                 <h5>{t("value1")}</h5>
                                 <p>{t("value1_desc")}</p>
                             </div>
                         </div>
-                        <div className="d-flex">
+                        <div className="d-flex align-content-center">
                             <div className="flex-shrink-0 pt-2">
-                                <GiSummits />
+                                <GiSummits className="m-3"/>
                             </div>
                             <div className="flex-grow-1 ms-3">
                                 <h5>{t("value2")}</h5>
                                 <p>{t("value2_desc")}</p>
                             </div>
                         </div>
-                        <div className="d-flex">
+                        <div className="d-flex align-content-center">
                             <div className="flex-shrink-0 pt-2">
-                                <BiWorld />
+                                <BiWorld className="m-3"/>
                             </div>
                             <div className="flex-grow-1 ms-3">
                                 <h5>{t("value3")}</h5>
                                 <p>{t("value3_desc")}</p>
                             </div>
                         </div>
-                        <div className="d-flex">
+                        <div className="d-flex align-content-center">
                             <div className="flex-shrink-0 pt-2">
-                                <LuHeartHandshake />
+                                <LuHeartHandshake className="m-3"/>
                             </div>
                             <div className="flex-grow-1 ms-3">
                                 <h5>{t("value4")}</h5>

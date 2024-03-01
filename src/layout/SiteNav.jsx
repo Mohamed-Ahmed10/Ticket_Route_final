@@ -14,9 +14,7 @@ export default function SiteNav() {
         <div>
             <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand href="#">
-                        <img src={logo} alt="Icon" style={{ width: '50px' }} />
-                    </Navbar.Brand>
+                    <img src={logo} alt="Icon" style={{ width: '50px' }} /> 
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className={`${i18n.language === 'en' ? "me-auto" : "ms-auto"} ms-4 my-2 my-lg-0`}>

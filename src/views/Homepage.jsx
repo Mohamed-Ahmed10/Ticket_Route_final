@@ -7,35 +7,33 @@ import { Link } from "react-router-dom";
 export default function Homepage() {
     let { t } = useTranslation()
     return (
-        <Container className="my-4">
+        <Container className="my-4 homepage">
+            <h3 className="mb-4 pb-4 text-center">{t("intro_message")}</h3>
             <Row>
                 <Col>
-                    <Card className="h-100" >
+                    <Card className="text-center" >
                         <Card.Img variant="top" src={train_image} />
                         <Card.Body>
                             <Card.Title>{t('train')}</Card.Title>
-                            <Link to="/train" className="btn btn-primary stretched-link">Go somewhere</Link>
-
+                            <Link className="stretched-link" to="/train"></Link>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="h-100" >
+                    <Card className="text-center" >
                         <Card.Img variant="top" src={bus_image} />
                         <Card.Body>
                             <Card.Title>{t('bus')}</Card.Title>
-                            <Link to="/bus" className="btn btn-primary stretched-link">Go somewhere</Link>
-
+                            <Link className="stretched-link" to="/bus"></Link>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="h-100" >
+                    <Card className="text-center" >
                         <Card.Img variant="top" src={airplane_image} />
                         <Card.Body>
                             <Card.Title>{t('airplane')}</Card.Title>
-                            <Link to="/airplane" className="btn btn-primary stretched-link">Go somewhere</Link>
-
+                            <Link className="stretched-link" to="/airplane"></Link>
                         </Card.Body>
                     </Card>
                 </Col>

@@ -7,8 +7,8 @@ export default function Airplane() {
     return (
         <Container>
             <Hero trip_status="flight" />
-            <Partners />
-            <TripIdeas />
+            <Partners trip_status="flight"/>
+            <TripIdeas trip_status="flight"/>
         </Container>
     )
 }

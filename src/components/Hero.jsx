@@ -12,7 +12,8 @@ function Hero({ trip_status }) {
             <div className="background_box"></div>
             <section id="hero_section">
                 <div className="hero_text_box mt-3">
-                    <p className="d-flex align-items-center gap-2" ><PiPaperPlaneTilt style={{ color: '#2582C0' }} /> {t('her_sup_p')}</p>
+                    <p className="d-flex align-items-center gap-2" >
+                        <PiPaperPlaneTilt style={{ color: '#2582C0' }} /> {t('her_sup_p')}</p>
                     <h3 className="bold" >
                         {t('hero_heading')} <br />
                         {t('hero_heading2')}

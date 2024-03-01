@@ -1,105 +1,68 @@
-import { useState } from 'react';
-import cityOne from "../assets/cities/alex.png"
-import cityTwo from "../assets/cities/dahab.png"
-import cityThree from "../assets/cities/sharm.png"
+import { useEffect, useState } from 'react';
 import { Row, Col, Card } from "react-bootstrap"
+import { useTranslation } from 'react-i18next';
+import { places as data_places } from "../db/homepage_places"
+// eslint-disable-next-line react/prop-types
+const TripIdeas = ({ trip_status }) => {
+    let { t } = useTranslation()
 
-const TripIdeas = () => {
+    let [places, setPlaces] = useState([])
+    const [activeButton, setActiveButton] = useState('All');
 
-    const [activeButton, setActiveButton] = useState('');
-    const handleButtonClick = (buttonName) => {
-        setActiveButton(buttonName);
-    };
+    useEffect(() => {
+        setTimeout(() => setPlaces(data_places.filter(trip => trip.by === trip_status)), 1500)
+    }, [])
 
-    let buttons_data = ['Romantic', 'Nature', 'Family-friendly', 'BackPacking', 'Beach', 'Cultural', 'Summer Special']
+    // const handleButtonClick = (buttonName) => {
+    //     setActiveButton(buttonName)
+    //     console.log(places.filter((place => place.categories.find(category => category === activeButton))))
 
-    let places = [
-        {
-            city: 'Sharm Elsheikh',
-            by: 'flight',
-            price: 2500,
-            image: cityOne
-        },
-        {
-            city: 'Dahab',
-            by: 'bus',
-            price: 250,
-            image: cityTwo
-        },
-        {
-            city: 'Alexandria',
-            by: 'bus',
-            price: 250,
-            image: cityThree
-        },
-        {
-            city: 'Dahab',
-            by: 'bus',
-            price: 250,
-            image: cityTwo
-        },
-        {
-            city: 'Alexandria',
-            by: 'bus',
-            price: 350,
-            image: cityThree
-        },
-        {
-            city: 'Sharm Elsheikh',
-            by: 'flight',
-            price: 4500,
-            image: cityOne
-        }, {
-            city: 'Dahab',
-            by: 'bus',
-            price: 175,
-            image: cityTwo
-        },
-        {
-            city: 'Alexandria',
-            by: 'bus',
-            price: 95,
-            image: cityThree
-        },
-        {
-            city: 'Dahab',
-            by: 'bus',
-            price: 310,
-            image: cityTwo
-        }
-    ]
+    // };
+
+    // let buttons_data = ['All', 'Romantic', 'Nature', 'Family-friendly', 'BackPacking', 'Beach', 'Cultural', 'Summer']
+
     return (
         <section>
-            <h3>Trip Ideas from Cairo</h3>
-            <div className="filters">
+            <h3 className='my-4'>{t("trips_from_cairo")}</h3>
+            {/* <div className="filters">
                 {
                     buttons_data.map((btn, index) =>
                         <button
-                            className={`secondary_btn ${activeButton === btn ? 'active' : ''}`}
+                            className={`secondary_btn  ${activeButton === btn ? 'active' : ''}`}
                             onClick={() => handleButtonClick(btn)}
-                            key={index}>{btn}</button>
+                            key={index}>{btn}
+                        </button>
                     )
                 }
-            </div>
+            </div> */}
             <div className="trips_container">
                 <Row className='m-4'>
                     {
-                        places.map(place =>
-                            <Col key={Math.random()} sm="12" md="4" className='p-2'>
-                                <Card className="d-flex flex-row h-100">
-                                    <div className="image_container">
-                                        <img src={place.image} className='img-fluid' alt="..." />
-                                    </div>
-                                    <div className="description flex-grow-1">
-                                        <h4>{place.city}</h4>
-                                        <div className='by'>{place.by}</div>
-                                        <div className='price '>
-                                            <span>{place.price}</span>
-                                        </div>
-                                    </div>
-                                </Card>
-                            </Col>
-                        )
+                        places.length > 0 ?
+                            places.map((place) =>
+                                <Col key={Math.random()} sm="12" md="4" className='p-2'>
+                                    <Card className="h-100">
+                                        <Row className="h-100">
+                                            <Col md={5}>
+                                                <img src={place.image} loading="lazy" className='w-100 h-100' alt="..." />
+                                            </Col>
+                                            <Col md={7}>
+                                                <div className="description flex-grow-1">
+                                                    <h5>{place.city}</h5>
+                                                    <div className='by'>{place.by}</div>
+                                                    <div className='price '>
+                                                        <span>{place.price}</span>
+                                                    </div>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </Card>
+                                </Col>
+                            )
+                            :
+                            <div className='d-flex justify-content-center'>
+                                <div className="loader"></div>
+                            </div>
                     }
                 </Row>
             </div>
