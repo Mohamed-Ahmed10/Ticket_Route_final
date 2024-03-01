@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap"
+import { Container, Spinner } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
 // import { IoStarOutline } from "react-icons/io5";
 // import { BsCurrencyDollar } from "react-icons/bs";
@@ -22,6 +22,7 @@ export default function Search() {
     // const [fromCodeState, setFromCodeState] = useState("CAI")
     // const [toCodeState, setToCodeState] = useState("RUH")
     // const [departDateState, setDepartDateState] = useState("2024-02-27")
+    const [isLoading, setIsLoading] = useState(false);
     const [availableTickets, setAvailableTickets] = useState([]);
 
     const [searchFilterData, setSearchFilterData] = useState({
@@ -103,6 +104,7 @@ export default function Search() {
         const fetchTrips = async () => {
             try
             {
+                setIsLoading(true)
                 // setFromCodeState(searchFilterData.from.split(",")[1])
                 // setToCodeState(searchFilterData.from.split(",")[1])
                 // setDepartDateState(searchFilterData.departure)
@@ -111,12 +113,17 @@ export default function Search() {
                 // console.log(data);
                 if (searchVech == 'flight')
                 {
+                    setIsLoading(false)
                     setAvailableTickets(data)
                 } else if (searchVech == 'bus')
                 {
+                    setIsLoading(false)
+
                     setAvailableTickets(busTrips)
                 } else
                 {
+                    setIsLoading(false)
+
                     setAvailableTickets(trainTrips)
                 }
             } catch (error)
@@ -126,19 +133,22 @@ export default function Search() {
         };
         if (searchVech == 'flight')
         {
-
             fetchTrips();
         } else if (searchVech == 'bus')
         {
+            setIsLoading(true)
             // let TicketsArray = JSON.parse(busTrips)
             let ticketsArray = busTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
             console.log(ticketsArray);
             setAvailableTickets(ticketsArray)
+            setIsLoading(false)
         } else if (searchVech == 'train')
         {
+            setIsLoading(true)
             let ticketsArray = trainTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
             console.log(ticketsArray);
             setAvailableTickets(ticketsArray)
+            setIsLoading(false)
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -197,8 +207,13 @@ export default function Search() {
                     </div>
                 </div>
             </div> */}
+            {availableTickets && !isLoading && (
+                <TicketCards availableTickets={availableTickets} searchVech={searchVech} />
+            )}
+            {isLoading && <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>}
 
-            <TicketCards availableTickets={availableTickets} searchVech={searchVech} />
         </Container>
     )
 }
