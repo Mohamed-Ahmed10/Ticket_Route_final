@@ -119,19 +119,11 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                             }
                         />
                     </div>
-                    {!oneWay && (
-                        <div className={`input_container flex-fill d-flex flex-column p-2 ${oneWay && 'disabled'}`}>
-                            <label className={`fw-bold ${oneWay && 'disabled'}`}>{t('return')}</label>
-                            <input disabled={oneWay} type="text" name='return' placeholder={t("pick_return_date")} />
-                        </div>
-                    )}
                 </div>
                 <div className='actions_block'>
                     <div className='checkbox_container'>
-
                     </div>
                     <div className='forms_menu' >
-
                         <button className='submit_booking primary_btn link-underline link-underline-opacity-0'
                         >{t('search')}</button>
                     </div>

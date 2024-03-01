@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Card, Row, Col, Spinner } from "react-bootstrap"
+import { Card, Row, Col } from "react-bootstrap"
 import { IoMdAlarm } from "react-icons/io";
 import gobusLogo from '../assets/partners/go_bus.png'
 import fastbusLogo from '../assets/partners/fast_bus.png'
@@ -69,8 +69,9 @@ const TicketCards = ({ availableTickets, searchVech }) => {
             ) :
                 <>
                     {!availableTickets && (
-                        <Spinner animation="grow" variant="secondary" />
-
+                        <div className='d-flex justify-content-center'>
+                            <div className="loader"></div>
+                        </div>
                     )}
                     {availableTickets.map((item, i) => (
                         <Card key={`${item}/${i}`} className="my-2 shadow p-2 single_trip">
@@ -86,14 +87,15 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                                             <span className="text-secondary">
                                                 <IoMdAlarm className="mb-1 me-1" />
                                                 02h 00m
+                                                {/* EDIT : Duration */}
                                             </span>
                                             <span className="fw-bold">{item.arrival}</span>
                                         </div>
                                         <div className="line"></div>
                                         <div className="d-flex justify-content-between">
-                                            <span className="fw-bold text-secondary">{item.from}</span>
-                                            <span className="text-secondary">{item.company}</span>
                                             <span className="fw-bold text-secondary">{item.to}</span>
+                                            <span className="text-secondary">{item.company}</span>
+                                            <span className="fw-bold text-secondary">{item.from}</span>
                                         </div>
                                     </div>
                                 </Col>
