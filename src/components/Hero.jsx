@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import { useTranslation } from "react-i18next";
 import { PiPaperPlaneTilt } from "react-icons/pi";
 import BookingSection from "./BookingSection";
 import Statistics from "./Statistics";
 
 
-function Hero() {
+function Hero({ trip_status }) {
     let { t } = useTranslation()
     return (
-        <div className="hero">
+        <div className={`hero ${trip_status}`}>
             <div className="background_box"></div>
             <section id="hero_section">
                 <div className="hero_text_box mt-3">
@@ -21,9 +22,8 @@ function Hero() {
                     </p>
                 </div>
             </section>
-            <BookingSection />
+            <BookingSection trip_status={trip_status} />
             <Statistics />
-
         </div>
     )
 }

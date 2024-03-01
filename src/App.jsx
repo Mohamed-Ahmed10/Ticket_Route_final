@@ -7,6 +7,9 @@ import Footer from "./layout/Footer"
 import Contact from "./views/Contact"
 import { useTranslation } from "react-i18next"
 import Search from "./views/Search"
+import Airplane from "./components/main_sections/Airplane"
+import Bus from "./components/main_sections/Bus"
+import Train from "./components/main_sections/Train"
 
 const App = () => {
 
@@ -21,6 +24,10 @@ const App = () => {
         <Route path="/contact" Component={Contact} />
         <Route path="/faq" Component={FAQ} />
         <Route path="/search" Component={Search} />
+        {/* In main page */}
+        <Route path="/airplane" Component={Airplane} />
+        <Route path="/bus" Component={Bus} />
+        <Route path="/train" Component={Train} />
       </Routes>
 
       <Footer />

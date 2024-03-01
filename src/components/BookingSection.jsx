@@ -11,39 +11,53 @@ import TrainStations from '../db/trains.json'
 import BookingForm from './BookingForm';
 
 
-function BookingSection() {
+// eslint-disable-next-line react/prop-types
+function BookingSection({ trip_status }) {
     let { t } = useTranslation();
-    const [activeTap, setActiveTap] = useState("flight")
+    const [activeTap, setActiveTap] = useState(trip_status)
 
     return (
         <div className='tabs'>
             <div className='tap_buttons_container'>
-                <button className={`${activeTap == 'flight' ? "active_button" : ''} `} onClick={() => setActiveTap('flight')} id='flight'>
-                    <IoAirplaneOutline className={`${activeTap == 'flight' ? 'active_icon' : ''} me-1`} />
-                    {t('flight_tab')}
-                </button>
-                <button className={`${activeTap == 'bus' ? "active_button" : ''}`} onClick={() => setActiveTap('bus')} id='bus'>
-                    <TbBus className={`${activeTap == 'bus' ? 'active_icon' : ''} me-1`} />
-                    {t('bus_tab')}
-                </button>
-
-                <button className={`${activeTap == 'train' ? "active_button" : ''} `} onClick={() => setActiveTap('train')} id='train'>
-                    <PiTrain className={`${activeTap == 'train' ? 'active_icon' : ''} me-1`} />
-                    {t('train_tab')}
+                <button className="active_button" onClick={() => setActiveTap('flight')} id='flight'>
+                    {
+                        trip_status === "flight"
+                            ?
+                            <>
+                                <IoAirplaneOutline className="me-1 active_icon" />
+                                {t('flight_tab')}
+                            </>
+                            : trip_status === "bus"
+                                ? <>
+                                    <TbBus className="me-1 active_icon" />
+                                    {t('bus_tab')}</>
+                                : trip_status === "train"
+                                &&
+                                <>
+                                    <PiTrain className="me-1 active_icon" />
+                                    {t('train_tab')}
+                                </>
+                    }
                 </button>
             </div>
-            {activeTap === 'flight' && (
-                <BookingForm jsonLists={airports} activeTap={activeTap} />
-            )}
-            {activeTap === 'bus' && (
-                <BookingForm jsonLists={busStations} activeTap={activeTap} />
+            {
+                activeTap === 'flight' && (
+                    <BookingForm jsonLists={airports} activeTap={activeTap} />
+                )
+            }
+            {
+                activeTap === 'bus' && (
+                    <BookingForm jsonLists={busStations} activeTap={activeTap} />
 
-            )}
-            {activeTap === 'train' && (
-                <BookingForm jsonLists={TrainStations} activeTap={activeTap} />
+                )
+            }
+            {
+                activeTap === 'train' && (
+                    <BookingForm jsonLists={TrainStations} activeTap={activeTap} />
 
-            )}
-        </div>
+                )
+            }
+        </div >
 
     )
 }

@@ -96,8 +96,21 @@ input {
 }
 
 /* hero section */
+
+.train {
+  background: url(/src/assets/header/train.jpg) no-repeat 90% 5%;
+}
+
+.flight {
+  background: url(/src/assets/header/airplane.png) no-repeat 90% 5%;
+}
+
+.bus {
+  background: url(/src/assets/header/bus.jpg) no-repeat 90% 5%;
+
+}
+
 .hero {
-  background: url(/src/assets/header_image.png) no-repeat 90% 5%;
   background-size: 40%;
 }
 
