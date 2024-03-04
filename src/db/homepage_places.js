@@ -16,6 +16,7 @@ import tokyo from "../assets/cities/Tokyo.jpg"
 export let places = [
     {
         city: 'Sharm Elsheikh',
+        cityAr: 'شرم الشيخ',
         by: 'flight',
         price: 2500,
         image: sharm,
@@ -23,6 +24,7 @@ export let places = [
     },
     {
         city: 'Dahab',
+        cityAr: 'دهب',
         by: 'bus',
         price: 250,
         image: dahab,
@@ -30,6 +32,7 @@ export let places = [
     },
     {
         city: 'Alexandria',
+        cityAr: 'الإسكندرية',
         by: 'bus',
         price: 250,
         image: alex,
@@ -37,6 +40,7 @@ export let places = [
     },
     {
         city: 'Roma',
+        cityAr: 'روما',
         by: 'flight',
         price: 7500,
         image: rome,
@@ -44,6 +48,7 @@ export let places = [
     },
     {
         city: 'Paris',
+        cityAr: 'باريس',
         by: 'flight',
         price: 8000,
         image: paris,
@@ -51,6 +56,7 @@ export let places = [
     },
     {
         city: 'New York City',
+        cityAr: 'نيويورك',
         by: 'flight',
         price: 10000,
         image: new_york,
@@ -58,6 +64,7 @@ export let places = [
     },
     {
         city: 'Tokyo',
+        cityAr: 'طوكيو',
         by: 'flight',
         price: 9000,
         image: tokyo,
@@ -65,6 +72,7 @@ export let places = [
     },
     {
         city: 'Barcelona',
+        cityAr: 'برشلونة',
         by: 'flight',
         price: 6000,
         image: barcelona,
@@ -72,6 +80,7 @@ export let places = [
     },
     {
         city: 'Rio de Janeiro',
+        cityAr: 'ريو دي جانيرو',
         by: 'flight',
         price: 7000,
         image: rio,
@@ -79,6 +88,7 @@ export let places = [
     },
     {
         city: 'Sydney',
+        cityAr: 'سيدني',
         by: 'flight',
         price: 8500,
         image: sydney,
@@ -86,6 +96,7 @@ export let places = [
     },
     {
         city: 'Bali',
+        cityAr: 'بالي',
         by: 'flight',
         price: 5000,
         image: bali,
@@ -93,6 +104,7 @@ export let places = [
     },
     {
         city: 'Luxor',
+        cityAr: 'الأقصر',
         by: 'bus',
         price: 100,
         image: luxor,
@@ -100,6 +112,7 @@ export let places = [
     },
     {
         city: 'Aswan',
+        cityAr: 'أسوان',
         by: 'bus',
         price: 150,
         image: aswan,
@@ -107,6 +120,7 @@ export let places = [
     },
     {
         city: 'Hurghada',
+        cityAr: 'الغردقة',
         by: 'bus',
         price: 200,
         image: hurghada,
@@ -114,9 +128,10 @@ export let places = [
     },
     {
         city: 'Fayoum',
+        cityAr: 'الفيوم',
         by: 'bus',
         price: 120,
-        image: fayoum   ,
+        image: fayoum,
         categories: ['Cultural', 'Historical']
     }
 ];

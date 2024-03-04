@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { places as data_places } from "../db/homepage_places"
 // eslint-disable-next-line react/prop-types
 const TripIdeas = ({ trip_status }) => {
-    let { t } = useTranslation()
+    let { t, i18n } = useTranslation()
 
     let [places, setPlaces] = useState([])
     // const [activeButton, setActiveButton] = useState('All');
@@ -48,7 +48,7 @@ const TripIdeas = ({ trip_status }) => {
                                             </Col>
                                             <Col md={7}>
                                                 <div className="description flex-grow-1">
-                                                    <h5>{place.city}</h5>
+                                                    <h5>{i18n.language === "en" ? place.city : place.cityAr}</h5>
                                                     <div className='by'>{place.by}</div>
                                                     <div className='price '>
                                                         <span>{place.price}</span>
