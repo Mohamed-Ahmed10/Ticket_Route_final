@@ -85,7 +85,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         />
                         <datalist id="Data">
                             {autoCompleteFrom.map((item) => (
-                                <option key={Math.random()} value={`${item.item.name},${item.item.code}`} />
+                                <option key={Math.random()} value={`${item.item.name},${activeTap == "bus" ? "Bus Station" : activeTap == "train" ? "train Station" : item.item.code}`} />
                             ))}
                         </datalist>
                     </div>
@@ -103,7 +103,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         />
                         <datalist id="toData">
                             {autoCompleteTo.map((item) => (
-                                <option key={Math.random()} value={`${item.item.name},${item.item.code || "no Code"}`} />
+                                <option key={Math.random()} value={`${item.item.name},${activeTap == "bus" ? "Bus Station" : activeTap == "train" ? "train Station" : item.item.code}`} />
                             ))}
                         </datalist>
                     </div>
@@ -128,9 +128,6 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         >{t('search')}</button>
                     </div>
                 </div>
-                <datalist>
-                    <option value="Browser">browser</option>
-                </datalist>
             </form>
         </div>
     )
