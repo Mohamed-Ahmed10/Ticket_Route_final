@@ -77,5 +77,13 @@
   "partners": "Success partners",
   "partners_desc": "Book cheap trips on out partners and you’re ready to go",
   "trips_from_cairo": "Trip Ideas from Cairo",
-  "per_person":"Per Person"
+  "per_person": "Per Person",
+  "email": "Email address",
+  "name": "Name",
+  "message": "Message",
+  "send": "Send",
+  "mail_us": "Mail us",
+  "call_us": "Call us",
+  "swal_title":"Thank you",
+  "swal_message":"Your message send successfully"
 }
