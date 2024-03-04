@@ -6,7 +6,8 @@
     "from": "Cairo Ramses Station",
     "price": 30,
     "arrival": "16:00",
-    "departure": "20:00"
+    "departure": "20:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -15,7 +16,8 @@
     "from": "Cairo Ramses Station",
     "price": 50,
     "arrival": "10:00",
-    "departure": "12:00"
+    "departure": "12:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -24,7 +26,8 @@
     "from": "Port Said Station",
     "price": 45,
     "arrival": "18:00",
-    "departure": "21:00"
+    "departure": "21:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -33,7 +36,8 @@
     "from": "Port Said Station",
     "price": 35,
     "arrival": "10:00",
-    "departure": "12:00"
+    "departure": "12:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -42,7 +46,8 @@
     "from": "Cairo Ramses Station",
     "price": 27,
     "arrival": "10:00",
-    "departure": "12:00"
+    "departure": "12:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -51,7 +56,8 @@
     "from": "Cairo Ramses Station",
     "price": 30,
     "arrival": "09:00",
-    "departure": "06:00"
+    "departure": "06:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -60,7 +66,8 @@
     "from": "Banha Station",
     "price": 42.5,
     "arrival": "14:00",
-    "departure": "11:00"
+    "departure": "11:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -69,7 +76,8 @@
     "from": "Banha Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -78,7 +86,8 @@
     "from": "Banha Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -87,7 +96,8 @@
     "from": "Alexandria Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -96,7 +106,8 @@
     "from": "Alexandria Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -105,7 +116,8 @@
     "from": "Cairo Ramses Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -114,7 +126,8 @@
     "from": "Port Said Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -123,7 +136,8 @@
     "from": "Port Said Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -132,7 +146,8 @@
     "from": "Alexandria Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -141,7 +156,8 @@
     "from": "Alexandria Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -150,7 +166,8 @@
     "from": "Banha Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -159,7 +176,8 @@
     "from": "Port Said Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -168,7 +186,8 @@
     "from": "Cairo Ramses Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -177,7 +196,8 @@
     "from": "Port Said Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -186,7 +206,8 @@
     "from": "Aswan Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -195,7 +216,8 @@
     "from": "Aswan Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -204,7 +226,8 @@
     "from": "Alexandria Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -213,7 +236,8 @@
     "from": "Banha Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -222,7 +246,8 @@
     "from": "Aswan Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -231,7 +256,8 @@
     "from": "Cairo Ramses Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   },
   {
     "company": "railway",
@@ -240,6 +266,7 @@
     "from": "Aswan Station",
     "price": 38,
     "arrival": "13:00",
-    "departure": "10:00"
+    "departure": "10:00",
+    "duration":"02 h : 17 m"
   }
 ]

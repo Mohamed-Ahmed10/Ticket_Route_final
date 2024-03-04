@@ -5,7 +5,8 @@
     "from": "Cairo Gateway Bus Station",
     "price": 150,
     "arrival": "06:00",
-    "departure": "08:00"
+    "departure": "08:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -13,7 +14,8 @@
     "from": "Cairo Gateway Bus Station",
     "price": 155,
     "arrival": "07:00",
-    "departure": "09:00"
+    "departure": "09:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -21,7 +23,8 @@
     "from": "Port Said Bus Station",
     "price": 145,
     "arrival": "09:00",
-    "departure": "11:00"
+    "departure": "11:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -29,7 +32,8 @@
     "from": "Port Said Bus Station",
     "price": 130,
     "arrival": "10:00",
-    "departure": "12:00"
+    "departure": "12:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -37,7 +41,8 @@
     "from": "Alexandria Bus Station",
     "price": 150,
     "arrival": "10:00",
-    "departure": "12:00"
+    "departure": "12:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -45,7 +50,8 @@
     "from": "Alexandria Bus Station",
     "price": 125,
     "arrival": "11:00",
-    "departure": "13:00"
+    "departure": "13:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -53,7 +59,17 @@
     "from": "Cairo Gateway Bus Station",
     "price": 150,
     "arrival": "14:00",
-    "departure": "16:00"
+    "departure": "16:00",
+    "duration":"6 h : 00 m"
+  },
+  {
+    "company": "eastbus",
+    "to": "Sharm el-Sheikh Bus Station",
+    "from": "Cairo Gateway Bus Station",
+    "price": 150,
+    "arrival": "00:00",
+    "departure": "06:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -61,15 +77,8 @@
     "from": "Cairo Gateway Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
-  },
-  {
-    "company": "eastbus",
-    "to": "Sharm el-Sheikh Bus Station",
-    "from": "Cairo Gateway Bus Station",
-    "price": 150,
-    "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "21:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -77,7 +86,8 @@
     "from": "Sharm el-Sheikh Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -85,7 +95,8 @@
     "from": "Sharm el-Sheikh Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -93,7 +104,8 @@
     "from": "Alexandria Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -101,7 +113,8 @@
     "from": "Port Said Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -109,7 +122,8 @@
     "from": "Sharm el-Sheikh Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -117,7 +131,8 @@
     "from": "Port Said Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -125,7 +140,8 @@
     "from": "Alexandria Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -133,7 +149,8 @@
     "from": "Alexandria Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "eastbus",
@@ -141,7 +158,8 @@
     "from": "Sharm el-Sheikh Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   },
   {
     "company": "gobus",
@@ -149,6 +167,7 @@
     "from": "Sharm el-Sheikh Bus Station",
     "price": 150,
     "arrival": "15:00",
-    "departure": "17:00"
+    "departure": "17:00",
+    "duration":"6 h : 00 m"
   }
 ]

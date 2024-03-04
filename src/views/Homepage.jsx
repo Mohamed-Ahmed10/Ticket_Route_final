@@ -10,7 +10,7 @@ export default function Homepage() {
         <Container className="my-4 homepage">
             <h3 className="mb-4 pb-4 text-center">{t("intro_message")}</h3>
             <Row>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card className="text-center" >
                         <Card.Img variant="top" src={train_image} />
                         <Card.Body>
@@ -19,7 +19,7 @@ export default function Homepage() {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card className="text-center" >
                         <Card.Img variant="top" src={bus_image} />
                         <Card.Body>
@@ -28,7 +28,7 @@ export default function Homepage() {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card className="text-center" >
                         <Card.Img variant="top" src={airplane_image} />
                         <Card.Body>
