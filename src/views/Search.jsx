@@ -139,7 +139,6 @@ export default function Search() {
         {
             setIsLoading(true)
             // let TicketsArray = JSON.parse(busTrips)
-            // i18n.language === 'ar' ? "rtl" : ""
             if (i18n.language !== 'ar')
             {
 
@@ -159,9 +158,20 @@ export default function Search() {
         } else if (searchVech == 'train')
         {
             setIsLoading(true)
-            let ticketsArray = trainTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
-            console.log(ticketsArray);
-            setAvailableTickets(ticketsArray)
+            if (i18n.language !== 'ar')
+            {
+
+                let ticketsArray = trainTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
+                setAvailableTickets(ticketsArray)
+                console.log(ticketsArray);
+
+            } else
+            {
+
+                let ticketsArray = trainTrips.filter((ticket) => ticket.from_ar == originalFrom.split(",")[0] && ticket.to_ar == originalTo.split(",")[0])
+                setAvailableTickets(ticketsArray)
+                console.log(ticketsArray);
+            }
             setIsLoading(false)
         }
 
