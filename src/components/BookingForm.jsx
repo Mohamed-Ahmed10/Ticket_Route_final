@@ -12,6 +12,8 @@ const BookingForm = ({ jsonLists, activeTap }) => {
     const navigate = useNavigate();
 
 
+
+
     const [oneWay, setOneWay] = useState(true);
     const [autoCompleteFrom, setAutoCompleteFrom] = useState([]);
     const [autoCompleteTo, setAutoCompleteTo] = useState([]);
@@ -34,9 +36,9 @@ const BookingForm = ({ jsonLists, activeTap }) => {
         type: "Economy",
         departure: ""
     })
-    const fuse = new Fuse(jsonLists, { keys: ["name_ar", "code", "country", "city"] })
+    const fuse = new Fuse(jsonLists, { keys: ["name_ar", "code", "country", "city", "name"] })
     activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput
-    let { t } = useTranslation();
+    let { t, i18n } = useTranslation();
     useEffect(() => {
         setAutoCompleteTo(fuse.search(activeTap == "flight" ? tripData.toInput : activeTap == "bus" ? busTrip.toInput : trainTrip.toInput))
     }, [activeTap == "flight" ? tripData.toInput : activeTap == "bus" ? busTrip.toInput : trainTrip.toInput])
@@ -80,18 +82,18 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                             autoComplete="off"
                             placeholder={t("enter_your_location")}
                             onChange={
-                                activeTap == "flight" 
-                                ? (e) => setTripData({ ...tripData, fromInput: e.target.value }) 
-                                : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, fromInput: e.target.value }) 
-                                : (e) => setTrainTrip({ ...trainTrip, fromInput: e.target.value })}
+                                activeTap == "flight"
+                                    ? (e) => setTripData({ ...tripData, fromInput: e.target.value })
+                                    : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, fromInput: e.target.value })
+                                        : (e) => setTrainTrip({ ...trainTrip, fromInput: e.target.value })}
                             value={activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput}
                         />
                         <datalist id="Data">
-                            {autoCompleteFrom.map((item,index) => 
+                            {autoCompleteFrom.map((item, index) =>
                                 <option key={index} value={
-                                    `${item.item.name_ar},${activeTap == "bus" ? "Bus Station" 
-                                    : activeTap == "train" ? "train Station" 
-                                    : item.item.code}`} />
+                                    `${i18n.language == "ar" ? item.item.name_ar : item.item.name},${activeTap == "bus" ? "Bus Station"
+                                        : activeTap == "train" ? "train Station"
+                                            : item.item.code}`} />
                             )}
                         </datalist>
                     </div>
@@ -109,7 +111,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         />
                         <datalist id="toData">
                             {autoCompleteTo.map((item) => (
-                                <option key={Math.random()} value={`${item.item.name_ar},${activeTap == "bus" ? "Bus Station" : activeTap == "train" ? "train Station" : item.item.code}`} />
+                                <option key={Math.random()} value={`${i18n.language == "ar" ? item.item.name_ar : item.item.name},${activeTap == "bus" ? "Bus Station" : activeTap == "train" ? "train Station" : item.item.code}`} />
                             ))}
                         </datalist>
                     </div>
