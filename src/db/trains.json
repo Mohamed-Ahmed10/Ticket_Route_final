@@ -1,23 +1,27 @@
 [
   {
     "name": "Cairo Ramses Station",
+    "name_ar": "محطة القاهرة رمسيس",
     "city": "Cairo"
   },
   {
     "name": "Alexandria Station",
+    "name_ar": "محطة الإسكندرية",
     "city": "Alexandria"
   },
   {
     "name": "Aswan Station",
+    "name_ar": "محطة أسوان",
     "city": "Aswan"
   },
-
   {
     "name": "Port Said Station",
+    "name_ar": "محطة بورسعيد",
     "city": "Port Said"
   },
   {
     "name": "Banha Station",
+    "name_ar": "محطة بنها",
     "city": "Banha"
   }
 ]

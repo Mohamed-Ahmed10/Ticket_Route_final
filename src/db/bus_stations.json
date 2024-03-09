@@ -1,18 +1,22 @@
 [
   {
     "name": "Cairo Gateway Bus Station",
+    "name_ar": "محطة البوابة القاهرة للحافلات",
     "city": "Cairo"
   },
   {
     "name": "Alexandria Bus Station",
+    "name_ar": "محطة الإسكندرية للحافلات",
     "city": "Alexandria"
   },
   {
     "name": "Sharm el-Sheikh Bus Station",
+    "name_ar": "محطة شرم الشيخ للحافلات",
     "city": "Sharm el-Sheikh"
   },
   {
     "name": "Port Said Bus Station",
+    "name_ar": "محطة بورسعيد للحافلات",
     "city": "Port Said"
   }
 ]
