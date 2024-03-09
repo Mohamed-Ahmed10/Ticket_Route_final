@@ -163,36 +163,12 @@ export default function Search() {
                     <label className="fw-bold">{t('to')}</label>
                     <input type="text" disabled id="to" value={searchFilterData.to} onChange={handleChange} placeholder={t("enter_your_destination")} />
                 </div>
-                <div className='input_container d-flex flex-column border-start p-2'>
-                    <label className="fw-bold">{t('departure')}</label>
+                <div className='input_container d-flex flex-column border-start p-2 flex-grow-0'>
+                    <label className="fw-bold">{t('date_leave')}</label>
                     <input value={searchFilterData.departure} disabled id="departure" onChange={handleChange} type="text" placeholder={t("pick_departure_date")} />
                 </div>
             </div>
             <hr className="my-4" />
-            {/* <div className="d-flex filter_parent">
-                <div className="flex-fill d-flex filter p-2 active">
-                    <IoStarOutline />
-                    <div>
-                        <b>{t('recommended')}</b>
-                        <div className="price">000 </div>
-                    </div>
-                </div>
-                <div className="flex-fill d-flex filter p-2">
-                    <BsCurrencyDollar />
-
-                    <div>
-                        <b>{t('cheapest')}</b>
-                        <div className="price">000 </div>
-                    </div>
-                </div>
-                <div className="flex-fill d-flex filter p-2">
-                    <SiMinutemailer />
-                    <div>
-                        <b>{t('fastest')}</b>
-                        <div className="price">000 </div>
-                    </div>
-                </div>
-            </div> */}
             {availableTickets && !isLoading && (
                 <TicketCards availableTickets={availableTickets} searchVech={searchVech} />
             )}

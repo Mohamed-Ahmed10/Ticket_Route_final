@@ -1,272 +1,324 @@
 [
   {
     "name": "Hartsfield-Jackson Atlanta International Airport",
+    "name_ar": "مطار هارتسفيلد جاكسون أتلانتا الدولي",
     "code": "ATL",
     "country": "United States"
   },
   {
     "name": "Beijing Capital International Airport",
+    "name_ar": "مطار بكين العاصمة الدولي",
     "code": "PEK",
     "country": "China"
   },
   {
     "name": "Los Angeles International Airport",
+    "name_ar": "مطار لوس أنجلوس الدولي",
     "code": "LAX",
     "country": "United States"
   },
   {
     "name": "Dubai International Airport",
+    "name_ar": "مطار دبي الدولي",
     "code": "DXB",
     "country": "United Arab Emirates"
   },
-  { "name": "Tokyo Haneda Airport", "code": "HND", "country": "Japan" },
+  { "name": "Tokyo Haneda Airport", "name_ar": "مطار طوكيو حنيدا", "code": "HND", "country": "Japan" },
   {
     "name": "Chicago O'Hare International Airport",
+    "name_ar": "مطار شيكاغو أوهير الدولي",
     "code": "ORD",
     "country": "United States"
   },
   {
     "name": "London Heathrow Airport",
+    "name_ar": "مطار لندن هيثرو",
     "code": "LHR",
     "country": "United Kingdom"
   },
   {
     "name": "Shanghai Pudong International Airport",
+    "name_ar": "مطار شنغهاي بودونج الدولي",
     "code": "PVG",
     "country": "China"
   },
   {
     "name": "Paris Charles de Gaulle Airport",
+    "name_ar": "مطار باريس شارل ديغول",
     "code": "CDG",
     "country": "France"
   },
   {
     "name": "Dallas/Fort Worth International Airport",
+    "name_ar": "مطار دالاس/فورت وورث الدولي",
     "code": "DFW",
     "country": "United States"
   },
   {
     "name": "Guangzhou Baiyun International Airport",
+    "name_ar": "مطار قوانغتشو باييون الدولي",
     "code": "CAN",
     "country": "China"
   },
-  { "name": "Istanbul Airport", "code": "IST", "country": "Turkey" },
+  { "name": "Istanbul Airport", "name_ar": "مطار إسطنبول", "code": "IST", "country": "Turkey" },
   {
     "name": "Amsterdam Airport Schiphol",
+    "name_ar": "مطار أمستردام شيبول",
     "code": "AMS",
     "country": "Netherlands"
   },
   {
     "name": "Denver International Airport",
+    "name_ar": "مطار دنفر الدولي",
     "code": "DEN",
     "country": "United States"
   },
   {
     "name": "Soekarno-Hatta International Airport",
+    "name_ar": "مطار سوكارنو-حاتا الدولي",
     "code": "CGK",
     "country": "Indonesia"
   },
   {
     "name": "Incheon International Airport",
+    "name_ar": "مطار إنشيون الدولي",
     "code": "ICN",
     "country": "South Korea"
   },
-  { "name": "Frankfurt Airport", "code": "FRA", "country": "Germany" },
+  { "name": "Frankfurt Airport", "name_ar": "مطار فرانكفورت", "code": "FRA", "country": "Germany" },
   {
     "name": "Madrid-Barajas Adolfo Suárez Airport",
+    "name_ar": "مطار مدريد باراخاس أدولفو سواريز",
     "code": "MAD",
     "country": "Spain"
   },
   {
     "name": "Indira Gandhi International Airport",
+    "name_ar": "مطار إنديرا غاندي الدولي",
     "code": "DEL",
     "country": "India"
   },
   {
     "name": "Kunming Changshui International Airport",
+    "name_ar": "مطار كونمينغ تشانغشوي الدولي",
     "code": "KMG",
     "country": "China"
   },
   {
     "name": "San Francisco International Airport",
+    "name_ar": "مطار سان فرانسيسكو الدولي",
     "code": "SFO",
     "country": "United States"
   },
   {
     "name": "Chengdu Shuangliu International Airport",
+    "name_ar": "مطار تشنغدو شوانجليو الدولي",
     "code": "CTU",
     "country": "China"
   },
   {
     "name": "Seattle-Tacoma International Airport",
+    "name_ar": "مطار سياتل تاكوما الدولي",
     "code": "SEA",
     "country": "United States"
   },
   {
     "name": "Bangkok Suvarnabhumi Airport",
+    "name_ar": "مطار سوفارنابومي بانكوك",
     "code": "BKK",
     "country": "Thailand"
   },
   {
     "name": "Jose Joaquin de Olmedo International Airport",
+    "name_ar": "مطار خوسيه خواكين دي أولميدو الدولي",
     "code": "GYE",
     "country": "Ecuador"
   },
   {
     "name": "Phoenix Sky Harbor International Airport",
+    "name_ar": "مطار فينيكس سكاي هاربور الدولي",
     "code": "PHX",
     "country": "United States"
   },
   {
     "name": "Sydney Kingsford Smith Airport",
+    "name_ar": "مطار سيدني كينجسفورد سميث",
     "code": "SYD",
     "country": "Australia"
   },
   {
     "name": "Miami International Airport",
+    "name_ar": "مطار ميامي الدولي",
     "code": "MIA",
     "country": "United States"
   },
   {
     "name": "São Paulo/Guarulhos–Governador André Franco Montoro International Airport",
+    "name_ar": "مطار ساو باولو/غواروليوس - حاكم أندري فرانكو مونتورو الدولي",
     "code": "GRU",
     "country": "Brazil"
   },
-  { "name": "Barcelona-El Prat Airport", "code": "BCN", "country": "Spain" },
+  { "name": "Barcelona-El Prat Airport", "name_ar": "مطار برشلونة - إل برات", "code": "BCN", "country": "Spain" },
   {
     "name": "Las Vegas McCarran International Airport",
+    "name_ar": "مطار لاس فيغاس مكاران الدولي",
     "code": "LAS",
     "country": "United States"
   },
   {
     "name": "Toronto Pearson International Airport",
+    "name_ar": "مطار تورونتو بيرسون الدولي",
     "code": "YYZ",
     "country": "Canada"
   },
   {
     "name": "Shenzhen Bao'an International Airport",
+    "name_ar": "مطار شينزين باوآن الدولي",
     "code": "SZX",
     "country": "China"
   },
   {
     "name": "Rome Leonardo da Vinci–Fiumicino Airport",
+    "name_ar": "مطار روما ليوناردو دا فينشي - فيوميتشينو",
     "code": "FCO",
     "country": "Italy"
   },
-  { "name": "Manchester Airport", "code": "MAN", "country": "United Kingdom" },
+  { "name": "Manchester Airport", "name_ar": "مطار مانشستر", "code": "MAN", "country": "United Kingdom" },
   {
     "name": "Xi'an Xianyang International Airport",
+    "name_ar": "مطار شيان شيانغ يانغ الدولي",
     "code": "XIY",
     "country": "China"
   },
   {
     "name": "Newark Liberty International Airport",
+    "name_ar": "مطار نيوارك ليبرتي الدولي",
     "code": "EWR",
     "country": "United States"
   },
-  { "name": "Paris Orly Airport", "code": "ORY", "country": "France" },
+  { "name": "Paris Orly Airport", "name_ar": "مطار باريس أورلي", "code": "ORY", "country": "France" },
   {
     "name": "John F. Kennedy International Airport",
+    "name_ar": "مطار جون إف. كينيدي الدولي",
     "code": "JFK",
     "country": "United States"
   },
-  { "name": "São Paulo/Congonhas Airport", "code": "CGH", "country": "Brazil" },
+  { "name": "São Paulo/Congonhas Airport", "name_ar": "مطار ساو باولو كونغونياس", "code": "CGH", "country": "Brazil" },
   {
     "name": "Chhatrapati Shivaji Maharaj International Airport",
+    "name_ar": "مطار شاتراباتي شيفاجي ماهاراج الدولي",
     "code": "BOM",
     "country": "India"
   },
-  { "name": "Changi Airport", "code": "SIN", "country": "Singapore" },
+  { "name": "Changi Airport", "name_ar": "مطار تشانغي", "code": "SIN", "country": "Singapore" },
   {
     "name": "London Gatwick Airport",
+    "name_ar": "مطار لندن غاتويك",
     "code": "LGW",
     "country": "United Kingdom"
   },
-  { "name": "Dublin Airport", "code": "DUB", "country": "Ireland" },
-  { "name": "Hamad International Airport", "code": "DOH", "country": "Qatar" },
+  { "name": "Dublin Airport", "name_ar": "مطار دبلن", "code": "DUB", "country": "Ireland" },
+  { "name": "Hamad International Airport", "name_ar": "مطار حمد الدولي", "code": "DOH", "country": "Qatar" },
   {
     "name": "Riyadh King Khalid International Airport",
+    "name_ar": "مطار الملك خالد الدولي بالرياض",
     "code": "RUH",
     "country": "Saudi Arabia"
   },
   {
     "name": "Cairo International Airport",
+    "name_ar": "مطار القاهرة الدولي",
     "code": "CAI",
     "country": "Egypt"
   },
 
   {
     "name": "Hamad International Airport",
+    "name_ar": "مطار حمد الدولي",
     "code": "DOH",
     "country": "Qatar"
   },
   {
     "name": "Abu Dhabi International Airport",
+    "name_ar": "مطار أبوظبي الدولي",
     "code": "AUH",
     "country": "United Arab Emirates"
   },
   {
     "name": "King Abdulaziz International Airport",
+    "name_ar": "مطار الملك عبدالعزيز الدولي",
     "code": "JED",
     "country": "Saudi Arabia"
   },
   {
     "name": "Kuwait International Airport",
+    "name_ar": "مطار الكويت الدولي",
     "code": "KWI",
     "country": "Kuwait"
   },
   {
     "name": "Bahrain International Airport",
+    "name_ar": "مطار البحرين الدولي",
     "code": "BAH",
     "country": "Bahrain"
   },
   {
     "name": "Queen Alia International Airport",
+    "name_ar": "مطار الملكة علياء الدولي",
     "code": "AMM",
     "country": "Jordan"
   },
   {
     "name": "Beirut-Rafic Hariri International Airport",
+    "name_ar": "مطار بيروت رفيق الحريري الدولي",
     "code": "BEY",
     "country": "Lebanon"
   },
   {
     "name": "Mohammed V International Airport",
+    "name_ar": "مطار محمد الخامس الدولي",
     "code": "CMN",
     "country": "Morocco"
   },
   {
     "name": "Muscat International Airport",
+    "name_ar": "مطار مسقط الدولي",
     "code": "MCT",
     "country": "Oman"
   },
   {
     "name": "Tunis-Carthage International Airport",
+    "name_ar": "مطار تونس قرطاج الدولي",
     "code": "TUN",
     "country": "Tunisia"
   },
   {
     "name": "Baghdad International Airport",
+    "name_ar": "مطار بغداد الدولي",
     "code": "BGW",
     "country": "Iraq"
   },
   {
     "name": "Sana'a International Airport",
+    "name_ar": "مطار صنعاء الدولي",
     "code": "SAH",
     "country": "Yemen"
   },
   {
     "name": "Khartoum International Airport",
+    "name_ar": "مطار الخرطوم الدولي",
     "code": "KRT",
     "country": "Sudan"
   },
   {
     "name": "Tripoli International Airport",
+    "name_ar": "مطار طرابلس الدولي",
     "code": "TIP",
     "country": "Libya"
   },
   {
     "name": "Damascus International Airport",
+    "name_ar": "مطار دمشق الدولي",
     "code": "DAM",
     "country": "Syria"
   }

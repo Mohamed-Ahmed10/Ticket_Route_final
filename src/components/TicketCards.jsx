@@ -7,7 +7,7 @@ import railwayLogo from '../assets/partners/railway.png'
 import { useTranslation } from "react-i18next";
 
 const TicketCards = ({ availableTickets, searchVech }) => {
-    let { t } = useTranslation()
+    let { t ,i18n} = useTranslation()
     return (
         <>
             {searchVech == 'flight' ? (
@@ -47,7 +47,7 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                                             </span>
                                         </div>
                                         <div className="line"></div>
-                                        <div className="d-flex justify-content-between">
+                                        <div className={`d-flex justify-content-between ${i18n.language === 'ar' ? 'flex-row-reverse':''}`}>
                                             <span className="fw-bold text-secondary">{item.flights[0].arrival_airport.id}</span>
                                             <span className="text-secondary">{t("plane_model")} : {item2.
                                                 airplane

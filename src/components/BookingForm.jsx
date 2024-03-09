@@ -34,7 +34,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
         type: "Economy",
         departure: ""
     })
-    const fuse = new Fuse(jsonLists, { keys: ["name", "code", "country", "city"] })
+    const fuse = new Fuse(jsonLists, { keys: ["name_ar", "code", "country", "city"] })
     activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput
     let { t } = useTranslation();
     useEffect(() => {
@@ -79,14 +79,20 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                             name='from'
                             autoComplete="off"
                             placeholder={t("enter_your_location")}
-                            onChange={activeTap == "flight" ? (e) => setTripData({ ...tripData, fromInput: e.target.value }) : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, fromInput: e.target.value }) : (e) => setTrainTrip({ ...trainTrip, fromInput: e.target.value })}
-
+                            onChange={
+                                activeTap == "flight" 
+                                ? (e) => setTripData({ ...tripData, fromInput: e.target.value }) 
+                                : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, fromInput: e.target.value }) 
+                                : (e) => setTrainTrip({ ...trainTrip, fromInput: e.target.value })}
                             value={activeTap == "flight" ? tripData.fromInput : activeTap == "bus" ? busTrip.fromInput : trainTrip.fromInput}
                         />
                         <datalist id="Data">
-                            {autoCompleteFrom.map((item) => (
-                                <option key={Math.random()} value={`${item.item.name},${activeTap == "bus" ? "Bus Station" : activeTap == "train" ? "train Station" : item.item.code}`} />
-                            ))}
+                            {autoCompleteFrom.map((item,index) => 
+                                <option key={index} value={
+                                    `${item.item.name_ar},${activeTap == "bus" ? "Bus Station" 
+                                    : activeTap == "train" ? "train Station" 
+                                    : item.item.code}`} />
+                            )}
                         </datalist>
                     </div>
                     <div className='input_container flex-fill d-flex flex-column p-2'>
@@ -103,7 +109,7 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                         />
                         <datalist id="toData">
                             {autoCompleteTo.map((item) => (
-                                <option key={Math.random()} value={`${item.item.name},${activeTap == "bus" ? "Bus Station" : activeTap == "train" ? "train Station" : item.item.code}`} />
+                                <option key={Math.random()} value={`${item.item.name_ar},${activeTap == "bus" ? "Bus Station" : activeTap == "train" ? "train Station" : item.item.code}`} />
                             ))}
                         </datalist>
                     </div>
