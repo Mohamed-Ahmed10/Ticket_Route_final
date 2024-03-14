@@ -15,20 +15,12 @@ export default function FAQ() {
         {
             question: t("question3"),
             answer: t("answer3")
-        },
-        {
-            question: t("question4"),
-            answer: t("answer4")
-        },
-        {
-            question: t("question5"),
-            answer: t("answer5")
         }
     ];
 
     return (
         <div className="vh-100">
-            <Accordion defaultActiveKey="0" className="w-50 mx-auto my-4">
+            <Accordion defaultActiveKey="0" className="w-75 mx-auto my-4">
                 {reservationQuestionsAndAnswers.map((question, index) =>
                     <Accordion.Item eventKey={index} key={index}>
                         <Accordion.Header>{question.question}</Accordion.Header>

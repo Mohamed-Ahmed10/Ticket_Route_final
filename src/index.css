@@ -143,6 +143,7 @@ input {
   justify-content: space-between;
 }
 
+
 #hero_section img {
   width: 374px;
   height: 453px;
@@ -484,6 +485,7 @@ button.active_button {
 
   .hero_text_box {
     background: #eeeeee7a;
+    max-width: 60%;
   }
 
   #hero_section .hero_p {
@@ -971,4 +973,10 @@ button.active_button {
   87% {
     box-shadow: .3em -.3em 0 0 currentcolor;
   }
+}
+
+
+.rtl .accordion-button::after {
+  margin-right: auto;
+  margin-left: initial;
 }

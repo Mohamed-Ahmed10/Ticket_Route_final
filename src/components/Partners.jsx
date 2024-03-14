@@ -4,7 +4,7 @@ import egyptian_railway from "../assets/partners/railway.png"
 import egypt_air from "../assets/partners/egypt_Air.png"
 import elnil from "../assets/partners/el_nil.png"
 import emirates from "../assets/partners/emirates.png"
-import fast_bus from "../assets/partners/fast_bus.png"
+import east_bus from "../assets/partners/east_bus.png"
 import go_bus from "../assets/partners/go_bus.png"
 import saudi from "../assets/partners/saudia.png"
 import swvl from "../assets/partners/swvl.png"
@@ -30,7 +30,7 @@ export default function Partners({ trip_status }) {
             topic: "flight"
         },
         {
-            logo: fast_bus,
+            logo: east_bus,
             topic: "bus"
         },
         {

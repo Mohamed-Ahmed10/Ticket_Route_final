@@ -2,9 +2,7 @@
   {
     "company": "gobus",
     "to": "Port Said Bus Station",
-    "to_ar": "محطة بورسعيد للحافلات",
     "from": "Cairo Gateway Bus Station",
-    "from_ar": "محطة البوابة القاهرة للحافلات",
     "price": 150,
     "arrival": "06:00",
     "departure": "08:15",
@@ -13,9 +11,7 @@
   {
     "company": "eastbus",
     "to": "Port Said Bus Station",
-    "to_ar": "محطة بورسعيد للحافلات",
     "from": "Cairo Gateway Bus Station",
-    "from_ar": "محطة البوابة القاهرة للحافلات",
     "price": 155,
     "arrival": "07:00",
     "departure": "09:20",
@@ -24,9 +20,7 @@
   {
     "company": "gobus",
     "to": "Cairo Gateway Bus Station",
-    "to_ar": "محطة البوابة القاهرة للحافلات",
     "from": "Port Said Bus Station",
-    "from_ar": "محطة بورسعيد للحافلات",
     "price": 145,
     "arrival": "09:00",
     "departure": "11:10",
@@ -35,9 +29,7 @@
   {
     "company": "gobus",
     "to": "Cairo Gateway Bus Station",
-    "to_ar": "محطة البوابة القاهرة للحافلات",
     "from": "Port Said Bus Station",
-    "from_ar": "محطة بورسعيد للحافلات",
     "price": 130,
     "arrival": "10:00",
     "departure": "12:20",
@@ -46,10 +38,7 @@
   {
     "company": "eastbus",
     "to": "Cairo Gateway Bus Station",
-    "to_ar": "محطة البوابة القاهرة للحافلات",
     "from": "Alexandria Bus Station",
-    "from_ar": "محطة الإسكندرية للحافلات",
-
     "price": 150,
     "arrival": "10:00",
     "departure": "12:45",
@@ -58,9 +47,7 @@
   {
     "company": "eastbus",
     "to": "Cairo Gateway Bus Station",
-    "to_ar": "محطة البوابة القاهرة للحافلات",
     "from": "Alexandria Bus Station",
-    "from_ar": "محطة الإسكندرية للحافلات",
     "price": 125,
     "arrival": "11:00",
     "departure": "13:50",
@@ -69,9 +56,7 @@
   {
     "company": "gobus",
     "to": "Alexandria Bus Station",
-    "to_ar": "محطة الإسكندرية للحافلات",
     "from": "Cairo Gateway Bus Station",
-    "from_ar": "محطة البوابة القاهرة للحافلات",
     "price": 150,
     "arrival": "14:00",
     "departure": "16:55",
@@ -80,10 +65,7 @@
   {
     "company": "eastbus",
     "to": "Sharm el-Sheikh Bus Station",
-    "to_ar": "محطة شرم الشيخ للحافلات",
-
     "from": "Cairo Gateway Bus Station",
-    "from_ar": "محطة البوابة القاهرة للحافلات",
     "price": 150,
     "arrival": "00:00",
     "departure": "06:20",
@@ -92,9 +74,7 @@
   {
     "company": "eastbus",
     "to": "Sharm el-Sheikh Bus Station",
-    "to_ar": "محطة شرم الشيخ للحافلات",
     "from": "Cairo Gateway Bus Station",
-    "from_ar": "محطة البوابة القاهرة للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "21:30",
@@ -103,11 +83,7 @@
   {
     "company": "gobus",
     "to": "Cairo Gateway Bus Station",
-    "to_ar": "محطة البوابة القاهرة للحافلات",
-
     "from": "Sharm el-Sheikh Bus Station",
-    "from_ar": "محطة شرم الشيخ للحافلات",
-
     "price": 150,
     "arrival": "15:00",
     "departure": "21:20",
@@ -116,11 +92,7 @@
   {
     "company": "eastbus",
     "to": "Cairo Gateway Bus Station",
-    "to_ar": "محطة البوابة القاهرة للحافلات",
-
     "from": "Sharm el-Sheikh Bus Station",
-    "from_ar": "محطة شرم الشيخ للحافلات",
-
     "price": 150,
     "arrival": "15:00",
     "departure": "21:30",
@@ -129,10 +101,7 @@
   {
     "company": "eastbus",
     "to": "Port Said Bus Station",
-    "to_ar": "محطة بورسعيد للحافلات",
-
     "from": "Alexandria Bus Station",
-    "from_ar": "محطة الإسكندرية للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "18:10",
@@ -141,9 +110,7 @@
   {
     "company": "gobus",
     "to": "Alexandria Bus Station",
-    "to_ar": "محطة الإسكندرية للحافلات",
     "from": "Port Said Bus Station",
-    "from_ar": "محطة بورسعيد للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "18:10",
@@ -152,10 +119,7 @@
   {
     "company": "eastbus",
     "to": "Port Said Bus Station",
-    "to_ar": "محطة بورسعيد للحافلات",
     "from": "Sharm el-Sheikh Bus Station",
-    "from_ar": "محطة شرم الشيخ للحافلات",
-
     "price": 150,
     "arrival": "15:00",
     "departure": "22:00",
@@ -164,10 +128,7 @@
   {
     "company": "gobus",
     "to": "Sharm el-Sheikh Bus Station",
-    "to_ar": "محطة شرم الشيخ للحافلات",
-
     "from": "Port Said Bus Station",
-    "from_ar": "محطة بورسعيد للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "22:05",
@@ -176,9 +137,7 @@
   {
     "company": "eastbus",
     "to": "Sharm el-Sheikh Bus Station",
-    "to_ar": "محطة شرم الشيخ للحافلات",
     "from": "Alexandria Bus Station",
-    "from_ar": "محطة الإسكندرية للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "23:10",
@@ -187,9 +146,7 @@
   {
     "company": "gobus",
     "to": "Sharm el-Sheikh Bus Station",
-    "to_ar": "محطة شرم الشيخ للحافلات",
     "from": "Alexandria Bus Station",
-    "from_ar": "محطة الإسكندرية للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "23:00",
@@ -198,9 +155,7 @@
   {
     "company": "eastbus",
     "to": "Alexandria Bus Station",
-    "to_ar": "محطة الإسكندرية للحافلات",
     "from": "Sharm el-Sheikh Bus Station",
-    "from_ar": "محطة شرم الشيخ للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "23:10",
@@ -209,9 +164,7 @@
   {
     "company": "gobus",
     "to": "Alexandria Bus Station",
-    "to_ar": "محطة الإسكندرية للحافلات",
     "from": "Sharm el-Sheikh Bus Station",
-    "from_ar": "محطة شرم الشيخ للحافلات",
     "price": 150,
     "arrival": "15:00",
     "departure": "23:10",
