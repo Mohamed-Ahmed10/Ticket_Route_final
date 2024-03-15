@@ -134,6 +134,30 @@
   {
     "company": "railway",
     "company_log": "image",
+    "to": "Cairo Ramses Station",
+    "to_ar": "محطة القاهرة رمسيس",
+    "from": "Alexandria Station",
+    "from_ar": "محطة الإسكندرية",
+    "price": 52,
+    "arrival": "15:00",
+    "departure": "18:00",
+    "duration": "03 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Cairo Ramses Station",
+    "to_ar": "محطة القاهرة رمسيس",
+    "from": "Alexandria Station",
+    "from_ar": "محطة الإسكندرية",
+    "price": 38,
+    "arrival": "03:00",
+    "departure": "06:30",
+    "duration": "03 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
     "to": "Alexandria Station",
     "to_ar": "محطة الإسكندرية",
     "from": "Cairo Ramses Station",
@@ -142,6 +166,30 @@
     "arrival": "13:00",
     "departure": "16:10",
     "duration": "03 h : 10 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Alexandria Station",
+    "to_ar": "محطة الإسكندرية",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 75,
+    "arrival": "16:00",
+    "departure": "18:30",
+    "duration": "02 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Alexandria Station",
+    "to_ar": "محطة الإسكندرية",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 150,
+    "arrival": "12:00",
+    "departure": "14:10",
+    "duration": "02 h : 10 m"
   },
   {
     "company": "railway",
