@@ -97,19 +97,8 @@
   {
     "company": "railway",
     "company_log": "image",
-    "to": "Cairo Ramses Station",
-    "to_ar": "محطة الإسكندرية",
-    "from": "Banha Station",
-    "from_ar": "محطة بنها",
-    "price": 38,
-    "arrival": "13:00",
-    "departure": "14:00",
-    "duration": "01 h : 00 m"
-  },
-  {
-    "company": "railway",
-    "company_log": "image",
     "to": "Alexandria Station",
+    "to_ar": "محطة الإسكندرية",
     "from": "Banha Station",
     "from_ar": "محطة بنها",
     "price": 38,
