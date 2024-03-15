@@ -100,11 +100,9 @@ export default function Search() {
                     setAvailableTickets(data)
                 } else if (searchVech == 'bus') {
                     setIsLoading(false)
-
                     setAvailableTickets(busTrips)
                 } else {
                     setIsLoading(false)
-
                     setAvailableTickets(trainTrips)
                 }
             } catch (error) {
@@ -115,36 +113,33 @@ export default function Search() {
             fetchTrips();
         } else if (searchVech == 'bus') {
             setIsLoading(true)
-            // let TicketsArray = JSON.parse(busTrips)
-            if (i18n.language !== 'ar') {
+            setTimeout(() => {
+                // let TicketsArray = JSON.parse(busTrips)
+                if (i18n.language !== 'ar') {
 
-                let ticketsArray = busTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
-                setAvailableTickets(ticketsArray)
-                console.log(ticketsArray);
+                    let ticketsArray = busTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
+                    setAvailableTickets(ticketsArray)
+                } else {
+                    let ticketsArray = busTrips.filter((ticket) => ticket.from_ar == originalFrom.split(",")[0] && ticket.to_ar == originalTo.split(",")[0])
+                    setAvailableTickets(ticketsArray)
+                }
 
-            } else {
-
-                let ticketsArray = busTrips.filter((ticket) => ticket.from_ar == originalFrom.split(",")[0] && ticket.to_ar == originalTo.split(",")[0])
-                setAvailableTickets(ticketsArray)
-                console.log(ticketsArray);
-            }
-
-            setIsLoading(false)
+                setIsLoading(false)
+            }, 800)
         } else if (searchVech == 'train') {
             setIsLoading(true)
-            if (i18n.language !== 'ar') {
+            setTimeout(() => {
+                if (i18n.language !== 'ar') {
 
-                let ticketsArray = trainTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
-                setAvailableTickets(ticketsArray)
-                console.log(ticketsArray);
+                    let ticketsArray = trainTrips.filter((ticket) => ticket.from == originalFrom.split(",")[0] && ticket.to == originalTo.split(",")[0])
+                    setAvailableTickets(ticketsArray)
+                } else {
 
-            } else {
-
-                let ticketsArray = trainTrips.filter((ticket) => ticket.from_ar == originalFrom.split(",")[0] && ticket.to_ar == originalTo.split(",")[0])
-                setAvailableTickets(ticketsArray)
-                console.log(ticketsArray);
-            }
-            setIsLoading(false)
+                    let ticketsArray = trainTrips.filter((ticket) => ticket.from_ar == originalFrom.split(",")[0] && ticket.to_ar == originalTo.split(",")[0])
+                    setAvailableTickets(ticketsArray)
+                }
+                setIsLoading(false)
+            }, 800)
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
