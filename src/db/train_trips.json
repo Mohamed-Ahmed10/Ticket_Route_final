@@ -198,10 +198,10 @@
     "to_ar": "محطة الإسكندرية",
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-    "price": 38,
-    "arrival": "13:00",
-    "departure": "17:00",
-    "duration": "04 h : 00 m"
+    "price": 65,
+    "arrival": "13:30",
+    "departure": "17:30",
+    "duration": "04 h : 30 m"
   },
   {
     "company": "railway",
@@ -210,10 +210,10 @@
     "to_ar": "محطة الإسكندرية",
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-    "price": 38,
-    "arrival": "13:00",
-    "departure": "17:00",
-    "duration": "04 h : 00 m"
+    "price": 75,
+    "arrival": "17:00",
+    "departure": "20:05",
+    "duration": "03 h : 05 m"
   },
   {
     "company": "railway",
@@ -246,7 +246,7 @@
     "to_ar": "محطة بورسعيد",
     "from": "Banha Station",
     "from_ar": "محطة بنها",
-    "price": 38,
+    "price": 63,
     "arrival": "13:00",
     "departure": "15:50",
     "duration": "02 h :50  m"
@@ -258,7 +258,7 @@
     "to_ar": "محطة بنها",
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-    "price": 38,
+    "price": 48,
     "arrival": "13:00",
     "departure": "15:50",
     "duration": "02 h : 50 m"
@@ -270,7 +270,7 @@
     "to_ar": "محطة أسوان",
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
-    "price": 38,
+    "price": 175,
     "arrival": "13:00",
     "departure": "00:00",
     "duration": "11 h : 00 m"
@@ -282,7 +282,7 @@
     "to_ar": "محطة أسوان",
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-    "price": 38,
+    "price": 213,
     "arrival": "13:00",
     "departure": "01:50",
     "duration": "12 h : 50 m"
@@ -294,7 +294,7 @@
     "to_ar": "محطة الإسكندرية",
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-    "price": 38,
+    "price": 243,
     "arrival": "13:00",
     "departure": "01:40",
     "duration": "12 h : 40 m"
@@ -306,7 +306,7 @@
     "to_ar": "محطة بورسعيد",
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-    "price": 38,
+    "price": 270,
     "arrival": "13:00",
     "departure": "01:50",
     "duration": "12 h : 50 m"
@@ -318,7 +318,7 @@
     "to_ar": "محطة أسوان",
     "from": "Alexandria Station",
     "from_ar": "محطة الإسكندرية",
-    "price": 38,
+    "price": 190,
     "arrival": "13:00",
     "departure": "01:30",
     "duration": "12 h : 30 m"
@@ -330,7 +330,7 @@
     "to_ar": "محطة أسوان",
     "from": "Banha Station",
     "from_ar": "محطة بنها",
-    "price": 38,
+    "price": 160,
     "arrival": "13:00",
     "departure": "01:00",
     "duration": "12 h : 00 m"
@@ -342,7 +342,7 @@
     "to_ar": "محطة بنها",
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-    "price": 38,
+    "price": 140,
     "arrival": "13:00",
     "departure": "01:00",
     "duration": "12 h : 00 m"
@@ -354,7 +354,7 @@
     "to_ar": "محطة أسوان",
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
-    "price": 38,
+    "price": 140,
     "arrival": "13:00",
     "departure": "01:30",
     "duration": "12 h : 30 m"
@@ -366,7 +366,7 @@
     "to_ar": "محطة القاهرة رمسيس",
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-    "price": 38,
+    "price": 120,
     "arrival": "13:00",
     "departure": "01:30",
     "duration": "12 h : 30 m"
