@@ -4,10 +4,8 @@
     "company_log": "image",
     "to": "Port Said Station",
     "to_ar": "محطة بورسعيد",
-
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
-
     "price": 30,
     "arrival": "16:00",
     "departure": "19:10",
@@ -18,10 +16,8 @@
     "company_log": "image",
     "to": "Port Said Station",
     "to_ar": "محطة بورسعيد",
-
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
-
     "price": 50,
     "arrival": "10:00",
     "departure": "13:15",
@@ -32,10 +28,8 @@
     "company_log": "image",
     "to": "Cairo Ramses Station",
     "to_ar": "محطة القاهرة رمسيس",
-
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-
     "price": 45,
     "arrival": "18:00",
     "departure": "21:10",
@@ -46,10 +40,8 @@
     "company_log": "image",
     "to": "Cairo Ramses Station",
     "to_ar": "محطة القاهرة رمسيس",
-
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-
     "price": 35,
     "arrival": "10:00",
     "departure": "13:00",
@@ -71,7 +63,6 @@
     "company_log": "image",
     "to": "Banha Station",
     "to_ar": "محطة بنها",
-
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
     "price": 30,
@@ -86,7 +77,6 @@
     "to": "Cairo Ramses Station",
     "from": "Banha Station",
     "from_ar": "محطة بنها",
-
     "price": 42.5,
     "arrival": "14:00",
     "departure": "15:05",
@@ -97,10 +87,20 @@
     "company_log": "image",
     "to": "Cairo Ramses Station",
     "to_ar": "محطة القاهرة رمسيس",
-
     "from": "Banha Station",
     "from_ar": "محطة بنها",
-
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "14:00",
+    "duration": "01 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Cairo Ramses Station",
+    "to_ar": "محطة الإسكندرية",
+    "from": "Banha Station",
+    "from_ar": "محطة بنها",
     "price": 38,
     "arrival": "13:00",
     "departure": "14:00",
@@ -110,11 +110,8 @@
     "company": "railway",
     "company_log": "image",
     "to": "Alexandria Station",
-    "to_ar": "محطة الإسكندرية",
-
     "from": "Banha Station",
     "from_ar": "محطة بنها",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "16:30",
@@ -125,10 +122,8 @@
     "company_log": "image",
     "to": "Banha Station",
     "to_ar": "محطة بنها",
-
     "from": "Alexandria Station",
     "from_ar": "محطة الإسكندرية",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "16:20",
@@ -140,7 +135,6 @@
     "to": "Cairo Ramses Station",
     "from": "Alexandria Station",
     "from_ar": "محطة الإسكندرية",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "16:20",
@@ -162,7 +156,6 @@
     "company_log": "image",
     "to": "Alexandria Station",
     "to_ar": "محطة الإسكندرية",
-
     "from": "Port Said Station",
     "price": 38,
     "arrival": "13:00",
@@ -174,10 +167,8 @@
     "company_log": "image",
     "to": "Alexandria Station",
     "to_ar": "محطة الإسكندرية",
-
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "17:00",
@@ -188,10 +179,8 @@
     "company_log": "image",
     "to": "Port Said Station",
     "to_ar": "محطة بورسعيد",
-
     "from": "Alexandria Station",
     "from_ar": "محطة الإسكندرية",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "17:00",
@@ -202,10 +191,8 @@
     "company_log": "image",
     "to": "Port Said Station",
     "to_ar": "محطة بورسعيد",
-
     "from": "Alexandria Station",
     "from_ar": "محطة الإسكندرية",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "17:00",
@@ -216,10 +203,8 @@
     "company_log": "image",
     "to": "Port Said Station",
     "to_ar": "محطة بورسعيد",
-
     "from": "Banha Station",
     "from_ar": "محطة بنها",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "15:50",
@@ -230,10 +215,8 @@
     "company_log": "image",
     "to": "Banha Station",
     "to_ar": "محطة بنها",
-
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "15:50",
@@ -244,10 +227,8 @@
     "company_log": "image",
     "to": "Aswan Station",
     "to_ar": "محطة أسوان",
-
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "00:00",
@@ -258,10 +239,8 @@
     "company_log": "image",
     "to": "Aswan Station",
     "to_ar": "محطة أسوان",
-
     "from": "Port Said Station",
     "from_ar": "محطة بورسعيد",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:50",
@@ -272,10 +251,8 @@
     "company_log": "image",
     "to": "Alexandria Station",
     "to_ar": "محطة الإسكندرية",
-
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:40",
@@ -286,10 +263,8 @@
     "company_log": "image",
     "to": "Port Said Station",
     "to_ar": "محطة بورسعيد",
-
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:50",
@@ -300,10 +275,8 @@
     "company_log": "image",
     "to": "Aswan Station",
     "to_ar": "محطة أسوان",
-
     "from": "Alexandria Station",
     "from_ar": "محطة الإسكندرية",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:30",
@@ -314,10 +287,8 @@
     "company_log": "image",
     "to": "Aswan Station",
     "to_ar": "محطة أسوان",
-
     "from": "Banha Station",
     "from_ar": "محطة بنها",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:00",
@@ -328,10 +299,8 @@
     "company_log": "image",
     "to": "Banha Station",
     "to_ar": "محطة بنها",
-
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:00",
@@ -342,10 +311,8 @@
     "company_log": "image",
     "to": "Aswan Station",
     "to_ar": "محطة أسوان",
-
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:30",
@@ -356,10 +323,8 @@
     "company_log": "image",
     "to": "Cairo Ramses Station",
     "to_ar": "محطة القاهرة رمسيس",
-
     "from": "Aswan Station",
     "from_ar": "محطة أسوان",
-
     "price": 38,
     "arrival": "13:00",
     "departure": "01:30",

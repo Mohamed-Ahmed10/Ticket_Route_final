@@ -44,12 +44,11 @@
     "duration": "2 h : 20 m"
   },
   {
-    "company": "eastbus",
+    "company": "gobus",
     "to": "Cairo Gateway Bus Station",
     "to_ar": "محطة البوابة القاهرة للحافلات",
     "from": "Alexandria Bus Station",
     "from_ar": "محطة الإسكندرية للحافلات",
-
     "price": 150,
     "arrival": "10:00",
     "departure": "12:45",
@@ -81,7 +80,6 @@
     "company": "eastbus",
     "to": "Sharm el-Sheikh Bus Station",
     "to_ar": "محطة شرم الشيخ للحافلات",
-
     "from": "Cairo Gateway Bus Station",
     "from_ar": "محطة البوابة القاهرة للحافلات",
     "price": 150,
@@ -104,10 +102,8 @@
     "company": "gobus",
     "to": "Cairo Gateway Bus Station",
     "to_ar": "محطة البوابة القاهرة للحافلات",
-
     "from": "Sharm el-Sheikh Bus Station",
     "from_ar": "محطة شرم الشيخ للحافلات",
-
     "price": 150,
     "arrival": "15:00",
     "departure": "21:20",
@@ -117,10 +113,8 @@
     "company": "eastbus",
     "to": "Cairo Gateway Bus Station",
     "to_ar": "محطة البوابة القاهرة للحافلات",
-
     "from": "Sharm el-Sheikh Bus Station",
     "from_ar": "محطة شرم الشيخ للحافلات",
-
     "price": 150,
     "arrival": "15:00",
     "departure": "21:30",
@@ -130,7 +124,6 @@
     "company": "eastbus",
     "to": "Port Said Bus Station",
     "to_ar": "محطة بورسعيد للحافلات",
-
     "from": "Alexandria Bus Station",
     "from_ar": "محطة الإسكندرية للحافلات",
     "price": 150,
@@ -155,7 +148,6 @@
     "to_ar": "محطة بورسعيد للحافلات",
     "from": "Sharm el-Sheikh Bus Station",
     "from_ar": "محطة شرم الشيخ للحافلات",
-
     "price": 150,
     "arrival": "15:00",
     "departure": "22:00",
@@ -165,7 +157,6 @@
     "company": "gobus",
     "to": "Sharm el-Sheikh Bus Station",
     "to_ar": "محطة شرم الشيخ للحافلات",
-
     "from": "Port Said Bus Station",
     "from_ar": "محطة بورسعيد للحافلات",
     "price": 150,
@@ -202,8 +193,8 @@
     "from": "Sharm el-Sheikh Bus Station",
     "from_ar": "محطة شرم الشيخ للحافلات",
     "price": 150,
-    "arrival": "15:00",
-    "departure": "23:10",
+    "arrival": "12:00",
+    "departure": "20:10",
     "duration": "8 h : 10 m"
   },
   {
@@ -216,5 +207,148 @@
     "arrival": "15:00",
     "departure": "23:10",
     "duration": "8 h : 10 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Port Said Bus Station",
+    "to_ar": "محطة بورسعيد للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 160,
+    "arrival": "08:30",
+    "departure": "10:45",
+    "duration": "2h : 15 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Port Said Bus Station",
+    "to_ar": "محطة بورسعيد للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 170,
+    "arrival": "09:15",
+    "departure": "11:30",
+    "duration": "2h : 15 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Port Said Bus Station",
+    "from_ar": "محطة بورسعيد للحافلات",
+    "price": 180,
+    "arrival": "11:00",
+    "departure": "13:15",
+    "duration": "2 h : 15 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Port Said Bus Station",
+    "from_ar": "محطة بورسعيد للحافلات",
+    "price": 190,
+    "arrival": "11:45",
+    "departure": "14:00",
+    "duration": "2 h : 15 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Alexandria Bus Station",
+    "from_ar": "محطة الإسكندرية للحافلات",
+    "price": 200,
+    "arrival": "12:30",
+    "departure": "14:45",
+    "duration": "2 h : 15 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Alexandria Bus Station",
+    "from_ar": "محطة الإسكندرية للحافلات",
+    "price": 210,
+    "arrival": "13:15",
+    "departure": "15:30",
+    "duration": "2 h : 15 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Alexandria Bus Station",
+    "to_ar": "محطة الإسكندرية للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 220,
+    "arrival": "16:00",
+    "departure": "18:15",
+    "duration": "2 h : 15 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Sharm el-Sheikh Bus Station",
+    "to_ar": "محطة شرم الشيخ للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 230,
+    "arrival": "06:00",
+    "departure": "12:20",
+    "duration": "6 h : 20 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Sharm el-Sheikh Bus Station",
+    "to_ar": "محطة شرم الشيخ للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 240,
+    "arrival": "16:00",
+    "departure": "22:20",
+    "duration": "6 h : 20 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Sharm el-Sheikh Bus Station",
+    "from_ar": "محطة شرم الشيخ للحافلات",
+    "price": 250,
+    "arrival": "16:00",
+    "departure": "22:20",
+    "duration": "6 h : 20 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Sharm el-Sheikh Bus Station",
+    "from_ar": "محطة شرم الشيخ للحافلات",
+    "price": 260,
+    "arrival": "16:30",
+    "departure": "22:50",
+    "duration": "6 h : 20 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Port Said Bus Station",
+    "to_ar": "محطة بورسعيد للحافلات",
+    "from": "Alexandria Bus Station",
+    "from_ar": "محطة الإسكندرية للحافلات",
+    "price": 270,
+    "arrival": "17:00",
+    "departure": "20:10",
+    "duration": "3 h : 10 m"
+  },
+  {
+    "company": "swvl",
+    "to": "Alexandria Bus Station",
+    "to_ar": "محطة الإسكندرية للحافلات",
+    "from": "Port Said Bus Station",
+    "from_ar": "محطة بورسعيد للحافلات",
+    "price": 270,
+    "arrival": "17:00",
+    "departure": "20:10",
+    "duration": "3 h : 10 m"
   }
 ]

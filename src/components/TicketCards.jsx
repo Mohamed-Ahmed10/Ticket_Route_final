@@ -2,6 +2,7 @@
 import { Card, Row, Col } from "react-bootstrap"
 import { IoMdAlarm } from "react-icons/io";
 import gobusLogo from '../assets/partners/go_bus.png'
+import swvl from '../assets/partners/swvl.png'
 import EastBusLogo from '../assets/partners/east_bus.png'
 import railwayLogo from '../assets/partners/railway.png'
 import { useTranslation } from "react-i18next";
@@ -76,7 +77,7 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                         <Card key={`${item}/${i}`} className="my-2 shadow p-2 single_trip">
                             <Row>
                                 <Col md="2" className="d-flex align-items-center justify-content-center">
-                                    <img src={item.company == 'gobus' ? gobusLogo : item.company == 'eastbus' ? EastBusLogo : railwayLogo} className="py-4 img-fluid" alt="test" />
+                                    <img src={item.company == 'gobus' ? gobusLogo : item.company == 'eastbus' ? EastBusLogo : item.company == 'swvl' ? swvl : railwayLogo} className="py-4 img-fluid" alt="test" />
                                 </Col>
                                 <Col md="8" className="d-flex flex-row trip_details align-items-center">
                                     <div className="ps-3 py-1 w-100 d-flex flex-column justify-content-between">
@@ -111,7 +112,9 @@ const TicketCards = ({ availableTickets, searchVech }) => {
                                                     ? "https://go-bus.com/"
                                                     : item.company == 'eastbus'
                                                         ? "https://www.eastdelta-travel.com/?fbclid=IwAR2tFg88izu2q0td_dUTA72uL660cecWlUbv10kFpj2feWTeKEnRpTv6pbM"
-                                                        : "https://obs.enr.gov.eg/o-city/obs/enr/railway/ar/booktickets"} target="_blank">
+                                                        : item.company === "swvl"
+                                                            ? "https://www.swvl.com/"
+                                                            : "https://obs.enr.gov.eg/o-city/obs/enr/railway/ar/booktickets"} target="_blank">
                                             {t("reserve_now")}
                                         </a>
                                     </div>
