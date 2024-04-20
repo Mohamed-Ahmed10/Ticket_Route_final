@@ -13,13 +13,13 @@ export default function Problems() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
-        <div className="wrapper text-center">
-            <h2 className="mt-3 mb-4">{t('customers_complains')}</h2>
+        <div className="wrapper">
+            <h2 className="mt-3 mb-4 text-center">{t('customers_complains')}</h2>
             <ol role="list">
                 {problems.length > 0
                     ?
                     problems.map((problem, index) =>
-                        <li key={index}>
+                        <li key={index} className="justify-content-evenly">
                             <div className="text-center">
                                 <h4>{problem.name}</h4>
                                 <h5>{problem.email}</h5>
@@ -28,7 +28,7 @@ export default function Problems() {
                         </li>
                     )
                 :
-                <h3>{t('no_problems')}</h3>
+                <h3 className="text-center">{t('no_problems')}</h3>
                 }
             </ol>
         </div>

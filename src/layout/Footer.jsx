@@ -2,8 +2,8 @@
 import icon_transparent from "../assets/logo.png"
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next"
+import { NavLink } from "react-bootstrap";
 
 
 export default function Footer() {
@@ -19,10 +19,10 @@ export default function Footer() {
             </div>
             <div className="footer_nav">
                 <div className="footer_nav_links flex-wrap">
-                    <Link to="/" className="w-50 nav-link link-offset-3 ">{t('home')}</Link>
-                    <Link to="/about" className="w-50 nav-link link-offset-3 ">{t('about_us')}</Link>
-                    <Link to="/contact" className="w-50 nav-link link-offset-3 ">{t('contact_us')}</Link>
-                    <Link to="/faq" className="w-50 nav-link link-offset-3 ">{t('faq')}</Link>
+                    <NavLink to="/" className="w-50 nav-link link-offset-3 ">{t('home')}</NavLink>
+                    <NavLink to="/about" className="w-50 nav-link link-offset-3 ">{t('about_us')}</NavLink>
+                    <NavLink to="/contact" className="w-50 nav-link link-offset-3 ">{t('contact_us')}</NavLink>
+                    <NavLink to="/faq" className="w-50 nav-link link-offset-3 ">{t('faq')}</NavLink>
                 </div>
             </div>
             <div className="footer_socials">

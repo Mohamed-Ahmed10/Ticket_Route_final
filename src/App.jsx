@@ -26,7 +26,6 @@ const App = () => {
           <Route path="/contact" Component={Contact} />
           <Route path="/faq" Component={FAQ} />
           <Route path="/search" Component={Search} />
-          {/* In main page */}
           <Route path="/airplane" Component={Airplane} />
           <Route path="/bus" Component={Bus} />
           <Route path="/train" Component={Train} />

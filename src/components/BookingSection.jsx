@@ -6,7 +6,7 @@ import { PiTrain } from "react-icons/pi";
 
 import airports from '../db/airports.json'
 import busStations from '../db/bus_stations.json'
-import TrainStations from '../db/trains.json'
+import TrainStations from '../db/trains_stations.json'
 
 import BookingForm from './BookingForm';
 
