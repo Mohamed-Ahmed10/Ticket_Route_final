@@ -10,6 +10,7 @@ import Search from "./views/Search"
 import Airplane from "./components/main_sections/Airplane"
 import Bus from "./components/main_sections/Bus"
 import Train from "./components/main_sections/Train"
+import Problems from "./views/Problems"
 
 const App = () => {
 
@@ -18,17 +19,20 @@ const App = () => {
     <div className={i18n.language === 'ar' ? "rtl" : ""}>
       <SiteNav />
 
-      <Routes>
-        <Route path="/" Component={Homepage} />
-        <Route path="/about" Component={About} />
-        <Route path="/contact" Component={Contact} />
-        <Route path="/faq" Component={FAQ} />
-        <Route path="/search" Component={Search} />
-        {/* In main page */}
-        <Route path="/airplane" Component={Airplane} />
-        <Route path="/bus" Component={Bus} />
-        <Route path="/train" Component={Train} />
-      </Routes>
+      <div className="main_content">
+        <Routes>
+          <Route path="/" Component={Homepage} />
+          <Route path="/about" Component={About} />
+          <Route path="/contact" Component={Contact} />
+          <Route path="/faq" Component={FAQ} />
+          <Route path="/search" Component={Search} />
+          {/* In main page */}
+          <Route path="/airplane" Component={Airplane} />
+          <Route path="/bus" Component={Bus} />
+          <Route path="/train" Component={Train} />
+          <Route path="/problems" Component={Problems} />
+        </Routes>
+      </div>
 
       <Footer />
     </div>

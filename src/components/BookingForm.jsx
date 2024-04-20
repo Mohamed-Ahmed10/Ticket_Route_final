@@ -115,18 +115,22 @@ const BookingForm = ({ jsonLists, activeTap }) => {
                             ))}
                         </datalist>
                     </div>
-                    <div className='input_container flex-fill d-flex flex-column p-2'>
-                        <label className="fw-bold">{t('date_leave')}</label>
-                        <input type="date"
-                            name="departure"
-                            autoComplete="off"
-                            placeholder={t("pick_departure_date")}
-                            value={activeTap == "flight" ? tripData.departure : activeTap == "bus" ? busTrip.departure : trainTrip.departure}
-                            onChange={
-                                activeTap == "flight" ? (e) => setTripData({ ...tripData, departure: e.target.value }) : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, departure: e.target.value }) : (e) => setTrainTrip({ ...trainTrip, departure: e.target.value })
-                            }
-                        />
-                    </div>
+                    {
+                        activeTap !== 'train'
+                        &&
+                        <div className='input_container flex-fill d-flex flex-column p-2'>
+                            <label className="fw-bold">{t('date_leave')}</label>
+                            <input type="date"
+                                name="departure"
+                                autoComplete="off"
+                                placeholder={t("pick_departure_date")}
+                                value={activeTap == "flight" ? tripData.departure : activeTap == "bus" ? busTrip.departure : trainTrip.departure}
+                                onChange={
+                                    activeTap == "flight" ? (e) => setTripData({ ...tripData, departure: e.target.value }) : activeTap == "bus" ? (e) => setBusTrip({ ...busTrip, departure: e.target.value }) : (e) => setTrainTrip({ ...trainTrip, departure: e.target.value })
+                                }
+                            />
+                        </div>
+                    }
                 </div>
                 <div className='actions_block'>
                     <div className='checkbox_container'>

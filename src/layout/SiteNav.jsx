@@ -11,25 +11,23 @@ export default function SiteNav() {
     }
 
     return (
-        <div>
-            <Navbar expand="lg">
-                <Container>
-                    <img src={logo} alt="Icon" style={{ width: '50px' }} /> 
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav className={`${i18n.language === 'en' ? "me-auto" : "ms-auto"} ms-4 my-2 my-lg-0`}>
-                            <NavLink to="/" className="mx-4 nav-link link-offset-3 ">{t('home')}</NavLink>
-                            <NavLink to="/about" className="mx-4 nav-link link-offset-3 ">{t('about_us')}</NavLink>
-                            <NavLink to="/contact" className="mx-4 nav-link link-offset-3 ">{t('contact_us')}</NavLink>
-                            <NavLink to="/faq" className="mx-4 nav-link link-offset-3 ">{t('faq')}</NavLink>
-                        </Nav>
-                        <NavDropdown title={`${i18n.language}`} className="text-center">
-                            <NavDropdown.Item href="#" onClick={() => handleLanguage('en')}>English</NavDropdown.Item>
-                            <NavDropdown.Item href="#" onClick={() => handleLanguage('ar')}>عربى</NavDropdown.Item>
-                        </NavDropdown>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </div>
+        <Navbar expand="lg">
+            <Container>
+                <img src={logo} alt="Icon" style={{ width: '50px' }} />
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav className={`${i18n.language === 'en' ? "me-auto" : "ms-auto"} ms-4 my-2 my-lg-0`}>
+                        <NavLink to="/" className="mx-4 nav-link link-offset-3 ">{t('home')}</NavLink>
+                        <NavLink to="/about" className="mx-4 nav-link link-offset-3 ">{t('about_us')}</NavLink>
+                        <NavLink to="/faq" className="mx-4 nav-link link-offset-3 ">{t('faq')}</NavLink>
+                        <NavLink to="/contact" className="mx-4 nav-link link-offset-3 ">{t('contact_us')}</NavLink>
+                    </Nav>
+                    <NavDropdown title={`${i18n.language}`} className="text-center">
+                        <NavDropdown.Item href="#" onClick={() => handleLanguage('en')}>English</NavDropdown.Item>
+                        <NavDropdown.Item href="#" onClick={() => handleLanguage('ar')}>عربى</NavDropdown.Item>
+                    </NavDropdown>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }

@@ -302,6 +302,18 @@
   {
     "company": "railway",
     "company_log": "image",
+    "to": "Alexandria Station",
+    "to_ar": "محطة الإسكندرية",
+    "from": "Aswan Station",
+    "from_ar": "محطة أسوان",
+    "price": 400,
+    "arrival": "00:00",
+    "departure": "10:00",
+    "duration": "10 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
     "to": "Port Said Station",
     "to_ar": "محطة بورسعيد",
     "from": "Aswan Station",
@@ -322,6 +334,18 @@
     "arrival": "13:00",
     "departure": "01:30",
     "duration": "12 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Aswan Station",
+    "to_ar": "محطة أسوان",
+    "from": "Alexandria Station",
+    "from_ar": "محطة الإسكندرية",
+    "price": 210,
+    "arrival": "15:00",
+    "departure": "04:00",
+    "duration": "13 h : 00 m"
   },
   {
     "company": "railway",

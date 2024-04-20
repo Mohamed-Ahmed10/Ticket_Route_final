@@ -13,7 +13,19 @@ export default function Contact() {
     let navigate = useNavigate()
 
     let { t } = useTranslation()
+    // eslint-disable-next-line no-unused-vars
     const [validated, setValidated] = useState(false);
+    let localData = localStorage.getItem("data") ? localStorage.getItem("data") : "[]"
+
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+
+    let handleData = (ev) => {
+        setData({ ...data, [ev.target.name]: ev.target.value })
+    }
 
     let handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -36,11 +48,15 @@ export default function Contact() {
         });
         Toast.fire({
             icon: "success",
-            title: "Signed in successfully"
+            title: t('sign_up')
         });
         setTimeout(() =>
             navigate("/")
             , 2000)
+        let totalData = JSON.parse(localData);
+        totalData = [...totalData, data];
+        console.log(totalData)
+        localStorage.setItem("data", JSON.stringify(totalData))
     }
     return (
         <Container>
@@ -48,15 +64,15 @@ export default function Contact() {
             <Form className="my-3 w-50 mx-auto" onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>{t("name")}</Form.Label>
-                    <Form.Control required type="text" />
+                    <Form.Control onChange={handleData} name="name" required type="text" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>{t("email")}</Form.Label>
-                    <Form.Control required type="email" />
+                    <Form.Control onChange={handleData} name="email" required type="email" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Label>{t("message")}</Form.Label>
-                    <Form.Control required as="textarea" rows={3} />
+                    <Form.Control onChange={handleData} name="message" required as="textarea" rows={3} />
                 </Form.Group>
                 <button className="primary_btn">{t("send")}</button>
             </Form>
@@ -64,12 +80,12 @@ export default function Contact() {
             <div className="py-3 d-flex justify-content-evenly">
                 <div className="d-flex align-items-start">
                     <IoMdMail style={{ fontSize: '30px', color: '#2582c0', width: "1.24rem" }} />
-                    <p className="px-3">{t("mail_us")}<a href="#">tickets-route@email.com</a>
+                    <p className="px-3"><span className="mx-2">{t("mail_us")}</span><a href="#">tickets-route@email.com</a>
                     </p>
                 </div>
                 <div className="d-flex align-items-start">
                     <FaPhoneAlt style={{ fontSize: '30px', color: '#2582c0', width: "1.24rem" }} />
-                    <p className="px-3">{t("call_us")}<a href="#">1-800-123-4567</a>
+                    <p className="px-3"><span className="mx-2">{t("call_us")}</span><a href="#">1-800-123-4567</a>
                     </p>
                 </div>
             </div>
