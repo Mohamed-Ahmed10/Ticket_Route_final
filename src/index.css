@@ -106,7 +106,7 @@ input {
   text-align: center;
 }
 
-.nav-item > a {
+.nav-item>a {
   padding: 10px;
 }
 
@@ -177,7 +177,7 @@ input {
   border-radius: 15px;
   top: 0;
   right: 0;
-  z-index: 0;
+  z-index: -1
 }
 
 .navbar {
@@ -209,11 +209,11 @@ input {
   padding: 10px 25px;
 }
 
-.tap_buttons_container > :first-child {
+.tap_buttons_container> :first-child {
   border-start-start-radius: 10px;
 }
 
-.tap_buttons_container > :last-child {
+.tap_buttons_container> :last-child {
   border-start-end-radius: 10px;
 }
 
@@ -580,7 +580,7 @@ button.active_button {
   margin-top: 10px;
 }
 
-.search_view .inputs_block > * {
+.search_view .inputs_block>* {
   flex: 1;
 }
 
@@ -930,6 +930,7 @@ button.active_button {
 }
 
 @keyframes spin {
+
   0%,
   100% {
     box-shadow: .3em 0px 0 0px currentcolor;
@@ -980,7 +981,7 @@ ol {
   padding: 0;
 }
 
-li + li {
+li+li {
   margin-top: 1rem;
 }
 

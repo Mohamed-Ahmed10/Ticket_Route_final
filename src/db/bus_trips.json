@@ -350,5 +350,148 @@
     "arrival": "17:00",
     "departure": "20:10",
     "duration": "3 h : 10 m"
+  },
+  {
+    "company": "gobus",
+    "to": "Port Said Bus Station",
+    "to_ar": "محطة بورسعيد للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 150,
+    "arrival": "06:00",
+    "departure": "08:15",
+    "duration": "2h : 15 m"
+  },
+  {
+    "company": "eastbus",
+    "to": "Port Said Bus Station",
+    "to_ar": "محطة بورسعيد للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 180,
+    "arrival": "07:30",
+    "departure": "09:45",
+    "duration": "2h : 15 m"
+  },
+  {
+    "company": "gobus",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Port Said Bus Station",
+    "from_ar": "محطة بورسعيد للحافلات",
+    "price": 150,
+    "arrival": "08:30",
+    "departure": "10:45",
+    "duration": "2h : 15 m"
+  },
+  {
+    "company": "eastbus",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Port Said Bus Station",
+    "from_ar": "محطة بورسعيد للحافلات",
+    "price": 170,
+    "arrival": "09:00",
+    "departure": "11:15",
+    "duration": "2h : 15 m"
+  },
+  {
+    "company": "gobus",
+    "to": "Alexandria Bus Station",
+    "to_ar": "محطة الإسكندرية للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 180,
+    "arrival": "07:30",
+    "departure": "10:00",
+    "duration": "2h : 30 m"
+  },
+  {
+    "company": "eastbus",
+    "to": "Alexandria Bus Station",
+    "to_ar": "محطة الإسكندرية للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 190,
+    "arrival": "08:00",
+    "departure": "10:30",
+    "duration": "2h : 30 m"
+  },
+  {
+    "company": "gobus",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Alexandria Bus Station",
+    "from_ar": "محطة الإسكندرية للحافلات",
+    "price": 180,
+    "arrival": "10:30",
+    "departure": "13:00",
+    "duration": "2h : 30 m"
+  },
+  {
+    "company": "eastbus",
+    "to": "Cairo Gateway Bus Station",
+    "to_ar": "محطة البوابة القاهرة للحافلات",
+    "from": "Alexandria Bus Station",
+    "from_ar": "محطة الإسكندرية للحافلات",
+    "price": 200,
+    "arrival": "10:45",
+    "departure": "13:15",
+    "duration": "2h : 30 m"
+  },
+  {
+    "company": "gobus",
+    "to": "Dahab Bus Station",
+    "to_ar": "محطة دهب للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 250,
+    "arrival": "12:30",
+    "departure": "18:00",
+    "duration": "5h : 30 m"
+  },
+  {
+    "company": "eastbus",
+    "to": "Dahab Bus Station",
+    "to_ar": "محطة دهب للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 350,
+    "arrival": "8:00",
+    "departure": "15:00",
+    "duration": "7h : 00 m"
+  },
+  {
+    "company": "eastbus",
+    "to": "Marsa Matrouh Bus Station",
+    "to_ar": "محطة مرسى مطروح للحافلات",
+    "from": "Cairo Gateway Bus Station",
+    "from_ar": "محطة البوابة القاهرة للحافلات",
+    "price": 300,
+    "arrival": "11:00",
+    "departure": "15:30",
+    "duration": "4h : 30 m"
+  },
+  {
+    "company": "gobus",
+    "to": "Dahab Bus Station",
+    "to_ar": "محطة دهب للحافلات",
+    "from": "Marsa Matrouh Bus Station",
+    "from_ar": "محطة مرسى مطروح للحافلات",
+    "price": 450,
+    "arrival": "12:30",
+    "departure": "20:00",
+    "duration": "7h : 30 m"
+  },
+  {
+    "company": "gobus",
+    "to": "Marsa Matrouh Bus Station",
+    "to_ar": "محطة مرسى مطروح للحافلات",
+    "from": "Dahab Bus Station",
+    "from_ar": "محطة دهب للحافلات",
+    "price": 350,
+    "arrival": "00:00",
+    "departure": "9:00",
+    "duration": "9h : 00 m"
   }
 ]

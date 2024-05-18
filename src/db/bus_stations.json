@@ -18,5 +18,15 @@
     "name": "Port Said Bus Station",
     "name_ar": "محطة بورسعيد للحافلات",
     "city": "Port Said"
+  },
+  {
+    "name": "Dahab Bus Station",
+    "name_ar": "محطة دهب للحافلات",
+    "city": "Dahab"
+  },
+  {
+    "name": "Marsa Matrouh Bus Station",
+    "name_ar": "محطة مرسى مطروح للحافلات",
+    "city": "Marsa Matrouh"
   }
 ]
