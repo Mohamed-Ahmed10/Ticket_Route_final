@@ -13,6 +13,7 @@ import Train from "./components/main_sections/Train"
 import Problems from "./views/Problems"
 
 const App = () => {
+  let x = 0;
 
   let { i18n } = useTranslation()
   return (
@@ -21,15 +22,15 @@ const App = () => {
 
       <div className="main_content">
         <Routes>
-          <Route path="/" Component={Homepage} />
-          <Route path="/about" Component={About} />
-          <Route path="/contact" Component={Contact} />
-          <Route path="/faq" Component={FAQ} />
-          <Route path="/search" Component={Search} />
-          <Route path="/airplane" Component={Airplane} />
-          <Route path="/bus" Component={Bus} />
-          <Route path="/train" Component={Train} />
-          <Route path="/problems" Component={Problems} />
+          <Route path="/" element={<Homepage /> } />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/airplane" element={<Airplane />} />
+          <Route path="/bus" element={<Bus />} />
+          <Route path="/train" element={<Train />} />
+          <Route path="/problems" element={<Problems />} />
         </Routes>
       </div>
 
