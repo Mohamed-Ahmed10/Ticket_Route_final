@@ -13,7 +13,6 @@ import Train from "./components/main_sections/Train"
 import Problems from "./views/Problems"
 
 const App = () => {
-  let x = 0;
 
   let { i18n } = useTranslation()
   return (
