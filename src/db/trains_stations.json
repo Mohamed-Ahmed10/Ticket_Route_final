@@ -23,5 +23,20 @@
     "name": "Banha Station",
     "name_ar": "محطة بنها",
     "city": "Banha"
+  },
+  {
+    "name": "Menia el qamh Station",
+    "name_ar": "محطة منياالقمح",
+    "city": "menia el qamh"
+  },
+  {
+    "name": "Asyout Station",
+    "name_ar": "محطة أسيوط",
+    "city": "Asyout"
+  },
+  {
+    "name": "Luxor Station",
+    "name_ar": "محطة الاقصر",
+    "city": "Luxor"
   }
 ]
