@@ -20,7 +20,7 @@ i18n
         translation: arTranslate
       }
     },
-    lng: "ar",
+    lng: "en",
     fallbackLng: "en",
 
     interpolation: {

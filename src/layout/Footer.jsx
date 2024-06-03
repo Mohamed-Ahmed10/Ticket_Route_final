@@ -3,7 +3,7 @@ import icon_transparent from "../assets/logo.png"
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { useTranslation } from "react-i18next"
-import { NavLink } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 
 export default function Footer() {
