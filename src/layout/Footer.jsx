@@ -32,13 +32,13 @@ export default function Footer() {
                     <button className="primary_btn">{t('subscribe')}</button>
                 </form>
                 <div className="social_icons">
-                    <a href="#">
+                    <a href="https://www.facebook.com/share/9GhxBNuZJ8rPCQyQ/?mibextid=A7sQZp">
                         <FaFacebookF className="social_icon" />
                     </a>
                     <a href="#">
                         <FaTwitter className="social_icon" />
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/ticket_route?igsh=MW1oNmQ1ZTI2bWFwOA==">
                         <FaInstagram className="social_icon" />
                     </a>
                 </div>
