@@ -98,6 +98,54 @@
   {
     "company": "railway",
     "company_log": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Banha Station",
+    "from_ar": "محطة بنها",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "13:30",
+    "duration": "00 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Banha Station",
+    "from_ar": "محطة بنها",
+    "price": 10,
+    "arrival": "13:00",
+    "departure": "13:30",
+    "duration": "00 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "from": "Menia el qamh Station",
+    "from_ar": "محطة منياالقمح",
+    "to": "Banha Station",
+    "to_ar": "محطة بنها",
+    "price": 38,
+    "arrival": "13:00",
+    "departure": "13:30",
+    "duration": "00 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
+    "from": "Menia el qamh Station",
+    "from_ar": "محطة منياالقمح",
+    "to": "Banha Station",
+    "to_ar": "محطة بنها",
+    "price": 10,
+    "arrival": "13:00",
+    "departure": "13:30",
+    "duration": "00 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_log": "image",
     "to": "Alexandria Station",
     "to_ar": "محطة الإسكندرية",
     "from": "Banha Station",
@@ -666,10 +714,34 @@
     "to_ar": "محطة الاقصر",
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
+    "price": 275,
+    "arrival": "00:00",
+    "departure": "06:15",
+    "duration": "6 h : 15 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Luxor Station",
+    "to_ar": "محطة الاقصر",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
     "price": 225,
-    "arrival": "16:45",
+    "arrival": "02:00",
+    "departure": "08:15",
+    "duration": "6 h : 15 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Luxor Station",
+    "to_ar": "محطة الاقصر",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 350,
+    "arrival": "06:00",
     "departure": "11:15",
-    "duration": "5 h : 30 m"
+    "duration": "5 h : 15 m"
   },
   {
     "company": "railway",
@@ -679,9 +751,9 @@
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
     "price": 425,
-    "arrival": "12:45",
-    "departure": "16:15",
-    "duration": "3 h : 45 m"
+    "arrival": "10:00",
+    "departure": "14:00",
+    "duration": "4 h : 00 m"
   },
   {
     "company": "railway",
@@ -691,8 +763,8 @@
     "from": "Cairo Ramses Station",
     "from_ar": "محطة القاهرة رمسيس",
     "price": 195,
-    "arrival": "00:45",
-    "departure": "5:45",
+    "arrival": "10:45",
+    "departure": "15:45",
     "duration": "5 h : 00 m"
   },
   {
@@ -710,6 +782,30 @@
   {
     "company": "railway",
     "company_logo": "image",
+    "to": "Luxor Station",
+    "to_ar": "محطة الاقصر",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 225,
+    "arrival": "16:45",
+    "departure": "11:15",
+    "duration": "5 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Luxor Station",
+    "to_ar": "محطة الاقصر",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 300,
+    "arrival": "17:45",
+    "departure": "22:15",
+    "duration": "4 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
     "to": "Cairo Ramses Station",
     "to_ar": "محطة القاهرة رمسيس",
     "from": "Menia el qamh Station",
@@ -717,6 +813,126 @@
     "price": 30,
     "arrival": "13:30",
     "departure": "14:30",
+    "duration": "1 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 30,
+    "arrival": "10:30",
+    "departure": "11:30",
+    "duration": "1 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 15,
+    "arrival": "12:45",
+    "departure": "14:00",
+    "duration": "1 h : 15 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 35,
+    "arrival": "14:00",
+    "departure": "16:00",
+    "duration": "2 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 40,
+    "arrival": "15:00",
+    "departure": "17:00",
+    "duration": "2 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 30,
+    "arrival": "16:30",
+    "departure": "18:00",
+    "duration": "1 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 37,
+    "arrival": "18:30",
+    "departure": "19:30",
+    "duration": "1 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 12,
+    "arrival": "20:30",
+    "departure": "21:30",
+    "duration": "1 h : 00 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 30,
+    "arrival": "19:30",
+    "departure": "21:00",
+    "duration": "1 h : 30 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 60,
+    "arrival": "13:45",
+    "departure": "14:30",
+    "duration": "00 h : 45 m"
+  },
+  {
+    "company": "railway",
+    "company_logo": "image",
+    "to": "Menia el qamh Station",
+    "to_ar": "محطة منياالقمح",
+    "from": "Cairo Ramses Station",
+    "from_ar": "محطة القاهرة رمسيس",
+    "price": 30,
+    "arrival": "21:30",
+    "departure": "22:30",
     "duration": "1 h : 00 m"
   }
 ]
